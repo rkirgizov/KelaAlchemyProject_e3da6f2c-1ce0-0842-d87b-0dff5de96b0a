@@ -1,0 +1,1214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="67731907-4ad8-4be6-9326-d6f5b982140e">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="641a45d9-9332-4489-b69d-811446bfc703" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Featherfall" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3ef5becb-046f-44ca-8669-805b618997ff" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(FEATHER_FALL, 100, 7)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(FEATHER_FALL, 100, 7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8bc6e5e0-bce5-4d67-ba85-0e6974311d08" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Featherfall_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3ef5becb-046f-44ca-8669-805b618997ff" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(FEATHER_FALL, 100, 3)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(FEATHER_FALL, 100, 3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3c2884af-22ac-46d1-8879-52d218d9b431" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Concentration" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc813496-5230-40b1-9a20-7356a343290b" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_CONCENTRATION,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h7cde41feg94cfga7ceg40e1ga1111aa38ab9" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_CONCENTRATION,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object color="#FF2F4F4F" is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d90fd9f8-8ec3-4bd5-b401-ea53ccfb31d4" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Concentration_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3c2884af-22ac-46d1-8879-52d218d9b431" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_CONCENTRATION,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_CONCENTRATION,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b5362506-deed-4689-9e51-8f8962f1bb73" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Flying" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="029c1459-5300-4165-b416-1a3e82199d0e" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_FLYING, 100, 7)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_FLYING, 100, 7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="24403e4b-2792-44be-9e9d-bfb5773d5e89" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Flying_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="029c1459-5300-4165-b416-1a3e82199d0e" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_FLYING, 100, 3)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_FLYING, 100, 3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="af8e72bb-ddca-4d64-8729-9cf233f4a75a" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Alertness" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3c2884af-22ac-46d1-8879-52d218d9b431" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_ALERTNESS,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h7f009eb0g54c9g8619gc037ge16985abc0b0" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_ALERTNESS,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="42e4353f-5e31-402c-ad5e-0dea699d8589" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Alertness_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="af8e72bb-ddca-4d64-8729-9cf233f4a75a" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_ALERTNESS,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_ALERTNESS,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="075ae347-76fd-4ca6-b238-01370a890ee8" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_RemoveResistanceFire_Destroy" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4c6444d1-d73a-4fff-b6bb-48d401d0ae10" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 15) and IsResistantToDamageType(DamageType.Fire) and not IsImmuneToDamageType(DamageType.Fire)):ApplyStatus(ALCH_OIL_REMOVERESISTANCEFIRE_CONDITION,100,7)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_REMOVERESISTANCEFIRE_CONDITION,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d3d38b75-b9bb-4512-959d-b5aa201125cb" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_RemoveResistanceFire_Destroy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4c6444d1-d73a-4fff-b6bb-48d401d0ae10" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 12) and IsResistantToDamageType(DamageType.Fire) and not IsImmuneToDamageType(DamageType.Fire)):ApplyStatus(ALCH_OIL_REMOVERESISTANCEFIRE_CONDITION,100,3)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_REMOVERESISTANCEFIRE_CONDITION,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a38853b1-8da3-4148-9496-15e51b468ad5" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Healing_Supreme_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e14ca702-2d94-43e8-af00-f80f5298f81d" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEALING_SUPERIOR,100,0)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEALING_SUPREME,100,0)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f6b2e5f8-cc73-41e4-bc1f-3f4d61833f32" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Heroism" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="af8e72bb-ddca-4d64-8729-9cf233f4a75a" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEROISM,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h09d5cf51gaf9fg2824gac84g1e480882a36c" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEROISM,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="dc4bcba8-f8c4-4655-bac9-2e7322075420" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Heroism_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f6b2e5f8-cc73-41e4-bc1f-3f4d61833f32" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_HEROISM,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_HEROISM,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a8546770-8529-42a9-b591-7910d19c439d" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Tadpole" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f6b2e5f8-cc73-41e4-bc1f-3f4d61833f32" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_TADPOLE,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h8e45510eg6ca5g88d7g458bg5d48a1f2fb7f" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_TADPOLE,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="88d1c9f5-6d9f-4b28-8693-d5c8c78ce4ab" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Tadpole_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="a8546770-8529-42a9-b591-7910d19c439d" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_TADPOLE,100,5)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_TADPOLE,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="03ed9800-654e-4307-beb8-f6dc4605b1c9" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Jump" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="442ccf4f-b504-48c5-b090-10267a965272" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_JUMP, 100, 7)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_JUMP, 100, 7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="baf4c776-3def-4235-b77a-85eb7cb9ba6d" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Jump_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="442ccf4f-b504-48c5-b090-10267a965272" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_JUMP, 100, 3)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_JUMP, 100, 3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a7df991c-3183-4aba-aa01-8885b69adbb2" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_CrawlerMucus" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3e70942f-f424-4a30-922c-0d08eefcdc20" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POISON_CRAWLER_MUCUS_CONDITION,100,7,,,,not SavingThrow(Ability.Constitution,13, AdvantageOnPoisoned()))" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d4,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POISON_CRAWLER_MUCUS_CONDITION, 100, 7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e4009ef8-fdf1-42d8-82c6-2e89cc897f2f" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_CrawlerMucus_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3e70942f-f424-4a30-922c-0d08eefcdc20" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POISON_CRAWLER_MUCUS_CONDITION,100,3,,,,not SavingThrow(Ability.Constitution,11, AdvantageOnPoisoned()))" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d4,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POISON_CRAWLER_MUCUS_CONDITION, 100, 3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="dcd71806-a0c6-4924-8b39-18a92480c519" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Enlarge" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="a8546770-8529-42a9-b591-7910d19c439d" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_ENLARGE,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4b8be441g5349g93aag448cg3d50e3eb1ed6" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_ENLARGE,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7efdf5e0-eca0-4afb-9f04-06e5acabc88b" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Enlarge_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dcd71806-a0c6-4924-8b39-18a92480c519" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_ENLARGE,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_ENLARGE,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7cfed3af-306a-43e7-a399-b7a2d0c6e947" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Strength_CloudGiant" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="50ec3b2f-a08e-4716-aede-22078b3c9f09" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_STRENGTH_CLOUD_GIANT,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="dcd091aa-c3e7-4c19-bba1-ce0223587829" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Strength_CloudGiant_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="50ec3b2f-a08e-4716-aede-22078b3c9f09" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_STRENGTH_CLOUD_GIANT,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_STRENGTH_CLOUD_GIANT,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6a973ec5-64d9-4709-9759-c8e83ce0a261" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Lightning" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="a4916ef1-db73-4983-9119-d107698911cd" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_LIGHTNING,100,10)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_LIGHTNING,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ae445267-0f22-4de1-ab82-1d52da53f667" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Lightning_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="6a973ec5-64d9-4709-9759-c8e83ce0a261" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_LIGHTNING,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_LIGHTNING,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="011e9255-e038-4d52-bd83-9dc778959cbe" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_UNI_Brewer" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="814d1c6b-fa2f-4a79-b701-ef0e651db4a2" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(UNI_POISON_BREWER_CONDITION,100,7,,,,not SavingThrow(Ability.Constitution,17, AdvantageOnPoisoned()))" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d6,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(UNI_POISON_BREWER_CONDITION, 100, 7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5840dff5-1b06-4979-800c-f7442c6282be" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_UNI_Brewer_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="814d1c6b-fa2f-4a79-b701-ef0e651db4a2" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(UNI_POISON_BREWER_CONDITION,100,3,,,,not SavingThrow(Ability.Constitution,13, AdvantageOnPoisoned()))" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d6,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(UNI_POISON_BREWER_CONDITION, 100, 3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="851bb32d-5a9d-4fa5-bdee-de0a06d06cf7" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Strength_HillGiant" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc813496-5230-40b1-9a20-7356a343290b" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_STRENGTH_HILL_GIANT,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="53e7144a-2332-4e52-8ab8-8449840c73e1" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Strength_HillGiant_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc813496-5230-40b1-9a20-7356a343290b" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_STRENGTH_HILL_GIANT,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_STRENGTH_HILL_GIANT,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8ed3ca00-ff25-48eb-9c27-053af3583037" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Antitoxin_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="21318249-060d-4cad-b936-35e52aee94f9" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ANTITOXIN, 100, 0)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ANTITOXIN, 100, 0)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b369e8c1-2eb5-4ffb-83e5-90862a9ea756" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Healing_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="0417b180-51ac-4aad-af90-5aacffadc811" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEALING,100,0)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEALING,100,0)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="acea4a6d-4e14-4f8d-922c-de9b52137041" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_DamageAttackBuff_Destroy" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="6f95084e-7814-4288-b77d-a9cf1548ad6e" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,ALCH_OIL_DAMAGEATTACKBUFF_DIPPED,100,7);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,ALCH_OIL_DAMAGEATTACKBUFF_DIPPED,100,7);" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_DAMAGEATTACKBUFF_DIPPED,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="870b0864-e90b-449f-87a1-fa054ee7fabc" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_DamageAttackBuff_Destroy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="6f95084e-7814-4288-b77d-a9cf1548ad6e" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,ALCH_OIL_DAMAGEATTACKBUFF_DIPPED,100,3);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,ALCH_OIL_DAMAGEATTACKBUFF_DIPPED,100,3);" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_DAMAGEATTACKBUFF_DIPPED,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="07832f62-7f57-4a42-b9b6-d8efcc1ee2fa" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Barkskin" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dcd71806-a0c6-4924-8b39-18a92480c519" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_BARKSKIN,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h31e73117g6404gd1ccg67abg3ba8cd1d1d50" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_BARKSKIN,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="06d00ffa-e75f-4cce-bdef-87eb8140cfa8" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Barkskin_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="07832f62-7f57-4a42-b9b6-d8efcc1ee2fa" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_BARKSKIN,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_BARKSKIN,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="55fa150e-45e2-4d3c-9f77-631d88098e60" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Remedy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d47d39a1-2a6b-43bb-874b-26401e071c50" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REMEDY, 100, 0)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REMEDY, 100, 0)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6b388958-c5af-406d-be7b-7e89d796fe08" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Healing_Superior_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="1cba67fa-49dc-4217-9f9a-0bf9138c6f7a" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEALING_GREATER,100,0)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEALING_SUPERIOR,100,0)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="85d8132f-3e48-4fca-b7d8-53cfd2ef262e" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_AnimalSpeaking" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e9b27a30-0ca7-4d94-a5e2-add5b6cbe9bb" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_ANIMAL_SPEAKING,100,10)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_ANIMAL_SPEAKING,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f7b8eb7b-49f5-4a6b-981d-0225c57fcab5" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_AnimalSpeaking_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e9b27a30-0ca7-4d94-a5e2-add5b6cbe9bb" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_ANIMAL_SPEAKING,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_ANIMAL_SPEAKING,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="07f6893c-d0ce-4a4a-ba50-367d5041b375" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Meditation_Supreme" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="07832f62-7f57-4a42-b9b6-d8efcc1ee2fa" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_MEDITATION_SUPREME,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha089c7a6g727bgf970g985ag8693ef6f19e1" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_MEDITATION_SUPREME,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e33bf248-17c1-48c7-a9bc-137453fa3149" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Meditation_Supreme_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="07f6893c-d0ce-4a4a-ba50-367d5041b375" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_MEDITATION_SUPREME,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_MEDITATION_SUPREME,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1b8977c7-1965-43b7-9915-b5dbf77469ed" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Wizardsbane_Destroy" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="41e9b9a1-965f-4070-a688-1b5ccd004beb" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 15):ApplyStatus(ALCH_OIL_WIZARDSBANE_CONDITION,100,7)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_WIZARDSBANE_CONDITION,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="032bf003-55d1-4113-8e52-1bad3d57ff9e" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Wizardsbane_Destroy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="41e9b9a1-965f-4070-a688-1b5ccd004beb" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 12):ApplyStatus(ALCH_OIL_WIZARDSBANE_CONDITION,100,3)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_WIZARDSBANE_CONDITION,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2d946304-7da1-414f-a63e-d2bf04bc0252" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Rest_Greater" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="07f6893c-d0ce-4a4a-ba50-367d5041b375" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REST_SLEEP_GREATER,100,5)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h21369b15gcf5cg010cge9b3g472272dd29bb" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REST_SLEEP_GREATER,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d67dd93e-500a-44cc-91d9-77b8ec8d2e8f" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Rest_Greater_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="2d946304-7da1-414f-a63e-d2bf04bc0252" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REST_SLEEP_GREATER,100,10)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REST_SLEEP_GREATER,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f96b76d8-07f6-4bdb-af3f-a8d3855c20e8" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Darkvision" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="07f6893c-d0ce-4a4a-ba50-367d5041b375" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_DARKVISION,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h15310689g320dg8b5bg4a27g8f7577d16543" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_DARKVISION,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7f2cbfe7-5e2d-4219-9ae3-dc5c2e940c4c" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Darkvision_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f96b76d8-07f6-4bdb-af3f-a8d3855c20e8" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_DARKVISION,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_DARKVISION,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="be1040bd-cef7-4a73-ba24-f406137ab3e5" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_Drow" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e34b51c9-5fe8-4537-b67d-d6460538e8fd" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POISON_DROW_CONDITION,100,7,,,,not SavingThrow(Ability.Constitution,13, AdvantageOnPoisoned()))" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d4,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POISON_DROW_CONDITION, 100, 7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f03c954a-755f-4b04-9a11-45a567339e02" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_Drow_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e34b51c9-5fe8-4537-b67d-d6460538e8fd" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POISON_DROW_CONDITION,100,3,,,,not SavingThrow(Ability.Constitution,11, AdvantageOnPoisoned()))" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d4,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POISON_DROW_CONDITION, 100, 3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="54f87242-f6ab-45e5-b85a-f340dd03557f" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Reduce_Destroy" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="fecce5c4-cc5b-43ee-94c9-d64a456a2865" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 15)):ApplyStatus(REDUCE,100,7)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(REDUCE,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="68d0507e-6467-4b0f-812e-d283b7cf34f3" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Reduce_Destroy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="fecce5c4-cc5b-43ee-94c9-d64a456a2865" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 12)):ApplyStatus(REDUCE,100,3)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(REDUCE,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4a24c052-af58-4a0b-bc5a-df4ff8d10186" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Rest_Lesser" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="2d946304-7da1-414f-a63e-d2bf04bc0252" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REST_SLEEP_LESSER,100,5)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hece9ebd8g6537g20eag55f1g9efe0f4ef212" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REST_SLEEP_LESSER,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="28aab982-1ae7-4121-9c09-5b0bb56c3fca" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Rest_Lesser_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4a24c052-af58-4a0b-bc5a-df4ff8d10186" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REST_SLEEP_LESSER,100,10)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_POTION_REST_SLEEP_LESSER,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="011ffd84-d46d-41e8-9da0-909d44706827" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Healing_Greater_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="6b388958-c5af-406d-be7b-7e89d796fe08" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEALING,100,0)" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_HEALING_GREATER,100,0)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="42a7bb1c-5b30-4d7f-8ac8-9cdd1b322b07" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_AttackBuff_Destroy" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="06b97c56-86f6-43aa-bd87-b47f461f97ac" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,ALCH_OIL_ATTACKBUFF_DIPPED,100,7);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,ALCH_OIL_ATTACKBUFF_DIPPED,100,7)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_ATTACKBUFF_DIPPED,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b9fc2bd1-ef86-44ee-a37c-cdd9ea84e6be" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_AttackBuff_Destroy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="06b97c56-86f6-43aa-bd87-b47f461f97ac" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,ALCH_OIL_ATTACKBUFF_DIPPED,100,3);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,ALCH_OIL_ATTACKBUFF_DIPPED,100,3)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_ATTACKBUFF_DIPPED,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a1c51c9f-b6cd-47e8-89d8-f803de6c3177" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Fire" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="9984c592-ad9a-4d7d-a98e-9f68b9d0e352" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_FIRE,100,10)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_FIRE,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7cf9dd26-5439-4c5e-9466-80fd199a07ce" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Fire_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="a1c51c9f-b6cd-47e8-89d8-f803de6c3177" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_FIRE,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_FIRE,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="438bef2c-1520-493d-bc17-533b16c51e39" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Speed" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e3a71694-1309-44e4-b5fd-d5ff9328e76e" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_SPEED,100,2)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_SPEED,100,2)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f8dc359f-5559-4ebb-8268-aff7c12864c6" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Speed_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e3a71694-1309-44e4-b5fd-d5ff9328e76e" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_SPEED,100,1)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_SPEED,100,1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f4f2d343-3b88-4822-9f32-f683d6055b7f" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Invisibility" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="2c902edc-9d66-4f2d-9465-47dfd2a5148c" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_INVISIBILITY,100,7)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_INVISIBILITY,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3c40d77a-cc8a-4a1a-bf5b-22ee51d70dd2" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Invisibility_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="2c902edc-9d66-4f2d-9465-47dfd2a5148c" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_INVISIBILITY,100,3)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_INVISIBILITY,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="57574ff3-0fa5-4216-8ce0-8341e43f70f6" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Combustion_Destroy" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="7a082ac0-7f22-41ff-8b29-b839fa69162b" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 15)):ApplyStatus(ALCH_OIL_COMBUSTION_CONDITION,100,7)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_COMBUSTION_CONDITION,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d0b3061d-b66c-47f5-8d71-f945ff088b1d" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Combustion_Destroy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="7a082ac0-7f22-41ff-8b29-b839fa69162b" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 12)):ApplyStatus(ALCH_OIL_COMBUSTION_CONDITION,100,3)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_COMBUSTION_CONDITION,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e2524c0b-d300-46b0-be8b-780946364cb2" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Bloodlust" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f96b76d8-07f6-4bdb-af3f-a8d3855c20e8" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_BLOODLUST,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hbc6f37fdgb7b0g94aag496dg449c43e98e91" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_BLOODLUST,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ff36136d-c25f-4020-9a74-b9b0ae286248" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Bloodlust_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e2524c0b-d300-46b0-be8b-780946364cb2" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_BLOODLUST,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_BLOODLUST,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d2539ae9-0af0-4a7f-be9f-c725990a15f9" />
+        <field name="Name" type="NameTableFieldDefinition" value="Toxin_Destroy_Wyvern" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="aaffcc31-1658-4472-a614-72739085cd43" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_WYVERN_CONDITION, 100, 1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="119b564e-9d13-4805-8ef5-15196146bc63" />
+        <field name="Name" type="NameTableFieldDefinition" value="Toxin_Destroy_Wyvern_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="aaffcc31-1658-4472-a614-72739085cd43" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_WYVERN_CONDITION, 100, 1)" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_WYVERN_CONDITION,100,1,,,,not SavingThrow(Ability.Constitution,12, AdvantageOnPoisoned()))" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c07badba-7e26-49d5-9523-cddc27b9da1c" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Necrotic" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="a21243a7-636f-408b-9773-9b23e5b8a651" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_NECROTIC,100,10)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_NECROTIC,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="12832fff-323f-48e8-be8c-7d5b5e653237" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Necrotic_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="c07badba-7e26-49d5-9523-cddc27b9da1c" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_NECROTIC,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_NECROTIC,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5cc10dd6-9fc3-4d9c-897a-8885f1d93288" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_Basic" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="2be745ca-d90c-4c16-b50f-b8dfaf5ab970" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POISON_SIMPLE_CONDITION,100,7,,,,not SavingThrow(Ability.Constitution,11, AdvantageOnPoisoned()))" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d4,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POISON_SIMPLE_CONDITION, 100, 7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1ab83a8d-528d-4df7-9bf6-49671ff9d81c" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_Basic_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="2be745ca-d90c-4c16-b50f-b8dfaf5ab970" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POISON_SIMPLE_CONDITION,100,3,,,,not SavingThrow(Ability.Constitution,9, AdvantageOnPoisoned()))" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d4,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POISON_SIMPLE_CONDITION, 100, 3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4caef3bd-a1f8-48f4-a161-69b4205cd97c" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Invulnerability" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e2524c0b-d300-46b0-be8b-780946364cb2" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_INVULNERABILITY,100,5)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hf122027agf238g2f8fg16e5gb45e5500621e" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_INVULNERABILITY,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1485c90c-c6a7-4ae3-a176-a70647a3d6ad" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Invulnerability_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4caef3bd-a1f8-48f4-a161-69b4205cd97c" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_INVULNERABILITY,100,3)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_INVULNERABILITY,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="cfcf151f-032f-49bb-aa1a-5cf3c7a65384" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_Malice" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ce5a23d8-c3eb-4d30-961e-de2d92c59f95" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POISON_MALICE_CONDITION,100,7,,,,not SavingThrow(Ability.Constitution,12, AdvantageOnPoisoned()))" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d4,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POISON_MALICE_CONDITION, 100, 7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3b4ddb09-283e-4dbf-841f-a2b87800d4a5" />
+        <field name="Name" type="NameTableFieldDefinition" value="Poison_Destroy_Malice_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ce5a23d8-c3eb-4d30-961e-de2d92c59f95" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POISON_MALICE_CONDITION,100,3,,,,not SavingThrow(Ability.Constitution,15, AdvantageOnPoisoned()))" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d4,Poison)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POISON_MALICE_CONDITION, 100, 3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9e7f9061-05d9-4cf4-837b-f8e39e96c1e7" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Bane_Destroy" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="05b490dd-f953-4056-ac82-5a5a20d38f6a" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Charisma, 15)):ApplyStatus(ALCH_OIL_BANE_CONDITION,100,7)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_BANE_CONDITION,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="91d14f60-0da3-4a08-8d33-db1bb3b0ccfd" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Bane_Destroy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="05b490dd-f953-4056-ac82-5a5a20d38f6a" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Charisma, 12)):ApplyStatus(ALCH_OIL_BANE_CONDITION,100,3)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_OIL_BANE_CONDITION,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="461a8ea2-06b6-4d2b-94ba-49747ac4cb39" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Criticals" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4caef3bd-a1f8-48f4-a161-69b4205cd97c" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_CRITICALS,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h3fa5bafeg6980gc5a4g087bg1e6b1f58e235" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_CRITICALS,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="add6cdf4-2c74-44cc-90dd-73494d17f1d3" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Criticals_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="461a8ea2-06b6-4d2b-94ba-49747ac4cb39" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_CRITICALS,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_CRITICALS,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="dc7511c3-ab4d-45b2-89eb-501e0f6709ac" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Meditation" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="07f6893c-d0ce-4a4a-ba50-367d5041b375" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_MEDITATION,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h027282f7g1a71gd34eg0cb9gbfb9bf9e7be1" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_MEDITATION,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b7ccbc57-0e69-4d71-b1f3-06621eb2f7cc" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Meditation_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7511c3-ab4d-45b2-89eb-501e0f6709ac" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_MEDITATION,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_MEDITATION,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ee26a7a4-62cd-40a8-9c12-7d75e691d0c8" />
+        <field name="Name" type="NameTableFieldDefinition" value="Toxin_Destroy_Basic" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e2ce9aa8-7a9f-446c-9845-e16e93069c8f" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_BASIC_CONDITION, 100, 1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3b23bd4c-affa-4ee3-8ef0-19159c6c0d04" />
+        <field name="Name" type="NameTableFieldDefinition" value="Toxin_Destroy_Basic_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e2ce9aa8-7a9f-446c-9845-e16e93069c8f" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_BASIC_CONDITION, 100, 1)" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_BASIC_CONDITION,100,1,,,,not SavingThrow(Ability.Constitution,8, AdvantageOnPoisoned()))" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b3601db5-4922-44ec-85f3-50834d8aa210" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Frost_Destroy" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ffb5c6d1-5bd6-450f-8eb1-5558b2293fdc" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 15)):ApplyStatus(MAG_FROST,100,7)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MAG_FROST,100,7)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="50960541-c98d-41f2-8592-2e3b3a706c51" />
+        <field name="Name" type="NameTableFieldDefinition" value="Solution_Oil_Frost_Destroy_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ffb5c6d1-5bd6-450f-8eb1-5558b2293fdc" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SavingThrow(Ability.Constitution, 12)):ApplyStatus(MAG_FROST,100,3)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character()" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MAG_FROST,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="55eb7087-2003-4492-8357-fc0ff116fac4" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_ArcaneAcuity" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="461a8ea2-06b6-4d2b-94ba-49747ac4cb39" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_ARCANE_ACUITY,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h28a2106cgb2c3g6024g3b5cgea6a4a8eed01" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_ARCANE_ACUITY,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3aa51587-5de9-4758-846a-70f0d49c04dd" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_ArcaneAcuity_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="55eb7087-2003-4492-8357-fc0ff116fac4" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_ARCANE_ACUITY,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_ARCANE_ACUITY,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2bf04c7b-8454-4544-ad3a-2cd794ab811e" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Psychic" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="93f6acd5-c4d6-4896-a0dd-3a92bc0830c0" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_PSYCHIC,100,10)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_PSYCHIC,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f2428dd9-cafb-4f58-8f34-b3ded15cbb33" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Psychic_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="93f6acd5-c4d6-4896-a0dd-3a92bc0830c0" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_PSYCHIC,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_PSYCHIC,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9e5098e3-e2f0-417e-960b-ebeeacd11f17" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Meditation_Greater" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7511c3-ab4d-45b2-89eb-501e0f6709ac" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_MEDITATION_GREATER,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hc1bb9ddag8b7dg9c39gf460gde6a467c659e" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_MEDITATION_GREATER,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b19ffb7c-02db-4806-b3d6-415444a80e1f" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Meditation_Greater_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="9e5098e3-e2f0-417e-960b-ebeeacd11f17" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_MEDITATION_GREATER,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_MEDITATION_GREATER,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e6d901b7-4414-4e90-b5c2-86d9aefa2e29" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_DetectThoughts" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="55eb7087-2003-4492-8357-fc0ff116fac4" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(DETECT_THOUGHTS,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h74bdb5bfg7ba0g1ef1g1ba8g364f4bdb3b9e" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(DETECT_THOUGHTS,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a1bb80b6-14a0-4478-b5ba-00b53ed434f3" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_DetectThoughts_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e6d901b7-4414-4e90-b5c2-86d9aefa2e29" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_DETECT_THOUGHTS,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_DETECT_THOUGHTS,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ee9d6f2a-1dcb-4ccc-9829-e5dbec57f7fe" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Poison" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="bc6e1240-e6e1-4cdc-ae45-d5e4b66567c6" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_POISON,100,10)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(POTION_OF_RESISTANCE_POISON,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9dce40a0-e13d-4205-9f17-46b1cbbc920e" />
+        <field name="Name" type="NameTableFieldDefinition" value="Potion_Destroy_Resistance_Poison_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="bc6e1240-e6e1-4cdc-ae45-d5e4b66567c6" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_POISON,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_POTION_OF_RESISTANCE_POISON,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="87b4e937-ea58-4cf2-98d0-439d684946f1" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Meditation_Superior" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="9e5098e3-e2f0-417e-960b-ebeeacd11f17" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_MEDITATION_SUPERIOR,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfe9b80c6gb195g790dg8e5dg7ab4777050cc" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_MEDITATION_SUPERIOR,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="36793091-265b-45c6-99ed-bacbd15e731e" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Meditation_Superior_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="87b4e937-ea58-4cf2-98d0-439d684946f1" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_MEDITATION_SUPERIOR,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_MEDITATION_SUPERIOR,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="55f1578b-9937-4e5f-a88e-d3a499cd031c" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_SeeInvisible" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e6d901b7-4414-4e90-b5c2-86d9aefa2e29" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_SEE_INVISIBILITY,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha66e3c2ega386g5cebg093ag882cc5d05705" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_SEE_INVISIBILITY,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="89682b6f-0256-4972-9d85-4b0e65583c46" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_SeeInvisible_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="55f1578b-9937-4e5f-a88e-d3a499cd031c" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_SEE_INVISIBILITY,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_SEE_INVISIBILITY,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="78894a51-4dfc-4f53-bb1b-be39cf9ec7ea" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Freedom" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="55f1578b-9937-4e5f-a88e-d3a499cd031c" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_FREEDOM,100,10)" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha22b4f60ga5b2g2980gf551gec7cd0b597a4" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_ELIXIR_FREEDOM,100,10)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="bafaedbe-e684-48fe-b908-1baa7369c794" />
+        <field name="Name" type="NameTableFieldDefinition" value="Elixir_Destroy_Freedom_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="78894a51-4dfc-4f53-bb1b-be39cf9ec7ea" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_FREEDOM,100,5)" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(KAP_ALCH_ELIXIR_FREEDOM,100,5)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fcf51f0b-e1d6-4c18-84fa-f88e1236850d" />
+        <field name="Name" type="NameTableFieldDefinition" value="Toxin_Destroy_PurpleWorm" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="6020409b-8601-4c5f-b890-815a107b920a" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_PURPLEWORM_CONDITION, 100, 1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d5eb885f-b044-47d9-be65-090dae6a232a" />
+        <field name="Name" type="NameTableFieldDefinition" value="Toxin_Destroy_PurpleWorm_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="6020409b-8601-4c5f-b890-815a107b920a" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_PURPLEWORM_CONDITION, 100, 1)" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_PURPLEWORM_CONDITION,100,1,,,,not SavingThrow(Ability.Constitution,14, AdvantageOnPoisoned()))" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a68ccc02-ad01-4501-8cdf-ca235c6ab34c" />
+        <field name="Name" type="NameTableFieldDefinition" value="Toxin_Destroy_SerpentVenom" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="de9a977e-2700-43e0-90d2-0e2c34bee639" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="1" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_SERPENTVENOM_CONDITION, 100, 1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4b9fed10-c43f-4298-a105-440a218ee3cc" />
+        <field name="Name" type="NameTableFieldDefinition" value="Toxin_Destroy_SerpentVenom_Grenade" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="de9a977e-2700-43e0-90d2-0e2c34bee639" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_SERPENTVENOM_CONDITION, 100, 1)" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(ALCH_TOXIN_SERPENTVENOM_CONDITION,100,1,,,,not SavingThrow(Ability.Constitution,9, AdvantageOnPoisoned()))" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

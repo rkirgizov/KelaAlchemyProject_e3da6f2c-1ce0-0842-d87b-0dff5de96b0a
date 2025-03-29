@@ -1,0 +1,384 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//
+// SolutionRoot | Projectile | Surface | Radius | Lifetime 
+// 
+// AIR
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Potion_FeatherFall_179cfdd4-40ef-4f5c-ba6e-8c13f20aadc9,"Projectile_Potion_Destroy_Featherfall","NONE",0.0,0.0); // GRENADE CHECKED
+DB_KAP_Thrown_Solution((ITEMROOT)GRN_Sunflash_Grenade_A_5e282d02-6a10-44cb-9737-9d52aab0701c,"Projectile_Sunflash","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Concentration_45cdcf69-bfd2-4311-a883-3f3631ab3959,"Projectile_Elixir_Destroy_Concentration","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Potion_Flying_8b870692-8491-4f1b-9b5c-58cb0b47a62b,"Projectile_Potion_Destroy_Flying","NONE",0.0,0.0); // GRENADE CHECKED
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Alertness_17066367-7b64-402e-951d-9dcc1407c278,"Projectile_Elixir_Destroy_Alertness","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Soultion_Oil_RemoveResistanceFire_bd118cc0-eb90-412d-8229-6749f42df5c6,"Projectile_Solution_Oil_RemoveResistanceFire_Destroy","NONE",0.0,0.0); // GRENADE CHECKED
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,"Projectile_Potion_Destroy_Healing_Supreme","NONE",0.0,0.0); // GRENADE CHECKED
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Grenade_SporesHaste_6008231b-9f5a-44f6-8050-14586b7626fd,"Projectile_WhiteSporeCloud_Grenade","SurfaceSporeWhiteCloud",2.0,18.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Grenade_SporesToxic_9320005f-18c6-4c2b-be7f-e168d3b15573,"Projectile_GreenSporeCloud_Grenade","SurfaceSporeGreenCloud",2.0,18.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Heroism_A_bb27cc17-5af9-4d53-818b-3e620f3f59f2,"Projectile_Potion_Destroy_Heroism","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Tadpole_d44a454c-3a09-4b93-b982-79f7ee019703,"Projectile_Elixir_Destroy_Tadpole","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Potion_Jump_7406ffa4-930c-437f-b201-57b951e5165f,"Projectile_Potion_Destroy_Jump","NONE",0.0,0.0);
+//
+// EARTH
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Poison_Crawler_Mucus_5865caed-4a5d-45b7-b365-1113334a8e7b,"Projectile_Poison_Destroy_CrawlerMucus","SurfaceCrawlerMucusCloud",1.0,6.0); // GRENADE CHECKED
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Enlarge_0aacb1f9-116a-45ec-9b0c-cb436301d4b2,"Projectile_Elixir_Destroy_Enlarge","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Cloud_Giant_Strength_e6490cc8-7f81-4aac-95e8-a58ce5e88a31,"Projectile_Potion_Destroy_Strength_CloudGiant","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Lightning_Resistance_05257244-ab59-4eab-9745-d1fea7b8cd10,"Projectile_Potion_Destroy_Resistance_Lightning","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)UNI_Poison_Brewer_6db9ed3d-2d72-43ad-a2b8-02365728f29f,"Projectile_Poison_Destroy_UNI_Brewer","NONE",0.0,0.0); // GRENADE CHECKED
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Hill_Giant_Strength_c69fb092-2f4f-4688-82b6-7d92405626b1,"Projectile_Potion_Destroy_Strength_HillGiant","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Antitoxin_f0c7d8bb-85e9-4937-96bb-49ba69d28631,"Projectile_Potion_Destroy_Antitoxin","NONE",0.0,0.0); // GRENADE CHECKED
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,"Projectile_Potion_Destroy_Healing","NONE",0.0,0.0); // GRENADE CHECKED
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Oil_DamageAttackBuff_955d3880-3d10-4fb5-845b-96b6b52aef9a,"Projectile_Solution_Oil_DamageAttackBuff_Destroy","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Soultion_Elixir_Barkskin_cc1a8802-675a-426b-a791-ec1d5a5b6328,"Projectile_Elixir_Destroy_Barkskin","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Potion_Remedy_ae9a9360-7cbe-4f72-8bea-1dd5747c180d,"Projectile_Potion_Destroy_Remedy","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"Projectile_Potion_Destroy_Healing_Superior","NONE",0.0,0.0);
+//
+// FEY
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_AnimalSpeaking_A_447ee8a9-9319-4758-9dc7-2d8ba94e45b5,"Projectile_Potion_Destroy_AnimalSpeaking","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Meditation_Supreme_4f17f210-9cde-4dad-80b5-fc4f9ddb1e1f,"Projectile_Elixir_Destroy_Meditation_Supreme","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Oil_Wizardsbane_e4f7cb7f-1cb3-411b-b078-f4ac25b750a8,"Projectile_Solution_Oil_Wizardsbane_Destroy","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Grenade_SporesConfusion_cbc47f2b-b88a-4bd8-99cd-aacc2dc2ea44,"Projectile_BlackSporeCloud_Grenade","SurfaceSporeBlackCloud",2.0,12.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Grenade_Light_c3236e6e-21e4-4e39-a5b4-fda105d8ce3f,"Projectile_ALCH_Solution_Grenade_Light","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Potion_Rest_Greater_4d801c1a-691e-47c8-88e7-78367b4e2c8e,"Projectile_Potion_Destroy_Rest_Greater","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Darkvision_0f2ccca6-3ce8-4271-aec0-820f6581c551,"Projectile_Elixir_Destroy_Darkvision","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Poison_Drow_f528a334-bdb3-4cf1-b74c-0e08942daeb1,"Projectile_Poison_Destroy_Drow","SurfaceDrowPoisonCloud",1.0,6.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Oil_Reduce_01985597-fceb-47d1-93ae-9cc9928ed9e7,"Projectile_Solution_Oil_Reduce_Destroy","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Potion_Rest_Lesser_b0ff8d30-5825-49d4-8cd4-ebf3a3d0a024,"Projectile_Potion_Destroy_Rest_Lesser","NONE",0.0,0.0);
+//
+// FIRE
+DB_KAP_Thrown_Solution((ITEMROOT)LOW_RegenerationPrevention_Grenade_df5f8cbf-42c5-4c0d-a0ec-ce5046474d8e,"NONE","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,"Projectile_Potion_Destroy_Healing_Greater","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Oil_AttackBuff_3383e241-4d1c-41ad-bc81-fc548fa9062d,"Projectile_Solution_Oil_AttackBuff_Destroy","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Fire_Resistance_2608c096-a0f5-4172-ad04-c1b170e10d95,"Projectile_Potion_Destroy_Resistance_Fire","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)GRN_FireFlask_A_0b1aa718-fe45-4e4c-8811-ced51c581075,"Projectile_AlchemistFire","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Speed_ad9f3f24-d755-48b6-aa7b-c34da068209f,"Projectile_Potion_Destroy_Speed","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Invisible_A_809d5026-4896-4b3a-986e-95da58da77e2,"Projectile_Potion_Destroy_Invisibility","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Oil_Combustion_bb750807-895b-468d-81e1-4378797d11ca,"Projectile_Solution_Oil_Combustion_Destroy","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Bloodlust_45a775f8-2cf9-440d-b9eb-4ee5f17efca8,"Projectile_Elixir_Destroy_Bloodlust","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Poison_Wyvern_eca393b0-3f8e-4862-814b-9e236a0d4129,"Projectile_Toxin_Destroy_Wyvern","SurfaceWyvernPoison",1.0,-1.0);
+//
+// SHADOW
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Necrotic_Resistance_f3c0aefb-a399-42c6-8d85-7fdceb6d18f5,"Projectile_Potion_Destroy_Resistance_Necrotic","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Poison_Basic_28645376-e6e8-436a-8e9a-c62877fae07d,"Projectile_Poison_Destroy_Basic","SurfacePoisonCloud",1.0,6.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Invulnerability_7eb0b7b6-97fa-4ff5-a7bb-570ca11a3c64,"Projectile_Potion_Destroy_Invulnerability","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Poison_Malice_d990fefe-e0f3-46ba-915e-35aebc6c6599,"Projectile_Poison_Destroy_Malice","SurfaceMaliceCloud",1.0,6.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Oil_Bane_08789f74-3f63-4e7c-8288-b8d873542c15,"Projectile_Solution_Oil_Bane_Destroy","NONE",0.0,0.0); // 
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Criticals_44cd95a7-4791-4ace-bea0-a5ca4421171b,"Projectile_Elixir_Destroy_Criticals","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Meditation_6f328fc5-6f54-4aad-959d-0825290a2763,"Projectile_Elixir_Destroy_Meditation","NONE",0.0,0.0);  
+//
+// WHATER
+DB_KAP_Thrown_Solution((ITEMROOT)Solution_Toxin_Basic_8b5f7965-6cd1-42c1-8449-c6562a270ad9,"Projectile_Toxin_Destroy_Basic","SurfacePoison",1.0,-1.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Oil_Frost_3e4ce3e8-fbae-4e78-9198-e4c15485a928,"Projectile_Solution_Oil_Frost_Destroy","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_ArcaneAcuity_7d1699d9-c3fa-4761-9718-28230f78420b,"Projectile_Elixir_Destroy_ArcaneAcuity","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Psychic_Resistance_164ac6f3-8f93-4d74-9f72-e7c49723dedb,"Projectile_Potion_Destroy_Resistance_Psychic","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Meditation_Greater_8c7656f5-507a-4cee-8e15-320c968539f0,"Projectile_Elixir_Destroy_Meditation_Greater","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Potion_DetectThoughts_91da7fe8-a5f7-4132-9096-e8da4916a42e,"Projectile_Potion_Destroy_DetectThoughts","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Potion_Poison_Resistance_ae28b14c-0881-45fe-8237-9fcb1c951d3d,"Projectile_Potion_Destroy_Resistance_Poison","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Meditation_Superior_fb16d5a8-866f-4c17-9591-0df1372b49c9,"Projectile_Elixir_Destroy_Meditation_Superior","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_SeeInvisible_d106106a-3905-4acb-a24a-764940b61d9c,"Projectile_Elixir_Destroy_SeeInvisible","NONE",0.0,0.0);
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Elixir_Freedom_b8a2f9e4-3b5e-4418-af05-5ca3cd40dd71,"Projectile_Elixir_Destroy_Freedom","NONE",0.0,0.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Poison_Purple_Worm_56e531e9-78e4-430b-bc98-611c1b1ccd08,"Projectile_Toxin_Destroy_PurpleWorm","SurfacePurpleWormPoison",1.0,-1.0);  
+DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Grenade_Web_a4d98266-948b-4467-96cd-6a316f37ceda,"Projectile_ALCH_Solution_Grenade_Web","SurfaceWeb",3.0,10.0);
+DB_KAP_Thrown_Solution((ITEMROOT)CONS_Poison_Serpent_Venom_b0385b93-f525-4740-8126-471a76fa31a2,"Projectile_Toxin_Destroy_SerpentVenom","SurfaceSerpentVenom",1.0,-1.0);  
+KBSECTION
+// We restore additional status if it was removed incorrectly, for example after an overnight stay
+IF
+StatusRemoved(_AlchemySolution, _RemovedStatus, _Causee, _)
+AND
+QRY_IsExistingItem(_AlchemySolution,1)
+AND
+DB_KAP_Affinities(_,_,_,_AdditionalStatus,_,_)
+AND
+Concatenate("KAP_",_AdditionalStatus,_KAPStatus)
+AND
+_RemovedStatus == _KAPStatus
+THEN
+ApplyStatus(_AlchemySolution, _RemovedStatus, -1.0, 0);
+
+
+// DESTROING ALCH SOLUTION WITH ADDITIONAL STATUS
+//REGION DESTROING_ALCH_SOLUTION_WITH_ADDITIONAL_STATUS
+
+// intercept the solution destruction event
+IF
+TemplateDestroyedBy(_AlchemySolutionRoot,_AlchemySolution,_Destroyer,_,_)
+AND
+DB_KAP_Affinities(_,_,_AlchemySolutionRoot,_AdditionalStatus,_,_Type)
+THEN
+DB_KAP_Solution_Destroyed_For_Handle(_AlchemySolution,_Destroyer); // remember the solution and the destroyer
+
+// If there is an additional status, then we try to use the projectile and create a surface, simulating the destruction of the solution of additional status
+//
+// NOT POTIONS
+IF
+StatusRemoved(_AlchemySolution, _RemovedStatus, _Causee, _)
+AND
+IsDestroyed((ITEM)_AlchemySolution, 1)
+AND
+DB_KAP_Solution_Destroyed_For_Handle(_DestroyedAlchemySolution,_Destroyer)
+AND
+DB_KAP_Affinities(_,_,_AdditionalTemplate,_AdditionalStatus,_,_Type)
+AND
+_Type != "GRENADE"
+AND
+Concatenate("KAP_",_AdditionalStatus,_KAPStatus)
+AND
+_RemovedStatus == _KAPStatus
+AND
+QRY_KAP_Try_UseProjectile((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+AND
+QRY_KAP_Try_CreateSurface((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+THEN
+//SetDualEntityEvent(_Destroyer,_Destroyer,"StatusRemoved by destroing");
+NOT DB_KAP_Solution_Destroyed_For_Handle(_DestroyedAlchemySolution,_Destroyer);
+//
+//
+// Clear DB_KAP_Solution_Destroyed_For_Handle
+IF
+StatusRemoved(_AlchemySolution, _RemovedStatus, _Causee, _)
+AND
+DB_KAP_Solution_Destroyed_For_Handle(_DestroyedAlchemySolution,_Destroyer)
+THEN
+NOT DB_KAP_Solution_Destroyed_For_Handle(_DestroyedAlchemySolution,_Destroyer);
+//
+// PROJECTILE IF NOT GRENADE
+QRY
+QRY_KAP_Try_UseProjectile((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+AND
+GetTemplate(_DestroyedAlchemySolution, _DestroyedAlchemySolutionRoot)
+AND
+DB_KAP_Affinities(_,_,(ITEMROOT)_DestroyedAlchemySolutionRoot,_,_,_DestroyedType)
+AND
+_DestroyedType != "GRENADE"
+AND
+DB_KAP_Thrown_Solution(_AdditionalTemplate,_Projectile,_,_,_)
+AND
+_Projectile != "NONE"
+AND
+GetPosition(_DestroyedAlchemySolution, _X, _Y, _Z)
+THEN
+UseSpellAtPosition(NULL_00000000-0000-0000-0000-000000000000,_Projectile,_X,_Y,_Z,1);
+//
+// PROJECTILE IF GRENADE
+QRY
+QRY_KAP_Try_UseProjectile((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+AND
+GetTemplate(_DestroyedAlchemySolution, _DestroyedAlchemySolutionRoot)
+AND
+DB_KAP_Affinities(_,_,(ITEMROOT)_DestroyedAlchemySolutionRoot,_,_,_DestroyedType)
+AND
+_DestroyedType == "GRENADE"
+AND
+DB_KAP_Thrown_Solution(_AdditionalTemplate,_Projectile,_,_,_)
+AND
+_Projectile != "NONE"
+AND
+Concatenate(_Projectile,"_Grenade",_ProjectileGrenade)
+AND
+GetPosition(_DestroyedAlchemySolution, _X, _Y, _Z)
+THEN
+UseSpellAtPosition(NULL_00000000-0000-0000-0000-000000000000,_ProjectileGrenade,_X,_Y,_Z,1);
+//
+QRY
+QRY_KAP_Try_UseProjectile((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+THEN
+DB_NOOP(1);
+//
+// SURFACE IF NOT GRENADE
+QRY
+QRY_KAP_Try_CreateSurface((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+AND
+DB_KAP_Thrown_Solution(_AdditionalTemplate,_,_Surface,_Radius,_Lifetime)
+AND
+_Surface != "NONE"
+AND
+GetTemplate(_DestroyedAlchemySolution, _DestroyedAlchemySolutionRoot)
+AND
+DB_KAP_Affinities(_,_,(ITEMROOT)_DestroyedAlchemySolutionRoot,_,_,_DestroyedType)
+AND
+_DestroyedType != "GRENADE"
+AND
+GetPosition(_DestroyedAlchemySolution, _X, _Y, _Z)
+THEN
+CreateSurfaceAtPosition(_X, _Y, _Z, _Surface, _Radius, _Lifetime);
+//
+// SURFACE IF GRENADE AND NOT CLOUD SURFACE
+QRY
+QRY_KAP_Try_CreateSurface((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+AND
+DB_KAP_Thrown_Solution(_AdditionalTemplate,_,_Surface,_Radius,_Lifetime)
+AND
+_Surface != "NONE"
+AND
+GetTemplate(_DestroyedAlchemySolution, _DestroyedAlchemySolutionRoot)
+AND
+DB_KAP_Affinities(_,_,(ITEMROOT)_DestroyedAlchemySolutionRoot,_,_,_DestroyedType)
+AND
+_DestroyedType == "GRENADE"
+AND
+NOT IsSubstring(_Surface, "Cloud", 1)
+AND
+GetPosition(_DestroyedAlchemySolution, _X, _Y, _Z)
+THEN
+CreateSurfaceAtPosition(_X, _Y, _Z, _Surface, _Radius, _Lifetime);
+//
+// SURFACE IF GRENADE AND CLOUD SURFACE
+QRY
+QRY_KAP_Try_CreateSurface((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+AND
+DB_KAP_Thrown_Solution(_AdditionalTemplate,_,_Surface,_Radius,_Lifetime)
+AND
+_Surface != "NONE"
+AND
+GetTemplate(_DestroyedAlchemySolution, _DestroyedAlchemySolutionRoot)
+AND
+DB_KAP_Affinities(_,_,(ITEMROOT)_DestroyedAlchemySolutionRoot,_,_,_DestroyedType)
+AND
+_DestroyedType == "GRENADE"
+AND
+IsSubstring(_Surface, "Cloud", 1)
+AND
+GetPosition(_DestroyedAlchemySolution, _X, _Y, _Z)
+AND
+RealProduct(_Radius,3.0,_RadiusNew)
+AND
+RealProduct(_Lifetime,3.0,_LifetimeNew)
+THEN
+CreateSurfaceAtPosition(_X, _Y, _Z, _Surface, _RadiusNew, _LifetimeNew);
+//
+QRY
+QRY_KAP_Try_CreateSurface((ITEM)_DestroyedAlchemySolution,(ITEMROOT)_AdditionalTemplate)
+THEN
+DB_NOOP(1);
+//END_REGION
+
+
+// APPLY ADDITIONAL STATUS WHEN SOLUTION IS USED
+//REGION APPLY_ADDITIONAL_STATUS_WHEN_SOLUTION_IS_USED
+//
+// Clear DB_KAP_Status_For_Handle
+PROC
+PROC_BlockUseOfItem((CHARACTER)_Player,(ITEM)_Item,(INTEGER)_RequestID)
+AND
+DB_KAP_Status_For_Handle(_Player,_Item,_AdditionalStatus,_DurationReal)
+THEN
+NOT DB_KAP_Status_For_Handle(_Player,_Item,_AdditionalStatus,_DurationReal);
+//SysClear("DB_KAP_Status_For_Handle", 4);
+//
+// Intercept the event, and if we need to apply the status, we remember it
+// 
+// POTION
+PROC
+PROC_BlockUseOfItem((CHARACTER)_Player,(ITEM)_Item,(INTEGER)_RequestID)
+AND
+GetTemplate(_Item, _ItemRoot)
+AND
+DB_KAP_Affinities(_,_,(ITEMROOT)_ItemRoot,_,_,_ItemType)
+AND
+_ItemType != "GRENADE"
+AND
+DB_KAP_Affinities(_,_,_,_AdditionalStatus,_Turns,_Type)
+AND
+_Type == "POTION"
+AND
+Concatenate("KAP_",_AdditionalStatus,_KAPStatus)
+AND
+HasActiveStatus(_Item, _KAPStatus, 1)
+AND
+IntegerProduct(_Turns, 6, _DurationInt)
+AND
+IntegerToReal(_DurationInt, _DurationReal)
+THEN
+//SetDualEntityEvent(_Player,_Player,_Type);
+DB_KAP_Status_For_Handle(_Player,_Item,_AdditionalStatus,_DurationReal);
+//
+// ELIXIR
+PROC
+PROC_BlockUseOfItem((CHARACTER)_Player,(ITEM)_Item,(INTEGER)_RequestID)
+AND
+GetTemplate(_Item, _ItemRoot)
+AND
+DB_KAP_Affinities(_,_,(ITEMROOT)_ItemRoot,_,_,_ItemType)
+AND
+_ItemType != "GRENADE"
+AND
+DB_KAP_Affinities(_,_,_,_AdditionalStatus,_Turns,_Type)
+AND
+_Type == "ELIXIR"
+AND
+Concatenate("KAP_",_AdditionalStatus,_KAPStatus)
+AND
+HasActiveStatus(_Item, _KAPStatus, 1)
+AND
+NOT HasActiveStatus(_Player, _AdditionalStatus, 1)
+AND
+NOT HasActiveStatus(_Player, _KAPStatus, 1)
+AND
+IntegerProduct(_Turns, 6, _DurationInt)
+AND
+IntegerToReal(_DurationInt, _DurationReal)
+THEN
+//SetDualEntityEvent(_Player,_Player,_Type);
+DB_KAP_Status_For_Handle(_Player,_Item,_KAPStatus,_DurationReal);
+//
+// DIPPED
+PROC
+PROC_BlockUseOfItem((CHARACTER)_Player,(ITEM)_Item,(INTEGER)_RequestID)
+AND
+GetTemplate(_Item, _ItemRoot)
+AND
+DB_KAP_Affinities(_,_,(ITEMROOT)_ItemRoot,_,_,_ItemType)
+AND
+_ItemType != "GRENADE"
+AND
+DB_KAP_Affinities(_,_,_,_AdditionalStatus,_Turns,_Type)
+AND
+_Type == "DIPPED"
+AND
+Concatenate("KAP_",_AdditionalStatus,_KAPStatus)
+AND
+HasActiveStatus(_Item, _KAPStatus, 1)
+AND
+Concatenate(_KAPStatus,"_DIPPED",_KAPStatusDipped)
+AND
+DB_KAP_Dipped_KAP_Original(_KAPStatusDipped,_OriginalStatusDipped)
+AND
+GetEquippedWeapon(_Player,_Weapon)
+AND
+NOT HasActiveStatus(_Weapon, _OriginalStatusDipped, 1) //
+AND
+NOT HasActiveStatus(_Weapon, _KAPStatusDipped, 1)
+AND
+IntegerProduct(_Turns, 6, _DurationInt)
+AND
+IntegerToReal(_DurationInt, _DurationReal)
+THEN
+//SetDualEntityEvent(_Player,_Player,_Type);
+DB_KAP_Status_For_Handle(_Player,_Item,_KAPStatus,_DurationReal);
+//
+// If the solution usage is successfully completed, apply the additional status
+IF
+UseFinished(_Player, _Item, _Result)
+AND
+_Result == 1
+AND
+DB_KAP_Status_For_Handle(_Player,_Item,_KAPStatus,_DurationReal)
+THEN
+//SetDualEntityEvent(_Player,_Player,_KAPStatus);
+ApplyStatus(_Player, _KAPStatus, _DurationReal, 1);
+NOT DB_KAP_Status_For_Handle(_Player,_Item,_KAPStatus,_DurationReal);
+//
+// Clear DB_KAP_Status_For_Handle
+IF
+UseFinished(_Player, _Item, _Result)
+AND
+_Result == 0
+AND
+DB_KAP_Status_For_Handle(_Player,_Item,_KAPStatus,_DurationReal)
+THEN
+NOT DB_KAP_Status_For_Handle(_Player,_Item,_KAPStatus,_DurationReal);
+
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "GLO_KelaAlchemyProject"

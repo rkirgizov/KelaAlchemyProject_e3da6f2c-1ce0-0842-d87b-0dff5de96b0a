@@ -1,0 +1,126 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_KAP_Initialized(0);
+DB_KAP_Debug_Show_Notification(0);
+DB_KAP_Debug_Break(1);
+KBSECTION
+//REGION Init
+IF
+SavegameLoaded()
+AND
+DB_KAP_Initialized(0)
+THEN
+TimerLaunch("KAP_Wait_Game_Loaded", 5000);
+
+IF
+LevelLoaded(_)
+AND
+DB_KAP_Initialized(0)
+THEN
+TimerLaunch("KAP_Wait_Game_Loaded", 5000);
+
+// INIT finish
+IF
+TimerFinished("KAP_Wait_Game_Loaded")
+AND
+GetHostCharacter(_User)
+THEN
+SetDualEntityEvent(_User, _User, "Kela Alchemy Project Succesfully Initialized");
+NOT DB_KAP_Initialized(0);
+DB_KAP_Initialized(1);
+SetFlag(GLO_KAP_Initialized_8832458a-d8ac-4271-8d37-3d7d65bf5a9f,NULL_00000000-0000-0000-0000-000000000000, 1); // flagType: Global
+
+
+//END_REGION
+
+// -----------------------------------------------------------------------------------
+// DEBUG 
+// -----------------------------------------------------------------------------------
+//REGION DEBUG region
+//
+// Debag Message 
+// Entity must match
+// DualEntityEvent(_Entity, _Entity, _EventMessage)
+IF
+DualEntityEvent(_Main, _Debug, _EventMessage)
+AND
+GetHostCharacter(_Player)
+AND 
+_Main == _Debug
+AND
+GUIDToString(_Main, _ItemString)
+AND
+GetDisplayName(_Main,_TranslatedStringKey)
+AND
+ResolveTranslatedString(_TranslatedStringKey,_Name)
+AND
+Concatenate("KAP DEBUG (Entity ",_Name,_FirstResult)
+AND
+Concatenate(_FirstResult,"): ",_SecondResult)
+AND
+Concatenate(_SecondResult,_EventMessage,_FinalResult)
+AND
+QRY_KAP_Show_Notification(_Player,_FinalResult)
+AND
+QRY_KAP_Debug_Break(_FinalResult)
+THEN
+DB_NOOP(1);
+//DebugText(_Player, _FinalResult);
+
+QRY
+QRY_KAP_Show_Notification((CHARACTER)_Player,(STRING)_FinalResult)
+AND
+DB_KAP_Debug_Show_Notification(1)
+THEN
+ShowNotification((CHARACTER)_Player, _FinalResult);
+//
+QRY
+QRY_KAP_Show_Notification((CHARACTER)_Player,(STRING)_FinalResult)
+THEN
+DB_NOOP(1);
+//
+QRY
+QRY_KAP_Debug_Break((STRING)_FinalResult)
+AND
+DB_KAP_Debug_Break(1)
+THEN
+DebugBreak(_FinalResult);
+//
+QRY
+QRY_KAP_Debug_Break((STRING)_FinalResult)
+THEN
+DB_NOOP(1);
+
+
+//END_REGION
+// -----------------------------------------------------------------------------------
+// DEBUG 
+// -----------------------------------------------------------------------------------
+//
+
+//REGION Utilities
+
+QRY
+QRY_KAP_PlayerLevelIsRequired((CHARACTER)_Player, (INTEGER)_RequiredLevel)
+AND
+GetLevel(_Player, _PlayerLevel)
+AND
+_PlayerLevel >= _RequiredLevel
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_KAP_PlayerAbilityLevelIsRequired((CHARACTER)_Player, (STRING)_Ability, (INTEGER)_RequiredLevel)
+AND
+GetAbility(_Player, _Ability, _Value)
+AND
+_Value >= _RequiredLevel
+THEN
+DB_NOOP(1);
+
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "GLO_KelaAlchemyProject"

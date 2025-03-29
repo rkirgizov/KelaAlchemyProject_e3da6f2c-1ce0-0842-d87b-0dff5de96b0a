@@ -1,0 +1,191 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+// Alchemy recipes from original game
+// Name | ResultRoot | IngredientRoot | ComboCategory
+//
+// POTIONS
+DB_KAP_Recipes("ALCH_Potion_AnimalSpeaking_AcornTruffle",(ITEMROOT)CONS_Potion_AnimalSpeaking_A_447ee8a9-9319-4758-9dc7-2d8ba94e45b5,(ITEMROOT)ALCH_Extract_AcornTruffle_69e2d2d1-3617-4f8b-8c40-3eb0ad71f521,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Potion_Antidote_Mugwort",(ITEMROOT)CONS_Potion_Antitoxin_f0c7d8bb-85e9-4937-96bb-49ba69d28631,(ITEMROOT)ALCH_Extract_Mugwort_b707f039-af1d-456d-a606-1604f1d776c1,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Potion_DetectThoughts_Mergrass",(ITEMROOT)ALCH_Solution_Potion_DetectThoughts_91da7fe8-a5f7-4132-9096-e8da4916a42e,(ITEMROOT)ALCH_Extract_Mergrass_d08620da-0fa0-413a-88e7-631f901c568e,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Potion_FeatherFall_AutumnCrocus",(ITEMROOT)ALCH_Solution_Potion_FeatherFall_179cfdd4-40ef-4f5c-ba6e-8c13f20aadc9,(ITEMROOT)ALCH_Extract_AutumnCrocus_9a35caa4-86f4-4542-b46d-9550e815618d,"ALCH_Affinity_Fey");
+DB_KAP_Recipes("ALCH_Potion_Flying_EagleFeather",(ITEMROOT)ALCH_Solution_Potion_Flying_8b870692-8491-4f1b-9b5c-58cb0b47a62b,(ITEMROOT)ALCH_Extract_EagleFeather_8d1080b3-e1d8-4c71-9dfb-459c4600fef5,"ALCH_Affinity_Fey");
+DB_KAP_Recipes("ALCH_Potion_Healing_RoguesMorsel",(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,(ITEMROOT)ALCH_Extract_RoguesMorsel_d85f7014-8063-4eaa-a904-f51cbf59cff6,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Potion_HealingGreater_Balsam",(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,(ITEMROOT)ALCH_Extract_Balsam_a31d379e-b7fa-4d2b-bf16-80347e9f4a23,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Potion_HealingSuperior_YellowMuskCreeper",(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,(ITEMROOT)ALCH_Extract_YellowMuskCreeper_fdf1889d-ae81-43a9-8848-74c6edea2b37,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Potion_HealingSupreme_KiRinHair",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)ALCH_Extract_KiRinHair_4ee2434e-ca76-4e96-926b-49f7a20004c3,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Potion_Invisibility_ImpPatagium",(ITEMROOT)CONS_Potion_Invisible_A_809d5026-4896-4b3a-986e-95da58da77e2,(ITEMROOT)ALCH_Extract_ImpPatagium_3bb0fa56-00e5-4a22-b6d5-641d7fd811d3,"ALCH_Affinity_Fey");
+DB_KAP_Recipes("ALCH_Potion_Invulnerability_DivineBoneShard",(ITEMROOT)CONS_Potion_Invulnerability_7eb0b7b6-97fa-4ff5-a7bb-570ca11a3c64,(ITEMROOT)ALCH_Extract_DivineBoneShard_A_b651dd4e-121f-4cb1-9bb0-975e07ab7df1,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Potion_Jump_Wispweed",(ITEMROOT)ALCH_Solution_Potion_Jump_7406ffa4-930c-437f-b201-57b951e5165f,(ITEMROOT)ALCH_Extract_Wispweed_95356040-914c-4efa-8e5c-6555ce56db50,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Potion_Remedy",(ITEMROOT)ALCH_Solution_Potion_Remedy_ae9a9360-7cbe-4f72-8bea-1dd5747c180d,(ITEMROOT)ALCH_Extract_XornScales_36e2ac7a-5799-4949-8cc6-0d9ea1818dbe,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Potion_RestLesser_UnicornHorn",(ITEMROOT)ALCH_Solution_Potion_Rest_Lesser_b0ff8d30-5825-49d4-8cd4-ebf3a3d0a024,(ITEMROOT)ALCH_Extract_UnicornHorn_cecf2e17-8922-45b7-8841-f49415b9a688,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Potion_RestGreater_PlanetarFeather",(ITEMROOT)ALCH_Solution_Potion_Rest_Greater_4d801c1a-691e-47c8-88e7-78367b4e2c8e,(ITEMROOT)ALCH_Extract_PlanetarFeather_36e1bfca-e983-458c-8eb7-597af32f7644,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Potion_Speed_HyenaEar",(ITEMROOT)CONS_Potion_Speed_ad9f3f24-d755-48b6-aa7b-c34da068209f,(ITEMROOT)ALCH_Extract_HyenaEar_eb9ac491-ef6b-4163-9819-b91d11a7d6f2,"ALCH_Affinity_Earth");
+//
+// ELIXIRS
+DB_KAP_Recipes("ALCH_Elixir_Alertness_HookHorrorClaw",(ITEMROOT)ALCH_Solution_Elixir_Alertness_17066367-7b64-402e-951d-9dcc1407c278,(ITEMROOT)ALCH_Extract_HookHorrorClaw_c5e1a9c9-a691-494b-ae3d-d290198b3f6d,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Elixir_ArcaneAcuity_GauthEye",(ITEMROOT)ALCH_Solution_Elixir_ArcaneAcuity_7d1699d9-c3fa-4761-9718-28230f78420b,(ITEMROOT)ALCH_Extract_GauthEye_5f98a738-6249-418f-b50a-e478477962a0,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Elixir_Bloodlust_WorgFang",(ITEMROOT)ALCH_Solution_Elixir_Bloodlust_45a775f8-2cf9-440d-b9eb-4ee5f17efca8,(ITEMROOT)ALCH_Extract_WorgFang_314a234e-549d-41c0-992a-5a3765215eec,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Elixir_Barkskin_WoodBark",(ITEMROOT)ALCH_Soultion_Elixir_Barkskin_cc1a8802-675a-426b-a791-ec1d5a5b6328,(ITEMROOT)ALCH_Extract_WoodBark_19d0c788-596c-4893-ac4a-bd609ed69753,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Elixir_GiantStregthCloud_CloudGiantFinger",(ITEMROOT)CONS_Potion_Cloud_Giant_Strength_e6490cc8-7f81-4aac-95e8-a58ce5e88a31,(ITEMROOT)ALCH_Extract_CloudGiantFinger_9047c28f-7eee-4268-94e0-9144a4864175,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Elixir_Criticals_ShadowrootSac",(ITEMROOT)ALCH_Solution_Elixir_Criticals_44cd95a7-4791-4ace-bea0-a5ca4421171b,(ITEMROOT)ALCH_Extract_ShadowrootSac_a6015724-3ee4-4398-b157-a33b1024a7d4,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Elixir_Concentration_Belladonna",(ITEMROOT)ALCH_Solution_Elixir_Concentration_45cdcf69-bfd2-4311-a883-3f3631ab3959,(ITEMROOT)ALCH_Extract_Belladonna_ec632c57-bc8a-4f01-940b-b985adc58336,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Elixir_Darkvision_ScryingEye",(ITEMROOT)ALCH_Solution_Elixir_Darkvision_0f2ccca6-3ce8-4271-aec0-820f6581c551,(ITEMROOT)ALCH_Extract_ScryingEye_8994ae94-f6a4-479f-9dbd-75b6913a3a0e,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Elixir_Enlarge_ChasmCreeper",(ITEMROOT)ALCH_Solution_Elixir_Enlarge_0aacb1f9-116a-45ec-9b0c-cb436301d4b2,(ITEMROOT)ALCH_Extract_ChasmCreeper_8fc068d8-7a56-42a6-8a48-91f0b9fbf303,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Elixir_Freedom_OchreJellySlime",(ITEMROOT)ALCH_Solution_Elixir_Freedom_b8a2f9e4-3b5e-4418-af05-5ca3cd40dd71,(ITEMROOT)ALCH_Extract_OchreJellySlime_d0886ef5-a9a3-4e2a-af6c-753f757dce6a,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Elixir_GiantStregthHill_HillGiantFinger",(ITEMROOT)CONS_Potion_Hill_Giant_Strength_c69fb092-2f4f-4688-82b6-7d92405626b1,(ITEMROOT)ALCH_Extract_HillGiantFinger_a1e2a4f8-7af0-4379-a2c2-f0ab5ee84b05,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Elixir_Heroism_PegasusFeather",(ITEMROOT)CONS_Potion_Heroism_A_bb27cc17-5af9-4d53-818b-3e620f3f59f2,(ITEMROOT)ALCH_Extract_PegasusFeather_a85d14c0-7144-49bd-8664-b24ba4ef0fff,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Elixir_Meditation_Weavemoss",(ITEMROOT)ALCH_Solution_Elixir_Meditation_6f328fc5-6f54-4aad-959d-0825290a2763,(ITEMROOT)ALCH_Extract_Weavemoss_8d9e5180-6120-45a5-a464-7b9a461a4343,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Elixir_Meditation_Greater_Laculite",(ITEMROOT)ALCH_Solution_Elixir_Meditation_Greater_8c7656f5-507a-4cee-8e15-320c968539f0,(ITEMROOT)ALCH_Extract_Laculite_bde5ba94-db83-4855-adcb-ba585416d37f,"ALCH_Affinity_Shadow");
+DB_KAP_Recipes("ALCH_Elixir_Meditation_Superior_NightOrchid",(ITEMROOT)ALCH_Solution_Elixir_Meditation_Superior_fb16d5a8-866f-4c17-9591-0df1372b49c9,(ITEMROOT)ALCH_Extract_NightOrchid_4416dcc3-c469-4e59-90db-ba9a3ac05846,"ALCH_Affinity_Shadow");
+DB_KAP_Recipes("ALCH_Elixir_Meditation_Supreme_BeholderEye",(ITEMROOT)ALCH_Solution_Elixir_Meditation_Supreme_4f17f210-9cde-4dad-80b5-fc4f9ddb1e1f,(ITEMROOT)ALCH_Extract_BeholderEye_a9ef5d89-a2e0-49b4-b9ab-8a3b75e85a45,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Elixir_SeeInvisible_NothicEye",(ITEMROOT)ALCH_Solution_Elixir_SeeInvisible_d106106a-3905-4acb-a24a-764940b61d9c,(ITEMROOT)ALCH_Extract_NothicEye_b2730900-61b4-4ffe-9fbe-c77f128d7f17,"ALCH_Affinity_Shadow");
+DB_KAP_Recipes("ALCH_Elixir_Tadpole_TongueOfMadness",(ITEMROOT)ALCH_Solution_Elixir_Tadpole_d44a454c-3a09-4b93-b982-79f7ee019703,(ITEMROOT)ALCH_Extract_TongueOfMadness_50b5475a-7f63-45d5-8158-6cdc8c6de31c,"ALCH_Affinity_Fey");
+DB_KAP_Recipes("ALCH_Elixir_Resistance_Fire_DragonEggMushroom",(ITEMROOT)CONS_Potion_Fire_Resistance_2608c096-a0f5-4172-ad04-c1b170e10d95,(ITEMROOT)ALCH_Extract_DragonEggMushroom_ea7e0cc0-fe51-43b0-ba8b-4d955ec58941,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Elixir_Resistance_Lightning_ConstructPart",(ITEMROOT)CONS_Potion_Lightning_Resistance_05257244-ab59-4eab-9745-d1fea7b8cd10,(ITEMROOT)ALCH_Extract_ConstructPart_ea8bc956-7834-4618-af70-0ea0c8f9ea37,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Elixir_Resistance_Necrotic_BlackOleander",(ITEMROOT)CONS_Potion_Necrotic_Resistance_f3c0aefb-a399-42c6-8d85-7fdceb6d18f5,(ITEMROOT)ALCH_Extract_BlackOleander_60dcc511-946e-4bc0-9127-ac7fefab7df2,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Elixir_Resistance_Poison_MudMephitWing",(ITEMROOT)CONS_Potion_Poison_Resistance_ae28b14c-0881-45fe-8237-9fcb1c951d3d,(ITEMROOT)ALCH_Extract_MudMephitWing_081204a7-83e3-4d8d-8609-cb70008d8736,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Elixir_Resistance_Psychic_IntellectDevourer",(ITEMROOT)CONS_Potion_Psychic_Resistance_164ac6f3-8f93-4d74-9f72-e7c49723dedb,(ITEMROOT)ALCH_Extract_IntellectDevourer_10db3d0b-b798-471f-81b6-58395adff3fa,"ALCH_Affinity_Air");
+//
+// GRENADES
+DB_KAP_Recipes("ALCH_Grenade_Light",(ITEMROOT)ALCH_Solution_Grenade_Light_c3236e6e-21e4-4e39-a5b4-fda105d8ce3f,(ITEMROOT)ALCH_Extract_Nightlight_83b2f9b8-9f69-41c3-a2b8-d3b34fea9f33,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Grenade_SporesConfusion",(ITEMROOT)ALCH_Solution_Grenade_SporesConfusion_cbc47f2b-b88a-4bd8-99cd-aacc2dc2ea44,(ITEMROOT)ALCH_Extract_MyconidSpore_Confusion_2ebad980-402d-4178-84dd-e41bb10155ce,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Grenade_SporesHaste",(ITEMROOT)ALCH_Solution_Grenade_SporesHaste_6008231b-9f5a-44f6-8050-14586b7626fd,(ITEMROOT)ALCH_Extract_MyconidSpore_Haste_824f8096-3bcd-4c2e-aff7-3aa07c396ae1,"ALCH_Affinity_Fey");
+DB_KAP_Recipes("ALCH_Grenade_SporesToxic",(ITEMROOT)ALCH_Solution_Grenade_SporesToxic_9320005f-18c6-4c2b-be7f-e168d3b15573,(ITEMROOT)ALCH_Extract_MyconidSpore_Poison_921111eb-7ae5-466f-b9ff-4ad66ffcc2d6,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Grenade_Sunflash_BehirScales",(ITEMROOT)GRN_Sunflash_Grenade_A_5e282d02-6a10-44cb-9737-9d52aab0701c,(ITEMROOT)ALCH_Extract_BehirScales_f3f194fc-7a13-4e01-89fd-cf1cafb17297,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Grenade_Web_SpiderGland",(ITEMROOT)ALCH_Solution_Grenade_Web_a4d98266-948b-4467-96cd-6a316f37ceda,(ITEMROOT)ALCH_Extract_SpiderGland_1d4227ab-0f38-48fe-bee0-e15b0118fc55,"ALCH_Affinity_Shadow");
+DB_KAP_Recipes("ALCH_Grenade_Fire_FireAmber",(ITEMROOT)GRN_FireFlask_A_0b1aa718-fe45-4e4c-8811-ced51c581075,(ITEMROOT)ALCH_Extract_FireAmber_290c1dbc-08e8-45dc-bfb0-f45dc5bb87e2,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_LOW_RegenerationPrevention_Grenade",(ITEMROOT)LOW_RegenerationPrevention_Grenade_df5f8cbf-42c5-4c0d-a0ec-ce5046474d8e,(ITEMROOT)ALCH_Extract_RegenerationPreventionGrenade_3b31efae-7361-4ccc-a9e3-bf8b82e9f36d,"ALCH_Affinity_Fey");
+//
+// OILS
+DB_KAP_Recipes("ALCH_Oil_AttackBuff_Daggeroot",(ITEMROOT)ALCH_Solution_Oil_AttackBuff_3383e241-4d1c-41ad-bc81-fc548fa9062d,(ITEMROOT)ALCH_Extract_Daggeroot_fc04bc03-be3e-4cdb-901a-f6d33a537967,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Oil_Bane_Shadowcursed",(ITEMROOT)ALCH_Solution_Oil_Bane_08789f74-3f63-4e7c-8288-b8d873542c15,(ITEMROOT)ALCH_Extract_Shadowcursed_a602b074-9743-4ef8-b9ed-e8ba9aa68949,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Oil_Combustion_MagmaMephitHeart",(ITEMROOT)ALCH_Solution_Oil_Combustion_bb750807-895b-468d-81e1-4378797d11ca,(ITEMROOT)ALCH_Extract_MagmaMephitHeart_e30f5da5-3195-4105-84de-4054f48e2ec2,"ALCH_Affinity_Fey");
+DB_KAP_Recipes("ALCH_Oil_DamageAttackBuff_ViridianCrystal",(ITEMROOT)ALCH_Solution_Oil_DamageAttackBuff_955d3880-3d10-4fb5-845b-96b6b52aef9a,(ITEMROOT)ALCH_Extract_ViridianCrystal_79eba88f-c3a8-481a-84e3-304354b6725c,"ALCH_Affinity_Shadow");
+DB_KAP_Recipes("ALCH_Oil_Frost",(ITEMROOT)ALCH_Solution_Oil_Frost_3e4ce3e8-fbae-4e78-9198-e4c15485a928,(ITEMROOT)ALCH_Extract_FrostSalamander_b00e1d1b-4421-4711-8de3-6ef15d0117b5,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Oil_Reduce_SylvanStone",(ITEMROOT)ALCH_Solution_Oil_Reduce_01985597-fceb-47d1-93ae-9cc9928ed9e7,(ITEMROOT)ALCH_Extract_SylvanStone_c335c7b7-7495-48ec-b1cb-b2218e1dc6f3,"ALCH_Affinity_Water");
+DB_KAP_Recipes("ALCH_Oil_RemoveResistanceFire_IceMephitEar",(ITEMROOT)ALCH_Soultion_Oil_RemoveResistanceFire_bd118cc0-eb90-412d-8229-6749f42df5c6,(ITEMROOT)ALCH_Extract_IceMephitEar_e922193d-916c-4f70-9ec6-15e29e6f5314,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Oil_Wizardsbane_GremishkaTail",(ITEMROOT)ALCH_Solution_Oil_Wizardsbane_e4f7cb7f-1cb3-411b-b078-f4ac25b750a8,(ITEMROOT)ALCH_Extract_GremishkaTail_75f47914-f32c-4845-876d-e152ddfc3014,"ALCH_Affinity_Water");
+//
+// POISONS
+DB_KAP_Recipes("ALCH_Poison_Simple_Bonecap",(ITEMROOT)CONS_Poison_Basic_28645376-e6e8-436a-8e9a-c62877fae07d,(ITEMROOT)ALCH_Extract_Bonecap_a9023a22-3d82-414a-aefc-e29fc5ca9f67,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Poison_Sleep_SwarmingToadstool",(ITEMROOT)CONS_Poison_Drow_f528a334-bdb3-4cf1-b74c-0e08942daeb1,(ITEMROOT)ALCH_Extract_SwarmingToadstool_8f392687-af6e-491d-891f-0c3e6627a7c5,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Poison_Paralyze_CarrionCrawler",(ITEMROOT)CONS_Poison_Crawler_Mucus_5865caed-4a5d-45b7-b365-1113334a8e7b,(ITEMROOT)ALCH_Extract_CarrionCrawler_6f7be25a-a0eb-4b98-81e6-56f35c25b2c1,"ALCH_Affinity_Shadow");
+DB_KAP_Recipes("ALCH_Poison_Blind_LolthsCandle",(ITEMROOT)CONS_Poison_Malice_d990fefe-e0f3-46ba-915e-35aebc6c6599,(ITEMROOT)ALCH_Extract_LolthsCandle_b342d1bf-2c36-40e4-bd29-1d5b7fb25c5a,"ALCH_Affinity_Fire");
+DB_KAP_Recipes("ALCH_Poison_UNI_Brewer",(ITEMROOT)UNI_Poison_Brewer_6db9ed3d-2d72-43ad-a2b8-02365728f29f,(ITEMROOT)ALCH_Extract_CorpseRose_a2f0c692-183f-42dd-8ee5-545f18820a7e,"ALCH_Affinity_Water");
+//
+// TOXINS
+DB_KAP_Recipes("ALCH_Toxin_Basic_BullywugTrumpet",(ITEMROOT)Solution_Toxin_Basic_8b5f7965-6cd1-42c1-8449-c6562a270ad9,(ITEMROOT)ALCH_Extract_BullywugTrumpet_c838bd3d-9943-44dc-8903-35d30ae6e385,"ALCH_Affinity_Air");
+DB_KAP_Recipes("ALCH_Toxin_Greater_SnakeFang",(ITEMROOT)CONS_Poison_Serpent_Venom_b0385b93-f525-4740-8126-471a76fa31a2,(ITEMROOT)ALCH_Extract_SnakeFang_09bf68c6-db55-4405-b6dd-ba2d9a38e1ca,"ALCH_Affinity_Shadow");
+DB_KAP_Recipes("ALCH_Toxin_Superior_WyvernStinger",(ITEMROOT)CONS_Poison_Wyvern_eca393b0-3f8e-4862-814b-9e236a0d4129,(ITEMROOT)ALCH_Extract_WyvernStinger_13aa0c56-538e-4a7c-a4d1-115e2704a274,"ALCH_Affinity_Earth");
+DB_KAP_Recipes("ALCH_Toxin_Supreme_PurpleWorm",(ITEMROOT)CONS_Poison_Purple_Worm_56e531e9-78e4-430b-bc98-611c1b1ccd08,(ITEMROOT)ALCH_Extract_PurpleWorm_73b78376-2690-4f14-bc68-e1f52a9004b1,"ALCH_Affinity_Shadow");
+
+
+// ------------------------------------------------------------
+// AFFINITIES FOR ORIGINAL RECIPES
+//
+//
+// AIR
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_AutumnCrocus_9a35caa4-86f4-4542-b46d-9550e815618d,(ITEMROOT)ALCH_Solution_Potion_FeatherFall_179cfdd4-40ef-4f5c-ba6e-8c13f20aadc9,"FEATHER_FALL",10,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_BehirScales_f3f194fc-7a13-4e01-89fd-cf1cafb17297,(ITEMROOT)GRN_Sunflash_Grenade_A_5e282d02-6a10-44cb-9737-9d52aab0701c,"",0,"GRENADE");
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_Belladonna_ec632c57-bc8a-4f01-940b-b985adc58336,(ITEMROOT)ALCH_Solution_Elixir_Concentration_45cdcf69-bfd2-4311-a883-3f3631ab3959,"ALCH_ELIXIR_CONCENTRATION",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_EagleFeather_8d1080b3-e1d8-4c71-9dfb-459c4600fef5,(ITEMROOT)ALCH_Solution_Potion_Flying_8b870692-8491-4f1b-9b5c-58cb0b47a62b,"ALCH_POTION_FLYING",10,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_HookHorrorClaw_c5e1a9c9-a691-494b-ae3d-d290198b3f6d,(ITEMROOT)ALCH_Solution_Elixir_Alertness_17066367-7b64-402e-951d-9dcc1407c278,"ALCH_ELIXIR_ALERTNESS",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_IceMephitEar_e922193d-916c-4f70-9ec6-15e29e6f5314,(ITEMROOT)ALCH_Soultion_Oil_RemoveResistanceFire_bd118cc0-eb90-412d-8229-6749f42df5c6,"ALCH_OIL_REMOVERESISTANCEFIRE",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_KiRinHair_4ee2434e-ca76-4e96-926b-49f7a20004c3,(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,"POTION_OF_HEALING_SUPREME",0,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_MyconidSpore_Haste_824f8096-3bcd-4c2e-aff7-3aa07c396ae1,(ITEMROOT)ALCH_Solution_Grenade_SporesHaste_6008231b-9f5a-44f6-8050-14586b7626fd,"",0,"GRENADE");
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_MyconidSpore_Poison_921111eb-7ae5-466f-b9ff-4ad66ffcc2d6,(ITEMROOT)ALCH_Solution_Grenade_SporesToxic_9320005f-18c6-4c2b-be7f-e168d3b15573,"",0,"GRENADE");
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_PegasusFeather_a85d14c0-7144-49bd-8664-b24ba4ef0fff,(ITEMROOT)CONS_Potion_Heroism_A_bb27cc17-5af9-4d53-818b-3e620f3f59f2,"POTION_OF_HEROISM",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_TongueOfMadness_50b5475a-7f63-45d5-8158-6cdc8c6de31c,(ITEMROOT)ALCH_Solution_Elixir_Tadpole_d44a454c-3a09-4b93-b982-79f7ee019703,"ALCH_ELIXIR_TADPOLE",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Air",(ITEMROOT)ALCH_Extract_Wispweed_95356040-914c-4efa-8e5c-6555ce56db50,(ITEMROOT)ALCH_Solution_Potion_Jump_7406ffa4-930c-437f-b201-57b951e5165f,"ALCH_POTION_JUMP",10,"POTION"); // CHECKED
+//
+// EARTH
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_CarrionCrawler_6f7be25a-a0eb-4b98-81e6-56f35c25b2c1,(ITEMROOT)CONS_Poison_Crawler_Mucus_5865caed-4a5d-45b7-b365-1113334a8e7b,"POISON_CRAWLER_MUCUS",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_ChasmCreeper_8fc068d8-7a56-42a6-8a48-91f0b9fbf303,(ITEMROOT)ALCH_Solution_Elixir_Enlarge_0aacb1f9-116a-45ec-9b0c-cb436301d4b2,"ALCH_ELIXIR_ENLARGE",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_CloudGiantFinger_9047c28f-7eee-4268-94e0-9144a4864175,(ITEMROOT)CONS_Potion_Cloud_Giant_Strength_e6490cc8-7f81-4aac-95e8-a58ce5e88a31,"POTION_OF_STRENGTH_CLOUD_GIANT",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_ConstructPart_ea8bc956-7834-4618-af70-0ea0c8f9ea37,(ITEMROOT)CONS_Potion_Lightning_Resistance_05257244-ab59-4eab-9745-d1fea7b8cd10,"POTION_OF_RESISTANCE_LIGHTNING",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_CorpseRose_a2f0c692-183f-42dd-8ee5-545f18820a7e,(ITEMROOT)UNI_Poison_Brewer_6db9ed3d-2d72-43ad-a2b8-02365728f29f,"UNI_POISON_BREWER",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_HillGiantFinger_a1e2a4f8-7af0-4379-a2c2-f0ab5ee84b05,(ITEMROOT)CONS_Potion_Hill_Giant_Strength_c69fb092-2f4f-4688-82b6-7d92405626b1,"POTION_OF_STRENGTH_HILL_GIANT",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_Mugwort_b707f039-af1d-456d-a606-1604f1d776c1,(ITEMROOT)CONS_Potion_Antitoxin_f0c7d8bb-85e9-4937-96bb-49ba69d28631,"ANTITOXIN",0,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_RoguesMorsel_d85f7014-8063-4eaa-a904-f51cbf59cff6,(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,"POTION_OF_HEALING",0,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_ViridianCrystal_79eba88f-c3a8-481a-84e3-304354b6725c,(ITEMROOT)ALCH_Solution_Oil_DamageAttackBuff_955d3880-3d10-4fb5-845b-96b6b52aef9a,"ALCH_OIL_DAMAGEATTACKBUFF",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_WoodBark_19d0c788-596c-4893-ac4a-bd609ed69753,(ITEMROOT)ALCH_Soultion_Elixir_Barkskin_cc1a8802-675a-426b-a791-ec1d5a5b6328,"ALCH_ELIXIR_BARKSKIN",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_XornScales_36e2ac7a-5799-4949-8cc6-0d9ea1818dbe,(ITEMROOT)ALCH_Solution_Potion_Remedy_ae9a9360-7cbe-4f72-8bea-1dd5747c180d,"ALCH_POTION_REMEDY",0,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Earth",(ITEMROOT)ALCH_Extract_YellowMuskCreeper_fdf1889d-ae81-43a9-8848-74c6edea2b37,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"POTION_OF_HEALING_SUPERIOR",0,"POTION"); // CHECKED
+//
+// FEY
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_AcornTruffle_69e2d2d1-3617-4f8b-8c40-3eb0ad71f521,(ITEMROOT)CONS_Potion_AnimalSpeaking_A_447ee8a9-9319-4758-9dc7-2d8ba94e45b5,"POTION_OF_ANIMAL_SPEAKING",-1,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_BeholderEye_a9ef5d89-a2e0-49b4-b9ab-8a3b75e85a45,(ITEMROOT)ALCH_Solution_Elixir_Meditation_Supreme_4f17f210-9cde-4dad-80b5-fc4f9ddb1e1f,"ALCH_ELIXIR_MEDITATION_SUPREME",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_GremishkaTail_75f47914-f32c-4845-876d-e152ddfc3014,(ITEMROOT)ALCH_Solution_Oil_Wizardsbane_e4f7cb7f-1cb3-411b-b078-f4ac25b750a8,"ALCH_OIL_WIZARDSBANE",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_MyconidSpore_Confusion_2ebad980-402d-4178-84dd-e41bb10155ce,(ITEMROOT)ALCH_Solution_Grenade_SporesConfusion_cbc47f2b-b88a-4bd8-99cd-aacc2dc2ea44,"",0,"GRENADE");
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_Nightlight_83b2f9b8-9f69-41c3-a2b8-d3b34fea9f33,(ITEMROOT)ALCH_Solution_Grenade_Light_c3236e6e-21e4-4e39-a5b4-fda105d8ce3f,"",0,"GRENADE");
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_PlanetarFeather_36e1bfca-e983-458c-8eb7-597af32f7644,(ITEMROOT)ALCH_Solution_Potion_Rest_Greater_4d801c1a-691e-47c8-88e7-78367b4e2c8e,"ALCH_POTION_REST_SLEEP_GREATER",2,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_ScryingEye_8994ae94-f6a4-479f-9dbd-75b6913a3a0e,(ITEMROOT)ALCH_Solution_Elixir_Darkvision_0f2ccca6-3ce8-4271-aec0-820f6581c551,"ALCH_ELIXIR_DARKVISION",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_SwarmingToadstool_8f392687-af6e-491d-891f-0c3e6627a7c5,(ITEMROOT)CONS_Poison_Drow_f528a334-bdb3-4cf1-b74c-0e08942daeb1,"POISON_DROW",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_SylvanStone_c335c7b7-7495-48ec-b1cb-b2218e1dc6f3,(ITEMROOT)ALCH_Solution_Oil_Reduce_01985597-fceb-47d1-93ae-9cc9928ed9e7,"ALCH_OIL_REDUCE",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Fey",(ITEMROOT)ALCH_Extract_UnicornHorn_cecf2e17-8922-45b7-8841-f49415b9a688,(ITEMROOT)ALCH_Solution_Potion_Rest_Lesser_b0ff8d30-5825-49d4-8cd4-ebf3a3d0a024,"ALCH_POTION_REST_SLEEP_LESSER",2,"POTION"); // CHECKED
+//
+// FIRE
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_RegenerationPreventionGrenade_3b31efae-7361-4ccc-a9e3-bf8b82e9f36d,(ITEMROOT)LOW_RegenerationPrevention_Grenade_df5f8cbf-42c5-4c0d-a0ec-ce5046474d8e,"",0,"GRENADE");
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_Balsam_a31d379e-b7fa-4d2b-bf16-80347e9f4a23,(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,"POTION_OF_HEALING_GREATER",0,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_Daggeroot_fc04bc03-be3e-4cdb-901a-f6d33a537967,(ITEMROOT)ALCH_Solution_Oil_AttackBuff_3383e241-4d1c-41ad-bc81-fc548fa9062d,"ALCH_OIL_ATTACKBUFF",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_DragonEggMushroom_ea7e0cc0-fe51-43b0-ba8b-4d955ec58941,(ITEMROOT)CONS_Potion_Fire_Resistance_2608c096-a0f5-4172-ad04-c1b170e10d95,"POTION_OF_RESISTANCE_FIRE",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_FireAmber_290c1dbc-08e8-45dc-bfb0-f45dc5bb87e2,(ITEMROOT)GRN_FireFlask_A_0b1aa718-fe45-4e4c-8811-ced51c581075,"",0,"GRENADE");
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_HyenaEar_eb9ac491-ef6b-4163-9819-b91d11a7d6f2,(ITEMROOT)CONS_Potion_Speed_ad9f3f24-d755-48b6-aa7b-c34da068209f,"POTION_OF_SPEED",3,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_ImpPatagium_3bb0fa56-00e5-4a22-b6d5-641d7fd811d3,(ITEMROOT)CONS_Potion_Invisible_A_809d5026-4896-4b3a-986e-95da58da77e2,"POTION_OF_INVISIBILITY",10,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_MagmaMephitHeart_e30f5da5-3195-4105-84de-4054f48e2ec2,(ITEMROOT)ALCH_Solution_Oil_Combustion_bb750807-895b-468d-81e1-4378797d11ca,"ALCH_OIL_COMBUSTION",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_WorgFang_314a234e-549d-41c0-992a-5a3765215eec,(ITEMROOT)ALCH_Solution_Elixir_Bloodlust_45a775f8-2cf9-440d-b9eb-4ee5f17efca8,"ALCH_ELIXIR_BLOODLUST",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Fire",(ITEMROOT)ALCH_Extract_WyvernStinger_13aa0c56-538e-4a7c-a4d1-115e2704a274,(ITEMROOT)CONS_Poison_Wyvern_eca393b0-3f8e-4862-814b-9e236a0d4129,"TOXIN_WYVERN",0,"DIPPED"); // CHECKED 
+//
+// SHADOW
+DB_KAP_Affinities("ALCH_Affinity_Shadow",(ITEMROOT)ALCH_Extract_BlackOleander_60dcc511-946e-4bc0-9127-ac7fefab7df2,(ITEMROOT)CONS_Potion_Necrotic_Resistance_f3c0aefb-a399-42c6-8d85-7fdceb6d18f5,"POTION_OF_RESISTANCE_NECROTIC",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Shadow",(ITEMROOT)ALCH_Extract_Bonecap_a9023a22-3d82-414a-aefc-e29fc5ca9f67,(ITEMROOT)CONS_Poison_Basic_28645376-e6e8-436a-8e9a-c62877fae07d,"POISON_BASIC",0,"DIPPED");  // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Shadow",(ITEMROOT)ALCH_Extract_DivineBoneShard_A_b651dd4e-121f-4cb1-9bb0-975e07ab7df1,(ITEMROOT)CONS_Potion_Invulnerability_7eb0b7b6-97fa-4ff5-a7bb-570ca11a3c64,"POTION_OF_INVULNERABILITY",10,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Shadow",(ITEMROOT)ALCH_Extract_LolthsCandle_b342d1bf-2c36-40e4-bd29-1d5b7fb25c5a,(ITEMROOT)CONS_Poison_Malice_d990fefe-e0f3-46ba-915e-35aebc6c6599,"POISON_MALICE",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Shadow",(ITEMROOT)ALCH_Extract_Shadowcursed_a602b074-9743-4ef8-b9ed-e8ba9aa68949,(ITEMROOT)ALCH_Solution_Oil_Bane_08789f74-3f63-4e7c-8288-b8d873542c15,"ALCH_OIL_BANE",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Shadow",(ITEMROOT)ALCH_Extract_ShadowrootSac_a6015724-3ee4-4398-b157-a33b1024a7d4,(ITEMROOT)ALCH_Solution_Elixir_Criticals_44cd95a7-4791-4ace-bea0-a5ca4421171b,"ALCH_ELIXIR_CRITICALS",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Shadow",(ITEMROOT)ALCH_Extract_Weavemoss_8d9e5180-6120-45a5-a464-7b9a461a4343,(ITEMROOT)ALCH_Solution_Elixir_Meditation_6f328fc5-6f54-4aad-959d-0825290a2763,"ALCH_ELIXIR_MEDITATION",-1,"ELIXIR"); // CHECKED  
+//
+// WHATER
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_BullywugTrumpet_c838bd3d-9943-44dc-8903-35d30ae6e385,(ITEMROOT)Solution_Toxin_Basic_8b5f7965-6cd1-42c1-8449-c6562a270ad9,"TOXIN_BASIC",0,"DIPPED");  // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_FrostSalamander_b00e1d1b-4421-4711-8de3-6ef15d0117b5,(ITEMROOT)ALCH_Solution_Oil_Frost_3e4ce3e8-fbae-4e78-9198-e4c15485a928,"ALCH_OIL_FROST",0,"DIPPED"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_GauthEye_5f98a738-6249-418f-b50a-e478477962a0,(ITEMROOT)ALCH_Solution_Elixir_ArcaneAcuity_7d1699d9-c3fa-4761-9718-28230f78420b,"ALCH_ELIXIR_ARCANE_ACUITY",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_IntellectDevourer_10db3d0b-b798-471f-81b6-58395adff3fa,(ITEMROOT)CONS_Potion_Psychic_Resistance_164ac6f3-8f93-4d74-9f72-e7c49723dedb,"POTION_OF_RESISTANCE_PSYCHIC",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_Laculite_bde5ba94-db83-4855-adcb-ba585416d37f,(ITEMROOT)ALCH_Solution_Elixir_Meditation_Greater_8c7656f5-507a-4cee-8e15-320c968539f0,"ALCH_ELIXIR_MEDITATION_GREATER",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_Mergrass_d08620da-0fa0-413a-88e7-631f901c568e,(ITEMROOT)ALCH_Solution_Potion_DetectThoughts_91da7fe8-a5f7-4132-9096-e8da4916a42e,"DETECT_THOUGHTS",-1,"POTION"); // CHECKED
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_MudMephitWing_081204a7-83e3-4d8d-8609-cb70008d8736,(ITEMROOT)CONS_Potion_Poison_Resistance_ae28b14c-0881-45fe-8237-9fcb1c951d3d,"POTION_OF_RESISTANCE_POISON",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_NightOrchid_4416dcc3-c469-4e59-90db-ba9a3ac05846,(ITEMROOT)ALCH_Solution_Elixir_Meditation_Superior_fb16d5a8-866f-4c17-9591-0df1372b49c9,"ALCH_ELIXIR_MEDITATION_SUPERIOR",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_NothicEye_b2730900-61b4-4ffe-9fbe-c77f128d7f17,(ITEMROOT)ALCH_Solution_Elixir_SeeInvisible_d106106a-3905-4acb-a24a-764940b61d9c,"ALCH_ELIXIR_SEE_INVISIBILITY",-1,"ELIXIR"); // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_OchreJellySlime_d0886ef5-a9a3-4e2a-af6c-753f757dce6a,(ITEMROOT)ALCH_Solution_Elixir_Freedom_b8a2f9e4-3b5e-4418-af05-5ca3cd40dd71,"ALCH_ELIXIR_FREEDOM",-1,"ELIXIR"); // CHECKED  
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_PurpleWorm_73b78376-2690-4f14-bc68-e1f52a9004b1,(ITEMROOT)CONS_Poison_Purple_Worm_56e531e9-78e4-430b-bc98-611c1b1ccd08,"TOXIN_PURPLEWORM",0,"DIPPED");  // CHECKED 
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_SpiderGland_1d4227ab-0f38-48fe-bee0-e15b0118fc55,(ITEMROOT)ALCH_Solution_Grenade_Web_a4d98266-948b-4467-96cd-6a316f37ceda,"",0,"GRENADE");
+DB_KAP_Affinities("ALCH_Affinity_Water",(ITEMROOT)ALCH_Extract_SnakeFang_09bf68c6-db55-4405-b6dd-ba2d9a38e1ca,(ITEMROOT)CONS_Poison_Serpent_Venom_b0385b93-f525-4740-8126-471a76fa31a2,"TOXIN_SERPENTVENOM",0,"DIPPED");  // CHECKED 
+
+
+
+// ------------------------------------------------------------
+// Status DIPPED KAP - ORIGINAL
+DB_KAP_Dipped_KAP_Original("KAP_ALCH_OIL_REMOVERESISTANCEFIRE_DIPPED","ALCH_OIL_REMOVERESISTANCEFIRE_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_POISON_CRAWLER_MUCUS_DIPPED","POISON_CRAWLER_MUCUS_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_UNI_POISON_BREWER_DIPPED","UNI_POISON_BREWER_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_ALCH_OIL_DAMAGEATTACKBUFF_DIPPED","ALCH_OIL_DAMAGEATTACKBUFF_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_ALCH_OIL_WIZARDSBANE_DIPPED","ALCH_OIL_WIZARDSBANE_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_POISON_DROW_DIPPED","POISON_DROW_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_ALCH_OIL_REDUCE_DIPPED","ALCH_OIL_REDUCE_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_ALCH_OIL_ATTACKBUFF_DIPPED","ALCH_OIL_ATTACKBUFF_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_ALCH_OIL_COMBUSTION_DIPPED","ALCH_OIL_COMBUSTION_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_TOXIN_WYVERN_DIPPED","TOXIN_WYVERN_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_POISON_BASIC_DIPPED","POISON_SIMPLE_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_POISON_MALICE_DIPPED","POISON_MALICE_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_ALCH_OIL_BANE_DIPPED","ALCH_OIL_BANE_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_TOXIN_BASIC_DIPPED","ALCH_TOXIN_BASIC_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_ALCH_OIL_FROST_DIPPED","ALCH_OIL_FROST_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_TOXIN_PURPLEWORM_DIPPED","TOXIN_PURPLEWORM_DIPPED");
+DB_KAP_Dipped_KAP_Original("KAP_TOXIN_SERPENTVENOM_DIPPED","TOXIN_SERPENTVENOM_DIPPED");
+
+KBSECTION
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "GLO_KelaAlchemyProject"

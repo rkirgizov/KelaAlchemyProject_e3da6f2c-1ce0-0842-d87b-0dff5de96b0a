@@ -1,0 +1,869 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e2a8d59b-0e34-4a7c-bf5f-db7a2bb34cde">
+  <stat_objects>
+    <stat_object color="#FF6495ED" is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2472a061-ce6c-4143-90db-f6bbe76d19d0" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="he8557e72g6a1dg7f6fg739fg8eaf719e6c1e" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="43cda004-98c6-415a-8d3d-23fa00638ce3" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_CONCENTRATION" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="427f7840-5720-4588-b1e6-3738a435c7e4" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d8890ba8-bd4e-4456-a6bc-e02ea6882ef3" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_ALERTNESS" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="486576f5-b905-4e81-a589-1c2e0e1af775" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6765eb9d-6d4e-4929-8335-32722ab4f076" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_HEROISM" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="aa98c39d-6e27-45d2-aa86-1809c368aa82" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(Character()):ApplyStatus(POTION_OF_HEROISM_TEMPHP,100,-1)" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="cc652d92-3488-4536-aeb4-4ea38b25e8c9" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_TADPOLE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="bfb22a1b-5203-4da1-ade7-665a24f8fa51" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="0d1e92c2-e168-4ba5-8e10-4b46ee371478" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_ENLARGE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e4911d91-772e-4422-b2c7-b73d4acb7793" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3ad4ef6c-2eb3-4d87-9a4a-642bea10d4a0" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_STRENGTH_CLOUD_GIANT" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="9f57d793-a628-4985-931e-e25af7fac8a0" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="27dfb730-01dc-44aa-ae1e-373d80123d74" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_RESISTANCE_LIGHTNING" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e819145d-c583-44d8-8021-c08a7de0ec86" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b9083a7b-36e1-4815-9370-bc15715262cc" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_STRENGTH_HILL_GIANT" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="68504766-7da4-4f75-91ff-25aa61eac83e" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="693bb283-df57-4d89-8ed4-acbcfcd2e6ab" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_BARKSKIN" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="871f0027-be22-496d-b9e0-58043bc24cc2" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_ONLY:IF(Character() and not HasStatus('BARKSKIN')):ApplyStatus(AI_HELPER_MAGEARMOR,100,4)" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c4083caa-e91e-4e28-9890-04f2050c390c" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_MEDITATION_SUPREME" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3136eb45-4c38-4930-af1e-142d11719322" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="435f35bf-71d4-4091-ab02-9842a91348a3" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_DARKVISION" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="35f40d9d-7628-476c-b330-c3d5de66996c" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6624ecaa-317c-430e-990b-171ba2a98be5" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_RESISTANCE_FIRE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="89f2019e-a0f4-42ee-8173-41093b5317ac" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="91cff1a3-4e0c-4ce1-89e8-abab0004beae" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_BLOODLUST" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="b1bde3c2-7057-4a0b-af89-e8753a0de29d" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b617c096-ed36-4ae2-9a60-3bd11775713a" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_RESISTANCE_NECROTIC" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="12d247b5-89fc-4ee9-9fb2-f4dbb8d623f6" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f247e9fc-4603-4194-bfea-a301f4b363b5" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_CRITICALS" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="72f68645-d973-4ea4-b79b-cc167e22a662" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="70fa6d3a-9bd1-4681-ac45-61669a4c759f" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_MEDITATION" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d57e0623-387b-4103-9968-9cb92ec1cf72" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="25275d72-a288-4e45-aef3-776c5fe817ac" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_ARCANE_ACUITY" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="9573add5-3ab2-42b7-a2a3-91cb23d764f5" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(Character()):SetStatusDuration(MAG_GISH_ARCANE_ACUITY,3,ForceSet); IF(Character() and not HasStatus('MAG_GISH_ARCANE_ACUITY')): ApplyStatus(MAG_GISH_ARCANE_ACUITY,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="52e38684-80d4-4740-a30e-36d62d5d721b" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_RESISTANCE_PSYCHIC" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d94b8516-bce6-4aa4-9c44-e5cc294efdf9" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2f738004-4ab7-4a77-9012-1773c1a776f7" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_MEDITATION_GREATER" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="73accd3d-5d8f-482c-8048-d14d94f101d1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="716f9f5d-6427-4362-8f03-31ef802a7658" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_RESISTANCE_POISON" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="78004431-7fdc-49a6-a480-e7a2bea3bdba" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="31efc52c-5042-4534-8cc9-e988cac264a8" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_MEDITATION_SUPERIOR" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ce78ae3f-876d-4b7e-bc77-0fa138b6fc87" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7fc38095-f3b1-473b-bba6-d0c330b9f1e4" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_SEE_INVISIBILITY" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8c6656eb-4273-4ca3-ab0c-f2c371075d08" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_ONLY:IF(Character() and not HasStatus('ALCH_ELIXIR_SEE_INVISIBILITY')):ApplyStatus(AI_HELPER_SEEINVISIBILITY,100,3)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2c4e8c13-20e6-4f58-8537-e142001053ab" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_ELIXIR_FREEDOM" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="a9243807-7d78-422a-a8ab-15cfccf2c661" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_ELIXIR" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object color="#FF00FF00" is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="06cebe26-1e4a-46e9-aa3b-98362968c7a8" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h39f7a6cbg6a22g25b9g9063gf083598e5c32" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ae14b337-befb-49aa-b144-18b3d27aa9a3" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_REMOVERESISTANCEFIRE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="0272b3a1-fca2-48fa-8d74-ae3a78fdb582" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_ALCH_OIL_REMOVERESISTANCEFIRE_DIPPED,100,10);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_ALCH_OIL_REMOVERESISTANCEFIRE_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON,100,1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ebe00050-5139-41f7-b7e3-d5bca022d382" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_REMOVERESISTANCEFIRE_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="986dc457-a5f7-467c-b3e3-afe95be1658f" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c45eaf23-38c7-4b8b-af69-63a49d434cee" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_DAMAGEATTACKBUFF" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="01134ed6-fc89-47aa-ada5-b37558801907" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_ALCH_OIL_DAMAGEATTACKBUFF_DIPPED,100,10);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_ALCH_OIL_DAMAGEATTACKBUFF_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_OIL_DAMAGEATTACKBUFF,100,4)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3b388647-833d-453a-ae0a-80aca09c729e" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_DAMAGEATTACKBUFF_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="b443ba33-bab8-4dbc-aa04-5882e8a32c28" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c1e7c730-6205-46fd-85af-36babe3be178" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_WIZARDSBANE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4a6c1530-6b3a-42ec-9cf2-b19bcc80502a" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_ALCH_OIL_WIZARDSBANE_DIPPED,100,10);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_ALCH_OIL_WIZARDSBANE_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_OIL_WIZARDSBANE,100,4)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ded00d8b-1591-48c1-98d6-e359fb0f1581" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_WIZARDSBANE_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="af8f3249-b111-442f-a87a-ce2b67c5a5d7" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c438a5e5-8397-48cb-b18c-10fb9bbf31b9" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_REDUCE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="86dd7b4b-e628-4bde-b7f9-46a9109dcaac" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_ALCH_OIL_REDUCE_DIPPED,100,10);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_ALCH_OIL_REDUCE_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_OIL_REDUCE,100,1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="55dab8e4-fb52-4e5d-ac8d-d1b496bae749" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_REDUCE_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4c76cb33-0d63-415c-bb8d-287749b52e00" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c79567ef-5b71-458f-b538-92697f804335" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_ATTACKBUFF" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="7834e707-e361-4c4c-a1e9-cc5375f589bc" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_ALCH_OIL_ATTACKBUFF_DIPPED,100,10);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_ALCH_OIL_ATTACKBUFF_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON,100,1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3b578fad-5453-4588-b170-21fcb4036ca1" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_ATTACKBUFF_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="fe305919-0a09-4f43-a601-9fed353938a1" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c7184faa-89b6-4948-8cb0-5867d0536eff" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_COMBUSTION" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="c5432320-8d68-4ca1-b22d-d9d55bae6a94" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_ALCH_OIL_COMBUSTION_DIPPED,100,10);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_ALCH_OIL_COMBUSTION_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON,100,1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="cab8eff2-42a7-4a7c-889e-197627afe4f2" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_COMBUSTION_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="492e73c7-9cc3-47c3-9a1f-6c906777c885" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ea38d543-9d8a-4cda-8640-fd8b2e95d76a" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_BANE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="48e7bda7-11c8-4b9d-89d0-2a6b97088d8a" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_ALCH_OIL_BANE_DIPPED,100,10);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_ALCH_OIL_BANE_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON,100,1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ea18d320-593e-4b19-9f32-810096d189ea" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_BANE_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="6a604c11-b542-4ea3-b7ba-28f53cb4e6d5" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e15efaf3-8517-460d-9c39-7dfedc1d34c2" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_FROST" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ec1aac1d-a1fb-49e4-aae2-2d399557bae3" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_ALCH_OIL_FROST_DIPPED,100,10);IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_ALCH_OIL_FROST_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON,100,1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9f5d763a-fe65-4a6e-b804-e2260458fce1" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_OIL_FROST_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="a3ee43c7-60f7-4981-bfc2-ee00fe353b35" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="901b4a0d-1a60-40a3-8c0a-d3f1a9ae1d32" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POISON_CRAWLER_MUCUS" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="9111cd3f-5b4b-44d6-bed8-04af4bd5c0f5" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_POISON_CRAWLER_MUCUS_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_POISON_CRAWLER_MUCUS_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_POISON_CRAWLER_MUCUS,100,4)" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_CONS_Poison_Essence_Of_Ether" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="312aa5fc-72e1-4b9a-bb6a-bd25ff59d4db" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POISON_CRAWLER_MUCUS_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="2ce33109-2e45-450d-8e32-5584ba8cb0b9" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a16f8f08-2f29-4eef-84ae-241389621a8e" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_UNI_POISON_BREWER" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="c3a6551e-625b-4159-bc60-ef04632eba53" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_UNI_POISON_BREWER_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_UNI_POISON_BREWER_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON,100,1)" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_UNI_Poison_Brewer" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9beea1c2-d6ee-4f6d-b41e-29b06680fea4" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_UNI_POISON_BREWER_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8d44ca10-3c09-43ae-a621-ef8d1870d77a" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e7b9e6b4-0bdf-49f8-8a54-7879da96903e" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POISON_DROW" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="76edde2f-152a-4da4-a3f8-132e36ed8924" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_POISON_DROW_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_POISON_DROW_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_POISON_DROW,100,4)" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_CONS_Poison_Drow" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c8bda8ea-da93-4d3f-85cf-168d3bbcb0ec" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POISON_DROW_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="c2273465-63c2-4632-b477-80bea1053154" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b49128e2-b9ad-461b-a6f4-e225b6fe9542" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POISON_BASIC" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f386d92c-4cb7-48c5-adc0-58c1ce6caef9" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_POISON_BASIC_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_POISON_BASIC_DIPPED,100,10);AI_ONLY:IF(not HasStatus('DIPPED_FIRE',GetActiveWeapon())):ApplyStatus(SELF,AI_HELPER_DIPWEAPON_POISON_SIMPLE,100,4)" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="86e4200c-fca7-4c80-b98a-453a8d12fb75" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POISON_BASIC_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="b8513ef4-a1a0-4bac-93b4-b7a4a8d1d667" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3fd9c894-5fb6-4982-9ffc-fc9ba2f25a0f" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POISON_MALICE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="70848acd-22c5-41f0-b3e5-c0df786c0f62" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_POISON_MALICE_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_POISON_MALICE_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_POISON_MALICE,100,4)" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_CONS_Poison_Malice" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="09dd57fb-e694-4898-b16e-a0a940ff835f" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POISON_MALICE_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="1fa41e57-3878-4e66-b3cd-23dfc791b657" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8f1c52d6-5e63-4da4-8021-0b60d42c5ce6" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_TOXIN_WYVERN" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="30c3cfbf-efd1-49b5-9362-0eb944f45808" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_TOXIN_WYVERN_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_TOXIN_WYVERN_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_TOXIN_WYVERN,100,4)" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="242e6be1-33e2-4d97-b206-1eae93034922" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_TOXIN_WYVERN_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8bc70f2c-bad3-46ce-a563-3d934dff3e3c" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="fac77ca7-ab23-4bf8-a767-1bc89bc713e8" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c0502d04-fa17-416c-bd28-252abb32cc7e" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_TOXIN_BASIC" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4a8279e9-79bf-4259-9d12-d9e964b8e17d" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_TOXIN_BASIC_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_TOXIN_BASIC_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_TOXIN_BASIC,100,4)" />
+        <field name="SoundStart" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5dc47138-1cc2-4eae-a78e-11868c8b61ce" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_TOXIN_BASIC_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="0f038eaa-20d1-41e6-904e-76f018f09d77" />
+        <field name="StatusEffectOverride" type="StringTableFieldDefinition" value="86b94e03-b0d5-46aa-9045-88cdc5aeff47" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c670c500-d970-49dd-90f3-4e89805fcc82" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_TOXIN_PURPLEWORM" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="79fa78cc-378e-4132-8fa8-2b885746dd0d" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_TOXIN_PURPLEWORM_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_TOXIN_PURPLEWORM_DIPPED,100,10);AI_ONLY:IF(not HasStatus('DIPPED_FIRE',GetActiveWeapon())):ApplyStatus(SELF,AI_HELPER_DIPWEAPON_TOXIN_PURPLE_WORM,100,4)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2ac8d7fd-fdef-4bdd-b4e8-cb914d231f6a" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_TOXIN_PURPLEWORM_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="45de896b-f76e-4f20-a732-890e6b1929c8" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ef0ac7e5-c9d0-48f2-97d1-eb458fd7635f" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_TOXIN_SERPENTVENOM" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ba8600ca-22db-4ddc-9e66-82962cda04d4" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="AI_IGNORE:IF(WieldingWeapon('Dippable') and not WieldingWeapon('Torch')):ApplyEquipmentStatus(MainHand,KAP_TOXIN_SERPENTVENOM_DIPPED,100,10);AI_IGNORE:IF(WieldingWeapon('Dippable',true) and not WieldingWeapon('Torch',true)):ApplyEquipmentStatus(OffHand,KAP_TOXIN_SERPENTVENOM_DIPPED,100,10);AI_ONLY:ApplyStatus(SELF,AI_HELPER_DIPWEAPON_TOXIN_SERPENTVENOM,100,4)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="354c208e-d390-4979-a0f3-fd1a1cef825d" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_TOXIN_SERPENTVENOM_DIPPED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="59a6f2e9-7c35-489b-a72f-09ddc0893e96" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_ALCH_DIPPED" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="WeaponDamage(1d4, Poison)" />
+      </fields>
+    </stat_object>
+    <stat_object color="#FFEEE8AA" is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fb6c9241-211a-4d75-b42e-4ad7fb74c5ac" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_POTION" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hf200a11cg7d5dg0295g8cebg1593034d6a94" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9342fce7-6885-4712-b62e-48841375b2b4" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_FEATHER_FALL" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="75424e09-ae1f-4ba3-87aa-b2678be6ea50" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9c9c4db7-c6cc-4767-b1e1-7e240d1fe9b1" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_POTION_FLYING" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="c7cd84f5-9f4e-43c9-af05-d1c3e328ecd8" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5ee7f416-6e26-46b0-bc00-ec0e23d96e9d" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_HEALING_SUPREME" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3d37326e-ba76-452b-b94a-90c03e291a6f" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_CONS_Potion_Healing_A_Supreme" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f40432d5-5d97-414f-9dba-7de4c03a6484" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_POTION_JUMP" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="b800bab3-f68a-4fb5-a876-9c27330bb153" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3659c351-8141-4b13-a00a-03413ac947a4" />
+        <field name="Name" type="NameTableFieldDefinition" value="ANTITOXIN" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hd8ee345egdda4g6db3g04b6g7cb7e1f82f59" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hec1247d0g7b1eg8f38gbf1cgff1a8427f474" version="2" />
+        <field name="Icon" type="StringTableFieldDefinition" value="statIcons_Antitoxin" />
+        <field name="StackId" type="StringTableFieldDefinition" value="ANTITOXIN" />
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="760dc13b-5d19-4a38-8239-ea86bba4ac89" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="RemoveStatus(POISON_SIMPLE_CONDITION);RemoveStatus(ALCH_TOXIN_BASIC_CONDITION);RemoveStatus(ALCH_TOXIN_SERPENTVENOM_CONDITION);RemoveStatus(POISON_DROW_CONDITION)" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="96af8c87-38a1-4282-8fb0-f605b61114e0" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ANTITOXIN" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ea46d120-25e0-4e03-ad18-70e296fe7573" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="RemoveStatus(POISON_SIMPLE_CONDITION);RemoveStatus(ALCH_TOXIN_BASIC_CONDITION);RemoveStatus(ALCH_TOXIN_SERPENTVENOM_CONDITION);RemoveStatus(POISON_DROW_CONDITION)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9010115f-55d7-46de-accc-9fb2bd7a9ec5" />
+        <field name="Name" type="NameTableFieldDefinition" value="DEN_APPRENTICE_ANTIDOTE" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h78b66ad0g0b62g7d40g0073g23a1c85269d2" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h8e900cc3g581bg33ecg2147gf03c924fcad8" version="1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="DEN_APPRENTICE_ANTIDOTE" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_UNI_Apprentice_Antidote" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="Tag(POISONED_ADV); Resistance(Poison, Resistant)" />
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="RemoveStatus(SG_Poisoned)" />
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="19eb8d84-a77b-4670-a7d8-29abcaadbfe3" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b0535810-4a44-4f38-963f-ef3628061acd" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_HEALING" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8a53981c-4720-4d92-af32-84e29e398a50" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e3a80b0f-19ba-4230-8815-274972ffee64" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_POTION_REMEDY" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="711704d3-ed3b-4d56-b92a-eb3455013c2f" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2297d070-cc27-4a45-bc65-5e9a7e9ab6ff" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_HEALING_SUPERIOR" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="438ed12e-0870-4112-9893-99e3069b9f29" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_CONS_Potion_Healing_A_Superior" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="15203240-7ebf-4934-a40f-5a1e528b2db3" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_ANIMAL_SPEAKING" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="798efc8f-bf19-4c66-80e9-00cc27f10cd8" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1e831839-9a02-4e1f-92f6-daec113f719c" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_POTION_REST_SLEEP_GREATER" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfa9771b3g2798g24b3gae92gd75ae6e4c15a" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hc62a5402g307cg659bgfa3ag5343965ef72f" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_CONS_Potion_Rare_A_Bronze" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a1747614-0c5d-4a8f-8fbd-e85a0fd77433" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_POTION_REST_SLEEP_LESSER" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hce418ea4g0626g6da2g25bfg37fa50fcc347" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h80fd73a8g98d5gbb2bgd550gc614ce2d23d6" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Item_CONS_Potion_Rare_A" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5cc84071-5761-47c1-a91f-1ecd7c5b8346" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_HEALING_GREATER" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="1662c9af-5e3f-47c3-9987-33428e4c7f3d" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b2cf23c3-3874-4066-81e6-bc0b6d8bf208" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_SPEED" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="0f2fbc6d-591d-4403-afdc-6e349926839b" />
+        <field name="SoundLoop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="SoundStop" type="StringTableFieldDefinition" value="%%%EMPTY" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fae3fa31-fa7a-4fda-a00f-61f633748cf0" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_INVISIBILITY" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h44f4538fg054bg5e93gac0ag9c5634e815c6" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hc35f45eagc48cg431fgac81g31351c3d544d" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Illusion_Invisibility" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3a0d2c7d-1223-4799-8d37-2a5ddf80f23e" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_POTION_OF_INVULNERABILITY" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="e8a8208c-54d7-4479-bef3-0f08bdad7395" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7596431b-57af-4592-bd6a-15386e6f6d46" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DETECT_THOUGHTS" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="a0a57e67-d458-40f3-84ae-991d62362c82" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object color="#FF008080" is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="he50147d8gbb4cg9d5fgedddgeb924f811d14" version="1" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="ForceOverhead" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c0351ad5-ec49-48bb-bf11-eb911536424b" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RESULT" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h169f1e32gdd0fgb3b7gdde2ged40b2999785" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h90de8460g6ea3g92f9g7b0cgdc1357f80d50" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RESULT" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="663280d3-1445-45d6-b433-795215ec0bb8" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ALCHEMY" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h17be5806g6cd8g66d5g0b0fgd00fec46c8e1" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hb900cff6g86d2g300fg9213g6842eabbd9d6" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ALCHEMY" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="16866006-159c-4cbf-905d-78e0f1c576d2" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ADDITIONAL_STATUS" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="663280d3-1445-45d6-b433-795215ec0bb8" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h69095a74gf6a1g5d08gef89g6d406ac6abee" version="1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ADDITIONAL_STATUS" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="37d85356-1c6e-4172-90db-18e5ee780c51" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_TRANSMUTATION" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfd8666fbga0e9g3e6cg3ce9gd22d32191b35" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf001028bg9122g0514gb2bbg754a1996eb32" version="2" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_RECIPE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7a37f3f1-c701-44f8-8d37-90cc12da85ae" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_ADDITIONAL_STATUS" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0a6418abg83acgc32eg5c13g6e817892684b" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_ADDITIONAL_STATUS" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="37d85356-1c6e-4172-90db-18e5ee780c51" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="57078e58-2a31-40d3-907f-e39bd6b9a602" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT_1" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h42cdfdc6g25f0g29a5g2345gbf1efdd5cf92" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h23ae302ag6f4agd51ag22a6ge61707cfecc1" version="1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT_1" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4f1534dc-56e4-46e1-90eb-019ddad14ab0" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT_2" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfddabeddg8912ge800gaf9cgc8e158d7e32b" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h7d403bf3g7324gccecgb15cgf14dae2a9e77" version="1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT_2" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="926c7424-daf2-42bd-b3c9-2d0313388ab9" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_TRANSMUTATION_KNOWN" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2d449a9egfffag26d5g9592gcb09c390a135" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h2abb0291ge602g0b96g6c18g3aa4a0c13e03" version="2" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_TRANSMUTATION_KNOWN" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="70f528bc-59b9-439b-a7b8-244fb5177bf0" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_MERGE_HEALING_KNOWN" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2c0fca8bgd751g5edegf3d8g0ba45f882892" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h85db12c0ge011g3c1bge3f7ga562b09b479c" version="1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_MERGE_HEALING_KNOWN" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ffd9f707-acbf-403a-abd9-499d12a4a471" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_RECIPE_HAS_BEEN_REVIEWED" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h05def27eg192fg0d57ga9b4ga3b35fa45353" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hc4e017fdg856dg7ec5g9f40gec46f9a58361" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_BookOfAncientSecrets" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_RECIPE_HAS_BEEN_REVIEWED" />
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

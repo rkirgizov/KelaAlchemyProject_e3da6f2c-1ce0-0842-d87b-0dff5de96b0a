@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="21465eb6-ebaf-4455-9f29-369759e000a9">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="81c8d36f-9893-4d20-8116-cd91d8a3f7a5" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Clear_Lab_Installation_1" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Installation" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="Transform" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="CONS_DRINK_Water_Bottle" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="Consume" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1a203028-09be-4c6c-878f-f832ffbbc307" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Clear_Lab_Installation_2" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Installation" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="Transform" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="CONS_DRINK_Water" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="Consume" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ce7bd03d-6080-4986-ba3b-25cb38d82a91" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Clear_Lab_Installation_3" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Installation" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="Transform" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="CONS_DRINK_Water_Bottle_Wicker" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="Consume" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="472b805c-9b22-422b-96cc-d5c38915bc35" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Clear_Lab_Flask_1" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="Transform" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="CONS_DRINK_Water_Bottle" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="Consume" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ef5a8172-3cef-40a5-8a8f-eeb2a98b4ef5" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Clear_Lab_Flask_2" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="Transform" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="CONS_DRINK_Water" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="Consume" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="845fc11a-35b6-4d3c-b0d3-add3288d4a27" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Clear_Lab_Flask_3" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="Transform" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="CONS_DRINK_Water_Bottle_Wicker" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="Consume" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="33096d5b-c813-47be-8bcb-a15b4114061c" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Laboratory_3" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Installation" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="Type 3" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 3" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 3" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 3" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 4" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 4" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 4" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 4" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="408d2060-58f6-45da-83f5-d68a78a82ac3" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Distilate_1" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Installation" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="30c5c8d6-682c-4598-825f-0ccc713410d5" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_ALCH_Separate_2" />
+        <field name="Type 1" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 1" type="StringTableFieldDefinition" value="OBJ_Laboratory_Installation" />
+        <field name="Combine 1" type="EnumerationTableFieldDefinition" value="Base" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 1" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="Type 2" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 2" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 2" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 2" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+        <field name="ResultAmount 1" type="IntegerTableFieldDefinition" value="1" />
+        <field name="Result 1" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="PreviewStatsID" type="StringTableFieldDefinition" value="KAP_Alchemy_Refuse" />
+        <field name="Type 3" type="EnumerationTableFieldDefinition" value="Object" enumeration_type_name="IngredientType" version="1" />
+        <field name="Object 3" type="StringTableFieldDefinition" value="OBJ_Laboratory_Glass" />
+        <field name="Combine 3" type="EnumerationTableFieldDefinition" value="Additive" enumeration_type_name="IngredientCombineType" version="1" />
+        <field name="Transform 3" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="IngredientTransformType" version="1" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="4a20cc05-eed3-46b0-bd19-62b9954ffd5e">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameTableFieldDefinition" value="New_Stat_29" />
+        <field name="UUID" type="IdTableFieldDefinition" value="85b9e425-48b5-4711-97b0-51aa11924615" />
+        <field name="RuleName" type="StringTableFieldDefinition" value="KAP_TRANSFORMFAKE" />
+        <field name="RetainDisplayName" type="BoolTableFieldDefinition" value="True" />
+        <field name="Hp" type="ModifierTableFieldDefinition">
+          <modifier value="1" type="Add" />
+        </field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>
