@@ -41,4 +41,4 @@ done;
 
 git add --all
 git commit -m "Backup at `date`"
-# git push
+git push
