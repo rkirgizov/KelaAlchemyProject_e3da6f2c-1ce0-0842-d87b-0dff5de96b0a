@@ -13,7 +13,7 @@ MOD_SUBDIR_NAME="KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a"
 # This is the MinGW64 path to a Steam install of the toolkit
 BG3_DATA="/d/SteamLibrary/steamapps/common/Baldurs Gate 3/Data"
 
-# These are set according to "Understanding the Mod Locations", as of Nov 2024, from d
+# These are set according to "Understanding the Mod Locations", as of Nov 2024, from 
 # https://mod.io/g/baldursgate3/r/getting-started-creating-a-new-mod
 SUBDIR_LIST=(
 	"Projects"
