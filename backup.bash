@@ -39,6 +39,7 @@ for subdir in "${SUBDIR_LIST[@]}"; do
 	cp -a "$SRC_ABS_PATH" "$subdir";
 done;
 
+git remote set-url origin rkirgizov@yandex.ru/rkirgizov/KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a.git
 git add --all
 git commit -m "Backup at `date`"
 git push
