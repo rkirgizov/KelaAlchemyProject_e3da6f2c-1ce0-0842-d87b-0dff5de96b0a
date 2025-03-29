@@ -6,7 +6,7 @@ set -e;
 
 # TODO Set MOD_SUBDIR_NAME here, example:
 # MOD_SUBDIR_NAME="CircleOfTheSpores_db7e15fd-b2fc-b159-4bbd-1baab34d8c3a"
-# Look in "C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data\Projects"
+# Look in "C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data\Projects" s
 # for names of mods you have already started
 MOD_SUBDIR_NAME="KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a"
 
