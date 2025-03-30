@@ -154,5 +154,18 @@
         <field name="Weight" type="FloatTableFieldDefinition" value="1" />
       </fields>
     </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d20c3d47-b241-45b4-9377-2449b1f0f765" />
+        <field name="Name" type="NameTableFieldDefinition" value="DEN_Apprentice_Antidote" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="97a07f71-8e07-4da3-8ae8-d5c1510d3c83" />
+        <field name="RootTemplate" type="RootTemplateTableFieldDefinition" value="25fea821-5ec1-4052-bd6c-60c249e72a79" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="ValueLevel" type="IntegerTableFieldDefinition" value="2" />
+        <field name="ValueUUID" type="GuidObjectTableFieldDefinition" value="d6378d27-882e-4b51-aee6-31e999ea1d81" />
+        <field name="ValueScale" type="FloatTableFieldDefinition" value="1" />
+        <field name="Value" type="IntegerTableFieldDefinition" value="50" />
+      </fields>
+    </stat_object>
   </stat_objects>
 </stats>

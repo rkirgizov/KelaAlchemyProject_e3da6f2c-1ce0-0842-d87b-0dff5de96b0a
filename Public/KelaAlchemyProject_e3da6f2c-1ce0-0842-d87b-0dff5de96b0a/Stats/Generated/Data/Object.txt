@@ -127,3 +127,13 @@ data "RootTemplate" "5b386575-5836-40cd-8548-e5c27fd105a1"
 data "ValueOverride" "10"
 data "Weight" "1"
 
+new entry "DEN_Apprentice_Antidote"
+type "Object"
+using "OBJ_Antitoxin"
+data "RootTemplate" "25fea821-5ec1-4052-bd6c-60c249e72a79"
+data "ValueLevel" "2"
+data "ValueUUID" "d6378d27-882e-4b51-aee6-31e999ea1d81"
+data "ValueScale" "1"
+data "ValueOverride" "50"
+data "ObjectCategory" ""
+

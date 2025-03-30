@@ -50,7 +50,7 @@ QRY_KAP_Clear_Old_Variables()
 THEN
 DB_NOOP(1);
 //
-// ERROR LOW INTELLIGENCE
+// ERROR LOW INTELLIGENCE OR WISDOM
 IF
 Combined(_Lab,_Slot1,_Slot2,_Slot3,_Slot4,_Player,_LabCombinedResult)
 AND
@@ -65,9 +65,11 @@ AND
 DB_KAP_Property_Ability_For_Making(_Level)
 AND
 NOT QRY_KAP_PlayerAbilityLevelIsRequired(_Player, "Intelligence", _Level)
+AND
+NOT QRY_KAP_PlayerAbilityLevelIsRequired(_Player, "Wisdom", _Level)
 THEN
 DB_Singleton("DB_KAP_StartCombined_Error",1);
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ALCHEMY", 6.0, 1);
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_INTELLIGENCE_OR_WISDOM_LOW_FOR_ALCHEMY", 6.0, 1);
 RequestDelete(_LabCombinedResult);
 //
 // SLOT 1 IS EMPTY
@@ -467,6 +469,8 @@ NOT IsSubstring(_RecipeName,"ALCH_Transmutation",1)
 AND
 NOT IsSubstring(_RecipeName,"ALCH_Merge_Healing",1)
 AND
+NOT IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
+AND
 QRY_KAP_Clear_MainIngredientProcess() // Clear old main ingredient if present
 AND
 DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessed)
@@ -543,7 +547,6 @@ THEN
 ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_TRANSMUTATION_KNOWN", 6.0, 1);
 //
 // MERGE_HEALING
-// Need catalyst for transmutation and recipe known
 PROC
 PROC_KAP_Start_Potion_Making()
 AND
@@ -585,6 +588,74 @@ AND
 NOT DB_KELA_Recipes_Known("ALCH_Merge_Healing")
 THEN
 ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_MERGE_HEALING_KNOWN", 6.0, 1);
+//
+// ALCH_Potion_ElixirSilvanus
+PROC
+PROC_KAP_Start_Potion_Making()
+AND
+DB_KAP_Current_Lab(_,_Player,_)
+AND
+DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
+AND
+DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemGUID,_ItemStat) // Let's go through the main ingredients
+AND
+DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
+AND
+IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
+AND
+DB_KELA_Recipes_Known("ALCH_Potion_ElixirSilvanus")
+AND
+IsTagged(_Player,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0,1)
+AND
+QRY_KAP_Clear_MainIngredientProcess() // Clear old main ingredient if present
+AND
+DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessed)
+AND
+IntegerSum(_AmountProcessed,1,_AmountProcessedNew) // Counting the processed ingredients
+THEN
+DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessedNew);
+DB_KAP_MainIngredientProcess(_Result,_ItemIndex,_ItemTemplate,_ComboCategory); // We send the main ingredient for processing
+PROC_KAP_Process_ModRecipe(_ComboCategory,_Amount); // ONLY FOR MOD RECIPES Prepares mod recipe
+//
+// Need recipe known
+// ERROR
+PROC
+PROC_KAP_Start_Potion_Making()
+AND
+DB_KAP_Current_Lab(_Lab,_Player,_)
+AND
+DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
+AND
+DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemGUID,_ItemStat) // Let's go through the main ingredients
+AND
+DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
+AND
+IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
+AND
+NOT DB_KELA_Recipes_Known("ALCH_Potion_ElixirSilvanus")
+THEN
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_KNOWN", 6.0, 1);
+//
+// Not Druid
+// ERROR
+PROC
+PROC_KAP_Start_Potion_Making()
+AND
+DB_KAP_Current_Lab(_Lab,_Player,_)
+AND
+DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
+AND
+DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemGUID,_ItemStat) // Let's go through the main ingredients
+AND
+DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
+AND
+IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
+AND
+DB_KELA_Recipes_Known("ALCH_Potion_ElixirSilvanus")
+AND
+NOT IsTagged(_Player,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0,1)
+THEN
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_NOT_DRUID", 6.0, 1);
 //
 // 
 // Create result
@@ -665,7 +736,7 @@ QRY_KAP_Available_Ingredients_Remove(_Slot2,_SpentCount,_ExtractIndex)
 THEN
 PROC_KAP_Register_Result(_ResultTemplate,_Lab,_SpentCount); // Register the result for later creation
 //
-// REGION QUERIES
+// QUERIES
 //
 QRY
 QRY_KAP_GetSpentCount((INTEGER)_Count1,(INTEGER)_Count2)

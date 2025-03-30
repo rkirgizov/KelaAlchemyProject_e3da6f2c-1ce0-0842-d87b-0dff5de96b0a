@@ -624,8 +624,8 @@
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="3659c351-8141-4b13-a00a-03413ac947a4" />
         <field name="Name" type="NameTableFieldDefinition" value="ANTITOXIN" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hd8ee345egdda4g6db3g04b6g7cb7e1f82f59" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hec1247d0g7b1eg8f38gbf1cgff1a8427f474" version="2" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hd8ee345egdda4g6db3g04b6g7cb7e1f82f59" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hec1247d0g7b1eg8f38gbf1cgff1a8427f474" version="3" />
         <field name="Icon" type="StringTableFieldDefinition" value="statIcons_Antitoxin" />
         <field name="StackId" type="StringTableFieldDefinition" value="ANTITOXIN" />
         <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="760dc13b-5d19-4a38-8239-ea86bba4ac89" />
@@ -646,8 +646,8 @@
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="9010115f-55d7-46de-accc-9fb2bd7a9ec5" />
         <field name="Name" type="NameTableFieldDefinition" value="DEN_APPRENTICE_ANTIDOTE" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h78b66ad0g0b62g7d40g0073g23a1c85269d2" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h8e900cc3g581bg33ecg2147gf03c924fcad8" version="1" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h78b66ad0g0b62g7d40g0073g23a1c85269d2" version="3" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h8e900cc3g581bg33ecg2147gf03c924fcad8" version="2" />
         <field name="StackId" type="StringTableFieldDefinition" value="DEN_APPRENTICE_ANTIDOTE" />
         <field name="Icon" type="StringTableFieldDefinition" value="Item_UNI_Apprentice_Antidote" />
         <field name="Boosts" type="StringTableFieldDefinition" value="Tag(POISONED_ADV); Resistance(Poison, Resistant)" />
@@ -848,10 +848,28 @@
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="70f528bc-59b9-439b-a7b8-244fb5177bf0" />
         <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_MERGE_HEALING_KNOWN" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2c0fca8bgd751g5edegf3d8g0ba45f882892" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h85db12c0ge011g3c1bge3f7ga562b09b479c" version="1" />
         <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_MERGE_HEALING_KNOWN" />
-        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="926c7424-daf2-42bd-b3c9-2d0313388ab9" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="53b295b4-39cd-4dfc-83f5-9c3ce2c12c57" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_KNOWN" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h93c2b253g9b2eg3928g1c10g537f4082070f" version="1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_KNOWN" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="926c7424-daf2-42bd-b3c9-2d0313388ab9" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="dcf608b7-bb17-4574-ab0a-5cafbfeeba91" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_NOT_DRUID" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hc1094378gaa94g9d00g7de8gdf8441c85746" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h89ea97e0g8d05g94f0g034agef3e36d37aa1" version="1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_NOT_DRUID" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="926c7424-daf2-42bd-b3c9-2d0313388ab9" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

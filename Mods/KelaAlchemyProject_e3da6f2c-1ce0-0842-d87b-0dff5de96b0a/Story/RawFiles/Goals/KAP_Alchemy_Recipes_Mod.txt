@@ -1,11 +1,6 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-
-
-DB_KAP_Recipes("ALCH_Potion_ElixirSilvanus_Mugwort",(ITEMROOT)UNI_Apprentice_Antidote_25fea821-5ec1-4052-bd6c-60c249e72a79,(ITEMROOT)ALCH_Extract_Mugwort_b707f039-af1d-456d-a606-1604f1d776c1,"ALCH_Affinity_Air_Earth_Fire_Shadow_Water");
-
-
 // Alchemy recipes from mod
 // Name | ResultRoot | MainIngredientRoot | Category
 //
@@ -18,6 +13,8 @@ DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion
 DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_3");
 DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_4");
 
+// Elixir of Silvanus
+DB_KAP_Recipes("ALCH_Potion_ElixirSilvanus_Mugwort",(ITEMROOT)UNI_Apprentice_Antidote_25fea821-5ec1-4052-bd6c-60c249e72a79,(ITEMROOT)ALCH_Extract_Mugwort_b707f039-af1d-456d-a606-1604f1d776c1,"ALCH_Recipe_ElixirSilvanus");
 
 // ------------------------------------------------------------
 // INGREDIENTS FOR MOD RECIPES
@@ -31,7 +28,11 @@ DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_2",
 DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_3",(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,4);
 DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_4",(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,1);
 DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_4",(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,2);
-
+//
+// Elixir of Silvanus
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_ElixirSilvanus",(ITEMROOT)ALCH_Extract_WoodBark_19d0c788-596c-4893-ac4a-bd609ed69753,1);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_ElixirSilvanus",(ITEMROOT)ALCH_Extract_WyvernStinger_13aa0c56-538e-4a7c-a4d1-115e2704a274,1);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_ElixirSilvanus",(ITEMROOT)ALCH_Extract_SwarmingToadstool_8f392687-af6e-491d-891f-0c3e6627a7c5,2);
 
 
 // TRANSMUTATION

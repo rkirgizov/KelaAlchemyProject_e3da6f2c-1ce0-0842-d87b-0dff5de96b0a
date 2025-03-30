@@ -4,6 +4,9 @@ INITSECTION
 //
 // SolutionRoot | Projectile | Surface | Radius | Lifetime 
 // 
+// MOD
+DB_KAP_Thrown_Solution((ITEMROOT)UNI_Apprentice_Antidote_25fea821-5ec1-4052-bd6c-60c249e72a79,"Projectile_Potion_Destroy_Apprentice_Antidote","NONE",0.0,0.0); // 
+//
 // AIR
 DB_KAP_Thrown_Solution((ITEMROOT)ALCH_Solution_Potion_FeatherFall_179cfdd4-40ef-4f5c-ba6e-8c13f20aadc9,"Projectile_Potion_Destroy_Featherfall","NONE",0.0,0.0); // GRENADE CHECKED
 DB_KAP_Thrown_Solution((ITEMROOT)GRN_Sunflash_Grenade_A_5e282d02-6a10-44cb-9737-9d52aab0701c,"Projectile_Sunflash","NONE",0.0,0.0);

@@ -3,6 +3,7 @@ SubGoalCombiner SGC_AND
 INITSECTION
 DB_KAP_Recipes_Books("ALCH_Transmutation",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Transmutation_8ced56a5-fe57-406d-84df-c9f3c409cb39);
 DB_KAP_Recipes_Books("ALCH_Merge_Healing",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Merge_Healing_354689f1-ea4f-4c2c-8794-776b3f29d9dd);
+DB_KAP_Recipes_Books("ALCH_Potion_ElixirSilvanus",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Apprentice_Antidote_befc74d2-ca7a-493e-a3d1-92b3383e32cb);
 KBSECTION
 //REGION RECIPE_READING
 // Reading recipes
