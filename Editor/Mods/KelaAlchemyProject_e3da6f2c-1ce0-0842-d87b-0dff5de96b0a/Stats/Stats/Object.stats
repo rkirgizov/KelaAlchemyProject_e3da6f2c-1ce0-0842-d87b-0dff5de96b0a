@@ -4,10 +4,10 @@
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="78f746d0-a1ed-4d3d-a112-4a2d0589a5ae" />
-        <field name="Name" type="NameTableFieldDefinition" value="KAP_BOOK_Alchemy_RecipeBook" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_BOOK_Alchemy_ForgottenRealmsRecipeBook" />
         <field name="RootTemplate" type="RootTemplateTableFieldDefinition" value="19acff58-b72a-43c3-a5a3-0307198e373a" />
         <field name="ValueLevel" type="IntegerTableFieldDefinition" value="1" />
-        <field name="ValueUUID" type="GuidObjectTableFieldDefinition" value="4c5217d8-0232-4592-9e32-2fd729123f53" />
+        <field name="ValueUUID" type="GuidObjectTableFieldDefinition" value="870797b7-fb40-47ae-be7a-544c05c158c8" />
         <field name="ValueScale" type="FloatTableFieldDefinition" value="1" />
         <field name="ValueRounding" type="BoolTableFieldDefinition" value="True" />
         <field name="Weight" type="FloatTableFieldDefinition" value="0.5" />
