@@ -1,0 +1,57 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+
+DB_KAP_Recipes("ALCH_Potion_ElixirSilvanus_Mugwort",(ITEMROOT)UNI_Apprentice_Antidote_25fea821-5ec1-4052-bd6c-60c249e72a79,(ITEMROOT)ALCH_Extract_Mugwort_b707f039-af1d-456d-a606-1604f1d776c1,"ALCH_Affinity_Air_Earth_Fire_Shadow_Water");
+
+
+// Alchemy recipes from mod
+// Name | ResultRoot | MainIngredientRoot | Category
+//
+// HEALING POTIONS
+DB_KAP_Recipes("ALCH_Merge_HealingGreater_Healing",(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,"ALCH_Recipe_Potion_HealingGreater_Healing");
+DB_KAP_Recipes("ALCH_Merge_HealingSuperior_HealingGreater",(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,"ALCH_Recipe_Potion_HealingSuperior_HealingGreater_1");
+DB_KAP_Recipes("ALCH_Merge_HealingSuperior_HealingGreater",(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,"ALCH_Recipe_Potion_HealingSuperior_HealingGreater_2");
+DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_1");
+DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_2");
+DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_3");
+DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_4");
+
+
+// ------------------------------------------------------------
+// INGREDIENTS FOR MOD RECIPES
+//
+// HEALING POTIONS
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingGreater_Healing",(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,1);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSuperior_HealingGreater_1",(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,1);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSuperior_HealingGreater_2",(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,2);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_1",(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,1);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_2",(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,2);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_3",(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,4);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_4",(ITEMROOT)CONS_Potion_Healing_A_Greater_e3b95c96-dc26-40fe-bfc0-baa05e1abd20,1);
+DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_4",(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,2);
+
+
+
+// TRANSMUTATION
+DB_KAP_Recipes("ALCH_Transmutation_Gold_Bronze",(ITEMROOT)LOOT_GEN_Metalbar_Gold_A_44f47718-9769-4c0e-af75-7789d2f2913d,(ITEMROOT)LOOT_GEN_Metalbar_Bronze_A_5b386575-5836-40cd-8548-e5c27fd105a1,"ALCH_GUIDString_Gold");
+DB_KAP_Recipes("ALCH_Transmutation_Gold_Silver",(ITEMROOT)LOOT_GEN_Metalbar_Gold_A_44f47718-9769-4c0e-af75-7789d2f2913d,(ITEMROOT)LOOT_GEN_Metalbar_Silver_A_e0803337-e2b1-4528-8d4f-b5814e9a52ec,"ALCH_GUIDString_Gold");
+DB_KAP_Recipes("ALCH_Transmutation_Adamantine_Bronze",(ITEMROOT)LOOT_GEN_Metalbar_Adamantine_A_ed758113-c69b-4e7f-8b41-036a071df80a,(ITEMROOT)LOOT_GEN_Metalbar_Bronze_A_5b386575-5836-40cd-8548-e5c27fd105a1,"ALCH_GUIDString_AdamantineScrap");
+DB_KAP_Recipes("ALCH_Transmutation_Adamantine_Silver",(ITEMROOT)LOOT_GEN_Metalbar_Adamantine_A_ed758113-c69b-4e7f-8b41-036a071df80a,(ITEMROOT)LOOT_GEN_Metalbar_Silver_A_e0803337-e2b1-4528-8d4f-b5814e9a52ec,"ALCH_GUIDString_AdamantineScrap");
+DB_KAP_Recipes("ALCH_Transmutation_Adamantine_Gold",(ITEMROOT)LOOT_GEN_Metalbar_Adamantine_A_ed758113-c69b-4e7f-8b41-036a071df80a,(ITEMROOT)LOOT_GEN_Metalbar_Gold_A_44f47718-9769-4c0e-af75-7789d2f2913d,"ALCH_GUIDString_AdamantineScrap");
+
+
+// ------------------------------------------------------------
+// AFFINITIES FOR ORIGINAL RECIPES
+//
+// AIR
+
+DB_KAP_Affinities_GUIDString("ALCH_GUIDString_Gold","Gold",1); 
+DB_KAP_Affinities_GUIDString("ALCH_GUIDString_AdamantineScrap","AdamantineScrap",1); 
+KBSECTION
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "GLO_KelaAlchemyProject"

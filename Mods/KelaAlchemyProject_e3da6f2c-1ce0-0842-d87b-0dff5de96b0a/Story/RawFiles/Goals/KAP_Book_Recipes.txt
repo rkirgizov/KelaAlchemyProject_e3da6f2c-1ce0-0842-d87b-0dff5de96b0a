@@ -1,0 +1,29 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_KAP_Recipes_Books("ALCH_Transmutation",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Transmutation_8ced56a5-fe57-406d-84df-c9f3c409cb39);
+DB_KAP_Recipes_Books("ALCH_Merge_Healing",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Merge_Healing_354689f1-ea4f-4c2c-8794-776b3f29d9dd);
+KBSECTION
+//REGION RECIPE_READING
+// Reading recipes
+
+IF
+TemplateUseFinished(_Player, _RecipeTemplate, _Recipe, 1)
+AND
+DB_Players(_Player) // used to be checking for DB_PartyMembers, problem with this is that if a familiar/summon was used, it'll be treated like whole party is following a companion into the hole - which isn't expected behavior.
+AND
+IsControlled(_Player, 1)
+AND
+DB_KAP_Recipes_Books(_RecipePattern,_RecipeTemplate)
+AND
+NOT DB_KELA_Recipes_Known(_RecipePattern)
+THEN
+DB_KELA_Recipes_Known(_RecipePattern);
+ApplyStatus(_Player, "KAP_MESSAGE_RECIPE_HAS_BEEN_REVIEWED", 6.0, 1);
+
+//
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "GLO_KelaAlchemyProject"
