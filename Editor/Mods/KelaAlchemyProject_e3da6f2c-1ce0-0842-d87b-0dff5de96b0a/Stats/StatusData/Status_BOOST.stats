@@ -800,7 +800,7 @@
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfd8666fbga0e9g3e6cg3ce9gd22d32191b35" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf001028bg9122g0514gb2bbg754a1996eb32" version="2" />
         <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
-        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_RECIPE" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_TRANSMUTATION" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
       </fields>
     </stat_object>
@@ -812,6 +812,17 @@
         <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
         <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_ADDITIONAL_STATUS" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="37d85356-1c6e-4172-90db-18e5ee780c51" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="efa8063b-c5ff-49ee-a113-13cc1e54f9dc" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_SEPARATE" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h67f71683g8953g585bgb5e1gf78d276d58c4" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0a0106efg634eg9aceg1cecg74003a1aa05e" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_SEPARATE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

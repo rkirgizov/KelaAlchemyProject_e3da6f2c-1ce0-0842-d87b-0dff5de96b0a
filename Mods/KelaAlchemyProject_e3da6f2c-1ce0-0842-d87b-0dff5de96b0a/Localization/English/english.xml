@@ -142,8 +142,8 @@
   <content contentuid="hbd9afa3egc2fdg4250g8650g39093208774f" version="4">A collection of fine glass flasks, used to distil liquids both mundane and sinister.</content>
   <content contentuid="h5abb5aabgc41eg4f6dga03dgda863e21a0a5" version="5">Glass Seperation Set</content>
   <content contentuid="he90ef7edgb7c7g4f9agb1c2gb1af77ff2ebb" version="5">Each cylinder, flask and retort in this set is covered in a sticky, dusty substance.</content>
-  <content contentuid="h1c0a11a7g2d62g4410ga817geb244c366247" version="8">Glass Seperation Set</content>
-  <content contentuid="h7e775530g5ed9g44f9gadebg104b51bdd812" version="8">Набор склянок, основная цель которого - сепарация</content>
+  <content contentuid="h1c0a11a7g2d62g4410ga817geb244c366247" version="9">Glass Seperation Set</content>
+  <content contentuid="h7e775530g5ed9g44f9gadebg104b51bdd812" version="9">Набор склянок, основная цель которого - сепарация</content>
   <content contentuid="h1974560eg8838g490fg9705g37b380b5d75c" version="3">Glass Distillation Set</content>
   <content contentuid="h4be54045g0e96g43e7gb383gafdf4c69e558" version="4">Each cylinder, flask and retort in this set is covered in a sticky, dusty substance.</content>
   <content contentuid="h137a02c3gc3b1g33d2g8488g9b7ccfa7cd0c" version="4">Для проведения алхимических опытов необходимо в каждый слот заложить чистую колбу или реторту с необходимыми ингредиентами согласно рецепту: &lt;br&gt;Слот 1 - основные &lt;br&gt;Слот 2 - вторичные &lt;br&gt;Слот 3 - вспомогательные и дополнительные, например алхимический катализатор или ингредиенты для дополнительных свойств</content>
@@ -203,7 +203,7 @@
   <content contentuid="h99fc3e54g91acgb0acg6d5fge4c86691a5d0" version="5">Рецепт трансмутации металлов</content>
   <content contentuid="h6ef69cf3g07cbg7ba6g1c48gf872fdaddb87" version="5">This parchment is unread.</content>
   <content contentuid="he91abed2g11c9g2d37g6079g9a37692606b6" version="3">После изучения рецепта, знание становится доступным любому из вашей команды, у кого есть нужные навыки.</content>
-  <content contentuid="h543413ddgdea0gba7bgd5f4gb1ae2170fc76" version="2">Для сепарации эликсиров, зелий и ядов на их ингредиенты, необходимо в каждый слот заложить чистую колбу или реторту, при этом в первый слот закладывается то, что сепарируем, а второй слот - для выделенных ингредиентов.</content>
+  <content contentuid="h543413ddgdea0gba7bgd5f4gb1ae2170fc76" version="3">Для сепарации эликсиров, зелий и ядов на их ингредиенты, необходимо в каждый слот заложить чистую колбу или реторту, при этом в первый слот закладывается катализатор и то, что сепарируем, а второй слот - для выделенных ингредиентов.</content>
   <content contentuid="h8fa3d0e5g274eg18fbgb656g90e197ef8823" version="1">Самый простой инструмент - просто установите в единственный слот одну колбу или реторту с необходимыми ингредиентами. &lt;br&gt;Стандартный рецепт - катализатор, для получения которого необходимы вода и спиртное (вино - две бутыли, крепкий алкоголь - одна).</content>
   <content contentuid="h05def27eg192fg0d57ga9b4ga3b35fa45353" version="1">Рецепт выучен!</content>
   <content contentuid="hc4e017fdg856dg7ec5g9f40gec46f9a58361" version="1">Вы выучили рецепт! Знание становится доступным любому из вашей команды, у кого есть нужные навыки.</content>
@@ -238,4 +238,6 @@
   <content contentuid="hc1094378gaa94g9d00g7de8gdf8441c85746" version="1">Не хватает благословения</content>
   <content contentuid="h89ea97e0g8d05g94f0g034agef3e36d37aa1" version="1">Только друидам доступно создание Эликсира Сильвануса.!</content>
   <content contentuid="h93c2b253g9b2eg3928g1c10g537f4082070f" version="1">Не хватает знаний для создания Эликсира Сильвануса!</content>
+  <content contentuid="h67f71683g8953g585bgb5e1gf78d276d58c4" version="1">No catalyst</content>
+  <content contentuid="h0a0106efg634eg9aceg1cecg74003a1aa05e" version="1">No catalyst for separate DESC</content>
 </contentList>

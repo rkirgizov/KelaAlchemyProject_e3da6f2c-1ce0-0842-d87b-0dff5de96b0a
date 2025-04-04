@@ -83,7 +83,7 @@ _Amount > 0 // If there are no potions in the slot, then there is no point in ch
 THEN
 PROC_KAP_StartSeparate();
 PROC_KAP_Try_Remove_Spented();
-PROC_KAP_Try_Create_Result();
+//PROC_KAP_Try_Create_Result(); //directly add separated ingredients in this script
 //
 // Separate by stack
 PROC
@@ -148,6 +148,29 @@ DB_KAP_CurrentAffinitiesByTemplate(_NewCount,_SecondTemplate);
 //END_REGION
 
 //REGION REGISTER_RESULTS
+// 
+// Check Catalyst
+PROC
+PROC_KAP_SeparateTryRegisterResult((INTEGER)_Index)
+AND
+DB_KAP_Current_Separate(_,_,_Slot1,_,_)
+AND
+QRY_KAP_CatalystIsInItemInventory(_Slot1)
+THEN
+//SetDualEntityEvent(_Slot1,_Slot1,"PROC_KAP_SeparateTryRegisterResult");
+DB_NOOP(1);
+// 
+// If NOT Check Catalyst
+PROC
+PROC_KAP_SeparateTryRegisterResult((INTEGER)_Index)
+AND
+GetHostCharacter(_Player)
+AND
+NOT DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked")
+THEN
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_SEPARATE", 6.0, 1);
+//
+//
 //
 PROC
 PROC_KAP_SeparateTryRegisterResult((INTEGER)_Index)
@@ -163,9 +186,12 @@ AND
 SysCount("DB_KAP_CurrentAffinitiesByTemplate",2,_SecondAmount)
 AND
 _SecondAmount > 0
+AND
+DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked")
 THEN
 PROC_KAP_Separate_Potion_Remove(_Slot1,_Index);
 PROC_KAP_Separate_Ingredients_Add(_Slot2);
+PROC_KAP_Separate_Catalyst_Remove(_Slot1);
 //
 // Spent processed potion
 PROC
@@ -188,14 +214,28 @@ DB_KAP_CurrentMainTemplate(_MainTemplate)
 AND
 SysCount("DB_KAP_CurrentAffinitiesByTemplate",2,_Amount)
 AND
-IntegerSum(_Amount, 1, _AmountPlusOne) // because Random() is within [0, Modulo-1]
+Random(_Amount,_RandomNumber)
 AND
-Random(_AmountPlusOne,_RandomNumber)
+IntegerSum(_RandomNumber, 1, _RandomNumberPlusOne) // because Random() is within [0, Modulo-1]
 AND
-DB_KAP_CurrentAffinitiesByTemplate(_RandomNumber,_SecondTemplate)
+DB_KAP_CurrentAffinitiesByTemplate(_RandomNumberPlusOne,_SecondTemplate)
 THEN
 TemplateAddTo(_MainTemplate,_Slot,1,0);
 TemplateAddTo(_SecondTemplate,_Slot,1,0);
+
+PROC
+PROC_KAP_Separate_Catalyst_Remove((ITEM)_Slot1)
+AND
+DB_KAP_CatalystTemplate(_Template)
+AND
+NOT DB_OnlyOnce("PROC_KAP_Separate_Catalyst_Remove")
+THEN
+TemplateRemoveFrom((ITEMROOT)_Template, _Slot1, 1);
+DB_OnlyOnce("PROC_KAP_Separate_Catalyst_Remove");
+
+
+
+
 
 //END_REGION
 
@@ -220,6 +260,8 @@ THEN
 SysClear("DB_KAP_Current_Separate",5);
 SysClear("DB_KAP_PotionsForSeparate",3);
 SysClear("DB_KAP_CurrentAffinitiesByTemplate",2);
+NOT DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked");
+NOT DB_OnlyOnce("PROC_KAP_Separate_Catalyst_Remove");
 
 //END_REGION
 EXITSECTION
