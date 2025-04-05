@@ -7,6 +7,8 @@ DB_KAP_Debug_Break(1);
 
 DB_KAP_CatalystTemplate(LOOT_Laboratory_Flask_Glass_B_4528c43d-f986-42ea-8189-6efedae49ba8);
 DB_KAP_CatalystTemplate(LOOT_Laboratory_Flask_Glass_C_38eddd97-ecbc-4a76-8ebc-54cfb26ec424);
+
+//DB_KAP_AlchemistResultPouch(CONT_GEN_Pouch_Leather_A_2e40240b-77d3-400b-bd6a-caff66a85833);
 KBSECTION
 //REGION Init
 IF
@@ -104,6 +106,7 @@ DB_NOOP(1);
 
 //REGION Utilities
 
+// CHECK CATALYST
 QRY
 QRY_KAP_CatalystIsInItemInventory((ITEM)_Owner)
 AND

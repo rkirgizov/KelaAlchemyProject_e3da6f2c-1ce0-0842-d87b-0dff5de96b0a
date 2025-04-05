@@ -140,15 +140,15 @@
   <content contentuid="h4280f3afg1715g4f92g8e78g8ecba865d639" version="6">Condensers and Alembics</content>
   <content contentuid="h4d02ea06g0fcbg1f16ga78fg62249321d575" version="2">Можно отмыть и использовать для алхимических опытов</content>
   <content contentuid="hbd9afa3egc2fdg4250g8650g39093208774f" version="4">A collection of fine glass flasks, used to distil liquids both mundane and sinister.</content>
-  <content contentuid="h5abb5aabgc41eg4f6dga03dgda863e21a0a5" version="5">Glass Seperation Set</content>
-  <content contentuid="he90ef7edgb7c7g4f9agb1c2gb1af77ff2ebb" version="5">Each cylinder, flask and retort in this set is covered in a sticky, dusty substance.</content>
+  <content contentuid="h5abb5aabgc41eg4f6dga03dgda863e21a0a5" version="6">Glass Separation Set</content>
+  <content contentuid="he90ef7edgb7c7g4f9agb1c2gb1af77ff2ebb" version="6">Each cylinder, flask and retort in this set is covered in a sticky, dusty substance.</content>
   <content contentuid="h1c0a11a7g2d62g4410ga817geb244c366247" version="9">Glass Seperation Set</content>
-  <content contentuid="h7e775530g5ed9g44f9gadebg104b51bdd812" version="9">Набор склянок, основная цель которого - сепарация</content>
+  <content contentuid="h7e775530g5ed9g44f9gadebg104b51bdd812" version="10">Набор склянок, основная цель которого - сепарация</content>
   <content contentuid="h1974560eg8838g490fg9705g37b380b5d75c" version="3">Glass Distillation Set</content>
   <content contentuid="h4be54045g0e96g43e7gb383gafdf4c69e558" version="4">Each cylinder, flask and retort in this set is covered in a sticky, dusty substance.</content>
   <content contentuid="h137a02c3gc3b1g33d2g8488g9b7ccfa7cd0c" version="4">Для проведения алхимических опытов необходимо в каждый слот заложить чистую колбу или реторту с необходимыми ингредиентами согласно рецепту: &lt;br&gt;Слот 1 - основные &lt;br&gt;Слот 2 - вторичные &lt;br&gt;Слот 3 - вспомогательные и дополнительные, например алхимический катализатор или ингредиенты для дополнительных свойств</content>
   <content contentuid="hfe9717e2gdd80g4032g90e6g5e570fd356ca" version="4">Glass Seperation Set</content>
-  <content contentuid="hfa2c26a1gcb7eg48bdgb946g800caf8b39fa" version="4">Though rust has bitten into this iron stand, the glass flasks it holds are in pristine condition.</content>
+  <content contentuid="hfa2c26a1gcb7eg48bdgb946g800caf8b39fa" version="5">Though rust has bitten into this iron stand, the glass flasks it holds are in pristine condition.</content>
   <content contentuid="h1e71830cga838g47ddg897agf556c85ec501" version="6">Glass Seperation Set</content>
   <content contentuid="h0912eb31g1e10g41e2g8ef0gca1726a43950" version="5">Though rust has bitten into this iron stand, the glass flasks it holds are in pristine condition.</content>
   <content contentuid="hbe908c11gf2f5g4f7fg8c54ga11fd4212262" version="3">Flask Stand</content>
@@ -167,8 +167,8 @@
   <content contentuid="h636d93d4g4670g4c39g9bd0g0065c9faa0b1" version="4">A greasy substance clogs up most of this set's spiralling condenser, making any distillation a risky business.</content>
   <content contentuid="h91e74476gbe35g4701g9b5dg68295c4ac4cc" version="3">Glass Distillation Set</content>
   <content contentuid="h63cf7172g44bag4643g91afg627f077edace" version="3">A greasy substance clogs up most of this set's spiralling condenser, making any distillation a risky business.</content>
-  <content contentuid="h42cdfdc6g25f0g29a5g2345gbf1efdd5cf92" version="1">The first slot is empty</content>
-  <content contentuid="h23ae302ag6f4agd51ag22a6ge61707cfecc1" version="1">The first slot is empty DESC</content>
+  <content contentuid="h42cdfdc6g25f0g29a5g2345gbf1efdd5cf92" version="2">The slot is empty</content>
+  <content contentuid="h23ae302ag6f4agd51ag22a6ge61707cfecc1" version="2">The slot is empty DESC</content>
   <content contentuid="hfddabeddg8912ge800gaf9cgc8e158d7e32b" version="1">The second slot is empty</content>
   <content contentuid="h7d403bf3g7324gccecgb15cgf14dae2a9e77" version="1">The second slot is empty DESC</content>
   <content contentuid="h0bc16905g7711g4e59gb100gb5eec5549019" version="3">Adamantine Ingot</content>
@@ -203,7 +203,7 @@
   <content contentuid="h99fc3e54g91acgb0acg6d5fge4c86691a5d0" version="5">Рецепт трансмутации металлов</content>
   <content contentuid="h6ef69cf3g07cbg7ba6g1c48gf872fdaddb87" version="5">This parchment is unread.</content>
   <content contentuid="he91abed2g11c9g2d37g6079g9a37692606b6" version="3">После изучения рецепта, знание становится доступным любому из вашей команды, у кого есть нужные навыки.</content>
-  <content contentuid="h543413ddgdea0gba7bgd5f4gb1ae2170fc76" version="3">Для сепарации эликсиров, зелий и ядов на их ингредиенты, необходимо в каждый слот заложить чистую колбу или реторту, при этом в первый слот закладывается катализатор и то, что сепарируем, а второй слот - для выделенных ингредиентов.</content>
+  <content contentuid="h543413ddgdea0gba7bgd5f4gb1ae2170fc76" version="4">Для сепарации эликсиров, зелий и ядов на их ингредиенты, необходимо в каждый слот заложить чистую колбу или реторту, при этом в первый слот закладывается катализатор и то, что сепарируем, а второй слот - для выделенных ингредиентов.</content>
   <content contentuid="h8fa3d0e5g274eg18fbgb656g90e197ef8823" version="1">Самый простой инструмент - просто установите в единственный слот одну колбу или реторту с необходимыми ингредиентами. &lt;br&gt;Стандартный рецепт - катализатор, для получения которого необходимы вода и спиртное (вино - две бутыли, крепкий алкоголь - одна).</content>
   <content contentuid="h05def27eg192fg0d57ga9b4ga3b35fa45353" version="1">Рецепт выучен!</content>
   <content contentuid="hc4e017fdg856dg7ec5g9f40gec46f9a58361" version="1">Вы выучили рецепт! Знание становится доступным любому из вашей команды, у кого есть нужные навыки.</content>
@@ -238,6 +238,12 @@
   <content contentuid="hc1094378gaa94g9d00g7de8gdf8441c85746" version="1">Не хватает благословения</content>
   <content contentuid="h89ea97e0g8d05g94f0g034agef3e36d37aa1" version="1">Только друидам доступно создание Эликсира Сильвануса.!</content>
   <content contentuid="h93c2b253g9b2eg3928g1c10g537f4082070f" version="1">Не хватает знаний для создания Эликсира Сильвануса!</content>
-  <content contentuid="h67f71683g8953g585bgb5e1gf78d276d58c4" version="1">No catalyst</content>
-  <content contentuid="h0a0106efg634eg9aceg1cecg74003a1aa05e" version="1">No catalyst for separate DESC</content>
+  <content contentuid="h67f71683g8953g585bgb5e1gf78d276d58c4" version="2">No separate</content>
+  <content contentuid="h0a0106efg634eg9aceg1cecg74003a1aa05e" version="2">No separate DESC</content>
+  <content contentuid="h2bb7812egafe4g534dg449cg58a7a022cc04" version="1">No distilate</content>
+  <content contentuid="hc1fc9d42gd621gb78fgbf89g82b9b4e0a207" version="1">No distilate DESC</content>
+  <content contentuid="h80419cf3gbe7bgd771g7e58g6448db2b5dee" version="1">No combine</content>
+  <content contentuid="hcf9ea92bgc0d1ge066ge6b3g8f71d286bd5a" version="1">No combine DESC</content>
+  <content contentuid="h76cb8350g0358ge9d8ge104g25c90a97a180" version="2">Alchemist's Chest</content>
+  <content contentuid="ha2a6c71cg2975ga0b6gfecdgf11061ed0e3f" version="2">Convenient and durable alchemist's chest</content>
 </contentList>

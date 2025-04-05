@@ -4,10 +4,9 @@ INITSECTION
 DB_KAP_SeparationSet(DEC_Laboratory_Flask_Glass_Installation_B_Empty_A_25344450-3a06-4450-9df3-132336578019);
 DB_KAP_SeparationSet(DEC_Laboratory_Flask_Glass_Installation_C_Empty_A_f4117a4e-3ece-4816-8f6f-1cf3fc11a2ee);
 KBSECTION
-//
-// START
+// FIRST CHECK CATALYST AND POTIONS FOR SEPARATE
 IF
-Combined(_Lab,_Slot1,_Slot2,_,_,_Player,_LabCombinedResult)
+RequestCanCombine(_Player,_Lab,_Slot1,_Slot2,_,_,_RequestID)
 AND
 GetTemplate(_Lab, _LabTemplate)
 AND
@@ -23,13 +22,13 @@ _Slot2Stat == "OBJ_Laboratory_Glass"
 AND
 QRY_KAP_Clear_Old_SeparateVariables()
 AND
-NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+QRY_KAP_CatalystIsInItemInventory(_Slot1)
 THEN
-//SetDualEntityEvent(_Player,_Player,"START SEPARATE");
-ObjectTimerLaunch(_LabCombinedResult, "KAP_DeleteLabCombinedResult_Timer", 30);
-DB_KAP_Current_Separate(_Player,_Lab,_Slot1,_Slot2,_LabCombinedResult);
+//SetDualEntityEvent(_Player,_Player,"START RequestCanCombine");
+DB_KAP_Current_Separate(_Player,_Lab,_Slot1,_Slot2);
 IterateInventory(_Slot1,"KAP_Collect_Ingredients_For_Separate","KAP_Collect_Ingredients_For_Separate_Finish");
-
+//
+// ITERATE SLOT 1
 //REGION ITERATE_POTIONS
 //
 IF
@@ -45,9 +44,7 @@ GetStackAmount(_Item, _Amount,_)
 AND
 QRY_KAP_Potions_Add_For_Separate(_ItemTemplate,_Amount)
 THEN
-//SetDualEntityEvent(_Item,_Item,"EVENT KAP_Collect_Ingredients_For_Separate");
 DB_NOOP(1);
-
 // 
 // ADD INGREDIENTS TO DB_KAP_PotionsForSeparate
 // Existed ingredients
@@ -72,18 +69,57 @@ THEN
 DB_KAP_PotionsForSeparate(_RandomIndex,_ItemTemplate,_Amount);
 
 //END_REGION
-
-// Collecting finished, go to separate
+//
+// START COMBINE
+//
+// ERRORS IF NOT CATALYST OR POTIONS FOR SEPARATE
 IF
-EntityEvent(_,"KAP_Collect_Ingredients_For_Separate_Finish")
+Combined(_Lab,_Slot1,_Slot2,_,_,_Player,_LabCombinedResult)
+AND
+GetTemplate(_Lab, _LabTemplate)
+AND
+DB_KAP_SeparationSet(_LabTemplate)
+AND
+NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+AND
+NOT DB_KAP_Current_Separate(_,_,_,_)
+THEN
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_SEPARATE", 6.0, 1);
+RequestDelete((ITEM)_LabCombinedResult);
+//
+IF
+Combined(_Lab,_Slot1,_Slot2,_,_,_Player,_LabCombinedResult)
+AND
+GetTemplate(_Lab, _LabTemplate)
+AND
+DB_KAP_SeparationSet(_LabTemplate)
+AND
+NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+AND
+NOT DB_KAP_PotionsForSeparate(_,_,_)
+THEN
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_SEPARATE", 6.0, 1);
+RequestDelete((ITEM)_LabCombinedResult);
+//
+// GOOD START
+IF
+Combined(_Lab,_Slot1,_Slot2,_,_,_Player,_LabCombinedResult)
+AND
+GetTemplate(_Lab, _LabTemplate)
+AND
+DB_KAP_SeparationSet(_LabTemplate)
+AND
+NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+AND
+DB_KAP_Current_Separate(_Player,_Lab,_Slot1,_Slot2)
 AND
 SysCount("DB_KAP_PotionsForSeparate",3,_Amount)
 AND
-_Amount > 0 // If there are no potions in the slot, then there is no point in checking further.
+_Amount > 0
 THEN
+ObjectTimerLaunch(_LabCombinedResult, "KAP_DeleteLabCombinedResult_Timer", 5);
 PROC_KAP_StartSeparate();
 PROC_KAP_Try_Remove_Spented();
-//PROC_KAP_Try_Create_Result(); //directly add separated ingredients in this script
 //
 // Separate by stack
 PROC
@@ -102,11 +138,11 @@ IntegerSubtract(_Stack, 1, _NewStack)
 AND
 _NewStack >= 0
 THEN
-PROC_KAP_CollectAffinitiesByTemplate(_Index);
+PROC_KAP_CollectAffinitiesByTemplate(_Index); // FIND_INGREDIENTS for potions
 PROC_KAP_SeparateTryRegisterResult(_Index);
 PROC_KAP_ProcessSeparateStack(_Index,_NewStack); // CYCLE by stack
-
-
+//
+//
 //REGION FIND_INGREDIENTS
 //
 // Collect by index
@@ -123,8 +159,8 @@ DB_Singleton("DB_KAP_CurrentAffinitiesCount",0);
 SysClear("DB_KAP_CurrentAffinitiesByTemplate",2);
 DB_KAP_CurrentMainTemplate(_MainTemplate); // Main ingredient
 PROC_KAP_CollectAffinities(_Affinity);
-//
 // 
+// COUNT affinities by air, earth etc
 PROC
 PROC_KAP_CollectAffinities((STRING)_Affinity)
 AND
@@ -147,29 +183,9 @@ DB_KAP_CurrentAffinitiesByTemplate(_NewCount,_SecondTemplate);
 
 //END_REGION
 
-//REGION REGISTER_RESULTS
-// 
-// Check Catalyst
-PROC
-PROC_KAP_SeparateTryRegisterResult((INTEGER)_Index)
-AND
-DB_KAP_Current_Separate(_,_,_Slot1,_,_)
-AND
-QRY_KAP_CatalystIsInItemInventory(_Slot1)
-THEN
-//SetDualEntityEvent(_Slot1,_Slot1,"PROC_KAP_SeparateTryRegisterResult");
-DB_NOOP(1);
-// 
-// If NOT Check Catalyst
-PROC
-PROC_KAP_SeparateTryRegisterResult((INTEGER)_Index)
-AND
-GetHostCharacter(_Player)
-AND
-NOT DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked")
-THEN
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_SEPARATE", 6.0, 1);
 //
+//
+//REGION REGISTER_RESULTS
 //
 //
 PROC
@@ -177,7 +193,7 @@ PROC_KAP_SeparateTryRegisterResult((INTEGER)_Index)
 AND
 DB_KAP_PotionsForSeparate(_Index,_,_)
 AND
-DB_KAP_Current_Separate(_,_,_Slot1,_Slot2,_)
+DB_KAP_Current_Separate(_,_,_Slot1,_Slot2)
 AND
 SysCount("DB_KAP_CurrentMainTemplate",1,_MainAmount)
 AND
@@ -186,8 +202,6 @@ AND
 SysCount("DB_KAP_CurrentAffinitiesByTemplate",2,_SecondAmount)
 AND
 _SecondAmount > 0
-AND
-DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked")
 THEN
 PROC_KAP_Separate_Potion_Remove(_Slot1,_Index);
 PROC_KAP_Separate_Ingredients_Add(_Slot2);
@@ -222,7 +236,8 @@ DB_KAP_CurrentAffinitiesByTemplate(_RandomNumberPlusOne,_SecondTemplate)
 THEN
 TemplateAddTo(_MainTemplate,_Slot,1,0);
 TemplateAddTo(_SecondTemplate,_Slot,1,0);
-
+//
+// Catalyst remove (checked on RequestCanCombine)
 PROC
 PROC_KAP_Separate_Catalyst_Remove((ITEM)_Slot1)
 AND
@@ -232,10 +247,6 @@ NOT DB_OnlyOnce("PROC_KAP_Separate_Catalyst_Remove")
 THEN
 TemplateRemoveFrom((ITEMROOT)_Template, _Slot1, 1);
 DB_OnlyOnce("PROC_KAP_Separate_Catalyst_Remove");
-
-
-
-
 
 //END_REGION
 
@@ -257,7 +268,7 @@ NOT DB_KAP_CurrentMainTemplate(_OldMainTemplate);
 QRY
 QRY_KAP_Clear_Old_SeparateVariables()
 THEN
-SysClear("DB_KAP_Current_Separate",5);
+SysClear("DB_KAP_Current_Separate",4);
 SysClear("DB_KAP_PotionsForSeparate",3);
 SysClear("DB_KAP_CurrentAffinitiesByTemplate",2);
 NOT DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked");

@@ -1,8 +1,8 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-DB_KAP_DistillationSet(DEC_Laboratory_Flask_Glass_Installation_D_Empty_A_9486a285-3e41-4918-b7a3-be5f099d00ad);
-DB_KAP_DistillationSet(DEC_Laboratory_Flask_Glass_Installation_E_Empty_A_6aa75479-f26f-48ab-bc05-9c117532dccb);
+DB_KAP_DistilationSet(DEC_Laboratory_Flask_Glass_Installation_D_Empty_A_9486a285-3e41-4918-b7a3-be5f099d00ad);
+DB_KAP_DistilationSet(DEC_Laboratory_Flask_Glass_Installation_E_Empty_A_6aa75479-f26f-48ab-bc05-9c117532dccb);
 
 
 
@@ -51,29 +51,23 @@ DB_KAP_Bottle_Wine(CONS_Drink_Wine_B_Wicker_c9cf7e80-679e-4c30-98ac-4bd43db95294
 DB_KAP_NeedSpentCountByType("Wine",2);
 DB_KAP_NeedSpentCountByType("Alcogol",1);
 KBSECTION
-//
-// START
+// FIRST CHECK 
 IF
-Combined(_Lab,_Slot1,_,_,_,_Player,_LabCombinedResult)
+RequestCanCombine(_Player,_Lab,_Slot1,_,_,_,_RequestID)
 AND
 GetTemplate(_Lab, _LabTemplate)
 AND
-DB_KAP_DistillationSet(_DistillationSetTemplate)
-AND
-_LabTemplate == _DistillationSetTemplate
+DB_KAP_DistilationSet(_LabTemplate)
 AND
 GetStatString(_Slot1, _Slot1Stat)
 AND
 _Slot1Stat == "OBJ_Laboratory_Glass"
 AND
 QRY_KAP_Clear_Old_DistilateVariables()
-AND
-NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
 THEN
-//SetDualEntityEvent(_Player,_Player,"START CATALYST MAKING");
-ObjectTimerLaunch(_LabCombinedResult, "KAP_DeleteLabCombinedResult_Timer", 50);
-DB_KAP_Current_Lab(_Lab,_Player,_LabCombinedResult);
-DB_KAP_Current_Distilate(_Player,_Lab,_Slot1,_LabCombinedResult);
+SetDualEntityEvent(_Player,_Player,"START RequestCanCombine");
+DB_KAP_Current_Lab(_Lab,_Player,NULL_00000000-0000-0000-0000-000000000000); // need for PROC_KAP_Create_Result
+DB_KAP_Current_Distilate(_Player,_Lab,_Slot1);
 IterateInventory(_Slot1,"KAP_Collect_Ingredients_For_Catalyst","KAP_Collect_Ingredients_For_Catalyst_Finish");
 
 // -----------------------------------------------------------------------------------------
@@ -135,6 +129,7 @@ IntegerSum(_CollectedAmount, _Amount, _NewAmount)
 THEN
 NOT DB_KAP_CatalystIngredients(_Index,_Type,_ItemTemplate,_CollectedAmount);
 DB_KAP_CatalystIngredients(_Index,_Type,_ItemTemplate,_NewAmount);
+DB_KAP_IngredientCountByType(_Type,_NewAmount);
 // 
 // New ingredients
 QRY
@@ -145,30 +140,46 @@ AND
 Random(100000,_RandomIndex)
 THEN
 DB_KAP_CatalystIngredients(_RandomIndex,_Type,_ItemTemplate,_Amount);
+DB_KAP_IngredientCountByType(_Type,_Amount);
 
 //END_REGION
 
-// Tranzit to PROC_KAP_Try_Create_Result for apply error status NO_RESULT
+//
+// START COMBINE
+//
+// ERROR IF NOT INGREDIENTS
 IF
-EntityEvent(_,"KAP_Collect_Ingredients_For_Catalyst_Finish")
+Combined(_Lab,_Slot1,_,_,_,_Player,_LabCombinedResult)
 AND
-SysCount("DB_KAP_CatalystIngredients",4,_Amount)
+GetTemplate(_Lab, _LabTemplate)
 AND
-_Amount < 1 // If there are no ingredients in the slot, then there is no point in checking further.
+DB_KAP_DistilationSet(_LabTemplate)
+AND
+NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+AND
+DB_KAP_Current_Distilate(_Player,_Lab,_Slot1)
+AND
+NOT QRY_KAP_EnoughIngredients()
 THEN
-PROC_KAP_Try_Create_Result();
-
-// Collecting finished, go to making
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_DISTILATE", 6.0, 1);
+RequestDelete((ITEM)_LabCombinedResult);
+//
+// START
 IF
-EntityEvent(_,"KAP_Collect_Ingredients_For_Catalyst_Finish")
+Combined(_Lab,_Slot1,_,_,_,_Player,_LabCombinedResult)
 AND
-SysCount("DB_KAP_CatalystIngredients",4,_Amount)
+GetTemplate(_Lab, _LabTemplate)
 AND
-_Amount > 0 // If there are no ingredients in the slot, then there is no point in checking further.
+DB_KAP_DistilationSet(_LabTemplate)
+AND
+NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+AND
+QRY_KAP_EnoughIngredients()
 THEN
 PROC_KAP_StartCatalystMaking();
 PROC_KAP_Try_Create_Result();
 PROC_KAP_Try_Remove_Spented();
+ObjectTimerLaunch(_LabCombinedResult, "KAP_DeleteLabCombinedResult_Timer", 5);
 //
 //
 // Start making by water 
@@ -289,7 +300,7 @@ DB_Singleton("DB_KAP_CatalystReadyForRegisterResult",1);
 PROC
 PROC_KAP_CatalistTryRegisterResult()
 AND
-DB_KAP_Current_Distilate(_,_Lab,_Slot1,_)
+DB_KAP_Current_Distilate(_,_Lab,_Slot1)
 AND
 SysCount("DB_KAP_CatalystDrinkForThisWater",3,_Amount) // not empty
 AND
@@ -352,17 +363,57 @@ THEN
 NOT DB_KAP_CatalystIngredients(_Index,_Type,_Template,_AvailableAmount);
 //
 //
+// 
+QRY
+QRY_KAP_EnoughIngredients()
+AND
+DB_KAP_IngredientCountByType("Water",_WaterAmount)
+AND
+_WaterAmount > 0
+AND
+DB_KAP_IngredientCountByType("Alcogol",_AlcogolAmount)
+AND
+_AlcogolAmount > 0
+THEN
+DB_NOOP(1);
+//
+QRY
+QRY_KAP_EnoughIngredients()
+AND
+DB_KAP_IngredientCountByType("Water",_WaterAmount)
+AND
+_WaterAmount > 0
+AND
+DB_KAP_IngredientCountByType("Wine",_AlcogolAmount)
+AND
+_AlcogolAmount > 1
+THEN
+DB_NOOP(1);
+//
+//
+//REGION TECHNICAL
+// Singleton for DB_KAP_IngredientCountByType 
+//
+IF
+DB_KAP_IngredientCountByType(_NewType,_NewAmount)
+AND
+DB_KAP_IngredientCountByType(_OldType,_OldAmount)
+AND
+_NewType == _OldType
+AND
+_NewAmount != _OldAmount
+THEN
+NOT DB_KAP_IngredientCountByType(_OldType,_OldAmount);
+//
+//
 // QRY for clear db on start combine
 QRY
 QRY_KAP_Clear_Old_DistilateVariables()
-AND
-GetHostCharacter(_Player)
 THEN
+SysClear("DB_KAP_IngredientCountByType", 2);
 SysClear("DB_KAP_CatalystIngredients", 4);
-SysClear("DB_KAP_Current_Distilate", 4);
-
-
-
+SysClear("DB_KAP_Current_Distilate", 3);
+//END_REGION
 
 
 

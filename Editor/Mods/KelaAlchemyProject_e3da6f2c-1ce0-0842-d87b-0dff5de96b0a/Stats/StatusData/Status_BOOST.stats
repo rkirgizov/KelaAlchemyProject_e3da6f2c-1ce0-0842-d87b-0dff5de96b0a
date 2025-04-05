@@ -816,32 +816,44 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
-        <field name="UUID" type="IdTableFieldDefinition" value="efa8063b-c5ff-49ee-a113-13cc1e54f9dc" />
-        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_SEPARATE" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h67f71683g8953g585bgb5e1gf78d276d58c4" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0a0106efg634eg9aceg1cecg74003a1aa05e" version="1" />
+        <field name="UUID" type="IdTableFieldDefinition" value="cb0d6f54-fd38-4553-9f04-dbc82bd6b9ca" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_COMBINE" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h80419cf3gbe7bgd771g7e58g6448db2b5dee" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hcf9ea92bgc0d1ge066ge6b3g8f71d286bd5a" version="1" />
         <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
-        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_SEPARATE" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_COMBINE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="efa8063b-c5ff-49ee-a113-13cc1e54f9dc" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_SEPARATE" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h67f71683g8953g585bgb5e1gf78d276d58c4" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0a0106efg634eg9aceg1cecg74003a1aa05e" version="2" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_SEPARATE" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8086ca1a-6375-42bd-ba67-a56508cdea98" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_DISTILATE" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2bb7812egafe4g534dg449cg58a7a022cc04" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hc1fc9d42gd621gb78fgbf89g82b9b4e0a207" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_DISTILATE" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="57078e58-2a31-40d3-907f-e39bd6b9a602" />
-        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT_1" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h42cdfdc6g25f0g29a5g2345gbf1efdd5cf92" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h23ae302ag6f4agd51ag22a6ge61707cfecc1" version="1" />
-        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT_1" />
-        <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
-        <field name="UUID" type="IdTableFieldDefinition" value="4f1534dc-56e4-46e1-90eb-019ddad14ab0" />
-        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT_2" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfddabeddg8912ge800gaf9cgc8e158d7e32b" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h7d403bf3g7324gccecgb15cgf14dae2a9e77" version="1" />
-        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT_2" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h42cdfdc6g25f0g29a5g2345gbf1efdd5cf92" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h23ae302ag6f4agd51ag22a6ge61707cfecc1" version="2" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_EMPTY_SLOT" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
       </fields>
     </stat_object>
