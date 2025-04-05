@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <contentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <content contentuid="h8619f3a4g9325g467fgb704g2933fddc6dfb" version="10">Condensers and Alembics</content>
-  <content contentuid="ha0c3ad34g92eagd757gab45ga3801923b8a4" version="7">Можно отмыть и использовать для алхимических опытов</content>
+  <content contentuid="ha0c3ad34g92eagd757gab45ga3801923b8a4" version="8">Можно отмыть и использовать для алхимических опытов</content>
   <content contentuid="hfc4eaef6g5a72g4580gad06g4c17bf4633ff" version="8">A collection of fine glass flasks, used to distil liquids both mundane and sinister.</content>
   <content contentuid="h74027666g46a6g3ccdg2f26g4b4a27741682" version="1">KAP_ALCH_RECIPEBOOK</content>
   <content contentuid="h1bf1d2e5g6578ge317g5f98g8e4708fc3129" version="10">Forgotten Realms Recipe Book</content>
@@ -135,8 +135,8 @@
   <content contentuid="hb900cff6g86d2g300fg9213g6842eabbd9d6" version="1">Low intelligence DESC</content>
   <content contentuid="he50147d8gbb4cg9d5fgedddgeb924f811d14" version="1">%%%EMPTY</content>
   <content contentuid="h69095a74gf6a1g5d08gef89g6d406ac6abee" version="1">Low intelligence for additional DESC</content>
-  <content contentuid="hc116c2a0g8b0bg47abga8bbg3d288099620a" version="9">Empty Condensers and Alembics</content>
-  <content contentuid="h8e05f8beg2e84g45f8gbd54g74cc0e1c4698" version="9">Целый набор реторт, колб и воронок, готовый к любым алхимическим опытам</content>
+  <content contentuid="hc116c2a0g8b0bg47abga8bbg3d288099620a" version="10">Empty Condensers and Alembics</content>
+  <content contentuid="h8e05f8beg2e84g45f8gbd54g74cc0e1c4698" version="10">Целый набор реторт, колб и воронок, готовый к любым алхимическим опытам</content>
   <content contentuid="h4280f3afg1715g4f92g8e78g8ecba865d639" version="6">Condensers and Alembics</content>
   <content contentuid="h4d02ea06g0fcbg1f16ga78fg62249321d575" version="2">Можно отмыть и использовать для алхимических опытов</content>
   <content contentuid="hbd9afa3egc2fdg4250g8650g39093208774f" version="4">A collection of fine glass flasks, used to distil liquids both mundane and sinister.</content>
@@ -146,7 +146,7 @@
   <content contentuid="h7e775530g5ed9g44f9gadebg104b51bdd812" version="10">Набор склянок, основная цель которого - сепарация</content>
   <content contentuid="h1974560eg8838g490fg9705g37b380b5d75c" version="3">Glass Distillation Set</content>
   <content contentuid="h4be54045g0e96g43e7gb383gafdf4c69e558" version="4">Each cylinder, flask and retort in this set is covered in a sticky, dusty substance.</content>
-  <content contentuid="h137a02c3gc3b1g33d2g8488g9b7ccfa7cd0c" version="4">Для проведения алхимических опытов необходимо в каждый слот заложить чистую колбу или реторту с необходимыми ингредиентами согласно рецепту: &lt;br&gt;Слот 1 - основные &lt;br&gt;Слот 2 - вторичные &lt;br&gt;Слот 3 - вспомогательные и дополнительные, например алхимический катализатор или ингредиенты для дополнительных свойств</content>
+  <content contentuid="h137a02c3gc3b1g33d2g8488g9b7ccfa7cd0c" version="5">Для проведения алхимических опытов необходимо в каждый слот заложить чистую колбу или реторту с необходимыми ингредиентами согласно рецепту: &lt;br&gt;Слот 1 - основные &lt;br&gt;Слот 2 - вторичные &lt;br&gt;Слот 3 - вспомогательные и дополнительные, например алхимический катализатор или ингредиенты для дополнительных свойств</content>
   <content contentuid="hfe9717e2gdd80g4032g90e6g5e570fd356ca" version="4">Glass Seperation Set</content>
   <content contentuid="hfa2c26a1gcb7eg48bdgb946g800caf8b39fa" version="5">Though rust has bitten into this iron stand, the glass flasks it holds are in pristine condition.</content>
   <content contentuid="h1e71830cga838g47ddg897agf556c85ec501" version="6">Glass Seperation Set</content>
@@ -155,15 +155,15 @@
   <content contentuid="h9044c527gd882g4967gb998gc31b834ccc73" version="4">Though rust has bitten into this iron stand, the glass flasks it holds are in pristine condition.</content>
   <content contentuid="h9121f5ffge91ag4e1fg9a6eg8ab6562971d0" version="3">Glass Distillation Set</content>
   <content contentuid="h2f677e6dg74acg41e8gaad3g0e8d22e97b27" version="3">A built-up of soot, dust, and a mysterious blue liquid has settled in every nook and cranny of this alchemical set.</content>
-  <content contentuid="hc1ea2e2cg3852g4f58ga51bg3bf7306f2ee8" version="5">Glass Distillation Set</content>
-  <content contentuid="h39fe9fd3g777bg4182g8cf2g036c904deec5" version="5">Дистилятор, готовый к работе</content>
+  <content contentuid="hc1ea2e2cg3852g4f58ga51bg3bf7306f2ee8" version="7">Glass Distillation Set</content>
+  <content contentuid="h39fe9fd3g777bg4182g8cf2g036c904deec5" version="7">Дистилятор, готовый к работе</content>
   <content contentuid="he97cb98dg17a1g4ac7gb70ag4f79ed848d34" version="3">Glass Distillation Set</content>
   <content contentuid="h5d21647bgd4e2g4d48g80beg185b35933bf4" version="3">A built-up of soot, dust, and a mysterious blue liquid has settled in every nook and cranny of this alchemical set.</content>
   <content contentuid="h1dfaf4bcg281dg4751gb06fge14632d3e36c" version="3">Glass Distillation Set</content>
   <content contentuid="ha0097b55g8117g4ac8g87cega1fd26c6799d" version="3">A built-up of soot, dust, and a mysterious blue liquid has settled in every nook and cranny of this alchemical set.</content>
   <content contentuid="h24054806g6fa2g4618gbaf8g165feda624e5" version="3">Glass Distillation Set</content>
-  <content contentuid="he1911590g90e2g46f1g8532g66457617e6ce" version="3">A greasy substance clogs up most of this set's spiralling condenser, making any distillation a risky business.</content>
-  <content contentuid="h336c2962g2bb5g40fdgbe38g9d893df90943" version="5">Glass Distillation Set</content>
+  <content contentuid="he1911590g90e2g46f1g8532g66457617e6ce" version="4">A greasy substance clogs up most of this set's spiralling condenser, making any distillation a risky business.</content>
+  <content contentuid="h336c2962g2bb5g40fdgbe38g9d893df90943" version="7">Glass Distillation Set</content>
   <content contentuid="h636d93d4g4670g4c39g9bd0g0065c9faa0b1" version="4">A greasy substance clogs up most of this set's spiralling condenser, making any distillation a risky business.</content>
   <content contentuid="h91e74476gbe35g4701g9b5dg68295c4ac4cc" version="3">Glass Distillation Set</content>
   <content contentuid="h63cf7172g44bag4643g91afg627f077edace" version="3">A greasy substance clogs up most of this set's spiralling condenser, making any distillation a risky business.</content>
@@ -204,7 +204,7 @@
   <content contentuid="h6ef69cf3g07cbg7ba6g1c48gf872fdaddb87" version="5">This parchment is unread.</content>
   <content contentuid="he91abed2g11c9g2d37g6079g9a37692606b6" version="3">После изучения рецепта, знание становится доступным любому из вашей команды, у кого есть нужные навыки.</content>
   <content contentuid="h543413ddgdea0gba7bgd5f4gb1ae2170fc76" version="4">Для сепарации эликсиров, зелий и ядов на их ингредиенты, необходимо в каждый слот заложить чистую колбу или реторту, при этом в первый слот закладывается катализатор и то, что сепарируем, а второй слот - для выделенных ингредиентов.</content>
-  <content contentuid="h8fa3d0e5g274eg18fbgb656g90e197ef8823" version="1">Самый простой инструмент - просто установите в единственный слот одну колбу или реторту с необходимыми ингредиентами. &lt;br&gt;Стандартный рецепт - катализатор, для получения которого необходимы вода и спиртное (вино - две бутыли, крепкий алкоголь - одна).</content>
+  <content contentuid="h8fa3d0e5g274eg18fbgb656g90e197ef8823" version="3">Самый простой инструмент - просто установите в единственный слот одну колбу или реторту с необходимыми ингредиентами. &lt;br&gt;Стандартный рецепт - катализатор, для получения которого необходимы вода и спиртное (вино - две бутыли, крепкий алкоголь - одна).</content>
   <content contentuid="h05def27eg192fg0d57ga9b4ga3b35fa45353" version="1">Рецепт выучен!</content>
   <content contentuid="hc4e017fdg856dg7ec5g9f40gec46f9a58361" version="1">Вы выучили рецепт! Знание становится доступным любому из вашей команды, у кого есть нужные навыки.</content>
   <content contentuid="h2d449a9egfffag26d5g9592gcb09c390a135" version="1">Незнакомый рецепт</content>

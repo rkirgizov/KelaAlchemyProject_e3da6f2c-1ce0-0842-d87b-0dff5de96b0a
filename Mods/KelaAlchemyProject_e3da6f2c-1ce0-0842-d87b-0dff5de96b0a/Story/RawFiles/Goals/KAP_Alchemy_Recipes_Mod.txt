@@ -35,8 +35,6 @@ DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_4",
 DB_KAP_Recipe_Ingredients("ALCH_Recipe_ElixirSilvanus",(ITEMROOT)ALCH_Extract_WoodBark_19d0c788-596c-4893-ac4a-bd609ed69753,1);
 DB_KAP_Recipe_Ingredients("ALCH_Recipe_ElixirSilvanus",(ITEMROOT)ALCH_Extract_WyvernStinger_13aa0c56-538e-4a7c-a4d1-115e2704a274,1);
 DB_KAP_Recipe_Ingredients("ALCH_Recipe_ElixirSilvanus",(ITEMROOT)ALCH_Extract_SwarmingToadstool_8f392687-af6e-491d-891f-0c3e6627a7c5,2);
-// Need for appling additional status
-DB_KAP_Affinities("ALCH_Recipe_ElixirSilvanus",(ITEMROOT)ALCH_Extract_Mugwort_b707f039-af1d-456d-a606-1604f1d776c1,(ITEMROOT)UNI_Apprentice_Antidote_25fea821-5ec1-4052-bd6c-60c249e72a79,"DEN_APPRENTICE_ANTIDOTE",10,"POTION"); // CHECKED
 
 
 // TRANSMUTATION

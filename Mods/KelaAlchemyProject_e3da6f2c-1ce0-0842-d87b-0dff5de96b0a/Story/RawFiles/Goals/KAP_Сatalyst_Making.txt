@@ -53,7 +53,7 @@ DB_KAP_NeedSpentCountByType("Alcogol",1);
 KBSECTION
 // FIRST CHECK 
 IF
-RequestCanCombine(_Player,_Lab,_Slot1,_,_,_,_RequestID)
+RequestCanCombine(_Player,_Lab,_Slot1,_Slot2,_,_,_RequestID)
 AND
 GetTemplate(_Lab, _LabTemplate)
 AND
@@ -63,10 +63,14 @@ GetStatString(_Slot1, _Slot1Stat)
 AND
 _Slot1Stat == "OBJ_Laboratory_Glass"
 AND
+GetStatString(_Slot2, _Slot2Stat)
+AND
+_Slot2Stat == "OBJ_Laboratory_Glass"
+AND
 QRY_KAP_Clear_Old_DistilateVariables()
 THEN
-SetDualEntityEvent(_Player,_Player,"START RequestCanCombine");
-DB_KAP_Current_Lab(_Lab,_Player,NULL_00000000-0000-0000-0000-000000000000); // need for PROC_KAP_Create_Result
+//SetDualEntityEvent(_Player,_Player,"START RequestCanCombine");
+DB_KAP_Current_Lab(_Lab,_Player,_Slot2); // need for PROC_KAP_Create_Result
 DB_KAP_Current_Distilate(_Player,_Lab,_Slot1);
 IterateInventory(_Slot1,"KAP_Collect_Ingredients_For_Catalyst","KAP_Collect_Ingredients_For_Catalyst_Finish");
 
@@ -146,6 +150,18 @@ DB_KAP_IngredientCountByType(_Type,_Amount);
 
 //
 // START COMBINE
+//
+// ERROR FROM MAIN SCRIPT
+IF
+Combined(_Lab,_,_,_,_,_Player,_LabCombinedResult)
+AND
+GetTemplate(_Lab, _LabTemplate)
+AND
+DB_KAP_DistilationSet(_LabTemplate)
+AND
+DB_Singleton("DB_KAP_StartCombined_Error",1)
+THEN
+RequestDelete((ITEM)_LabCombinedResult);
 //
 // ERROR IF NOT INGREDIENTS
 IF
