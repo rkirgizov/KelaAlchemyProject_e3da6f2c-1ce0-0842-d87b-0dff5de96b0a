@@ -181,7 +181,7 @@ DB_KAP_CatalystTemplate(_ItemTemplate)
 AND
 NOT DB_KAP_CatalystForRemove(_)
 THEN
-SetDualEntityEvent(_Item,_Item,"Catalyst registered");
+//SetDualEntityEvent(_Item,_Item,"Catalyst registered");
 DB_KAP_CatalystForRemove(_ItemTemplate);
 //
 // Finish Slot1, go to Slot2
