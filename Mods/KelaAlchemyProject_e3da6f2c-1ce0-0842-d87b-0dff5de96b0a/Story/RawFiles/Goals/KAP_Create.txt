@@ -463,12 +463,13 @@ PROC_KAP_Start_Potion_Making();
 PROC_KAP_Try_Create_Result();
 PROC_KAP_Try_Remove_Spented();
 ObjectTimerLaunch(_LabCombinedResult, "KAP_DeleteLabCombinedResult_Timer", 5);
-
 //
 //
 // GENERAL FUNCTIONS FOR ALL TYPES OF RECIPES
 //
 // START POTION MAKING
+//
+// COMMONLY KNOWN RECIPES WITHOUT REQUIREMENTS
 PROC
 PROC_KAP_Start_Potion_Making()
 AND
@@ -477,12 +478,8 @@ AND
 DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
 AND
 DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
-AND
-NOT IsSubstring(_RecipeName,"ALCH_Transmutation",1)
-AND
-NOT IsSubstring(_RecipeName,"ALCH_Merge_Healing",1)
-AND
-NOT IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
+AND 
+IsSubstring(_ComboCategory,"ALCH_Affinity",1) // We remove recipes from books that are not publicly available
 AND
 QRY_KAP_Clear_MainIngredientProcess() // Clear old main ingredient if present
 AND
@@ -490,12 +487,12 @@ DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessed)
 AND
 IntegerSum(_AmountProcessed,1,_AmountProcessedNew) // Counting the processed ingredients
 THEN
+//SetDualEntityEvent(_Slot1,_Slot1,"PROC_KAP_Start_Potion_Making AFFINITY");
 DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessedNew);
 DB_KAP_MainIngredientProcess(_Result,_ItemIndex,_ItemTemplate,_ComboCategory); // We send the main ingredient for processing
-PROC_KAP_Process_ModRecipe(_ComboCategory,_Amount); // ONLY FOR MOD RECIPES Prepares mod recipe
 //
-// TRANSMUTATION
-// Need catalyst for transmutation and recipe known
+//
+// CHECK KNOWN AND REQUIREMENTS FOR RECIPES FROM BOOKS
 PROC
 PROC_KAP_Start_Potion_Making()
 AND
@@ -504,12 +501,14 @@ AND
 DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
 AND
 DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
+AND 
+NOT IsSubstring(_ComboCategory,"ALCH_Affinity",1)
 AND
-IsSubstring(_RecipeName,"ALCH_Transmutation",1)
+DB_KAP_Recipes_Books(_,_RecipePattern,_) 
+AND 
+IsSubstring(_RecipeName,_RecipePattern,1) // For recipes from books 
 AND
-DB_KAP_Recipes_Known(_,"ALCH_Transmutation")
-AND
-DB_KAP_CatalystForRemove(_CatalystTemplate)
+QRY_KAP_RecipeCheckKnownAndRequirements(_RecipePattern) // check requirements
 AND
 QRY_KAP_Clear_MainIngredientProcess() // Clear old main ingredient if present
 AND
@@ -517,160 +516,74 @@ DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessed)
 AND
 IntegerSum(_AmountProcessed,1,_AmountProcessedNew) // Counting the processed ingredients
 THEN
+//SetDualEntityEvent(_Slot1,_Slot1,"PROC_KAP_Start_Potion_Making RECIPE");
 DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessedNew);
-DB_KAP_MainIngredientProcess(_Result,_ItemIndex,_ItemTemplate,_ComboCategory); // We send the main ingredient for processing
-PROC_KAP_Process_ModRecipe(_ComboCategory,_Amount); // ONLY FOR MOD RECIPES Prepares mod recipe
+PROC_KAP_Process_ModRecipe_CheckRequirements(_Result,_ItemIndex,_ItemTemplate,_ComboCategory,_Amount); // ONLY FOR MOD RECIPES Prepares mod recipe
 //
-// Need catalyst for transmutation
-// ERROR
-PROC
-PROC_KAP_Start_Potion_Making()
+// Clean singletons
+QRY
+QRY_KAP_RecipeCheckKnownAndRequirements((STRING)_RecipePattern)
+THEN
+DB_Singleton("DB_KAP_RecipeProcessing_Error",0);
+DB_Singleton("DB_KAP_RecipeProcessing_NeedCatalyst",0);
+//
+// Check recipe known
+QRY
+QRY_KAP_RecipeCheckKnownAndRequirements((STRING)_RecipePattern)
 AND
-DB_KAP_Current_Lab(_Lab,_Player,_)
+GetHostCharacter(_Player)
 AND
-DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
+NOT DB_KAP_Recipes_Known(_,_RecipePattern)
+THEN
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_KNOWN", 6.0, 1);
+DB_Singleton("DB_KAP_RecipeProcessing_Error",1);
+//
+// Check catalyst
+QRY
+QRY_KAP_RecipeCheckKnownAndRequirements((STRING)_RecipePattern)
 AND
-DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
+GetHostCharacter(_Player)
 AND
-DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
+DB_KAP_Recipes_Known(_,_RecipePattern)
 AND
-IsSubstring(_RecipeName,"ALCH_Transmutation",1)
+DB_KAP_Recipe_Requirements(_RecipePattern,1,_)
 AND
 NOT DB_KAP_CatalystForRemove(_)
 THEN
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_TRANSMUTATION", 6.0, 1);
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_RECIPE_REQUIREMENTS", 6.0, 1);
+DB_Singleton("DB_KAP_RecipeProcessing_Error",1);
 //
-// Need recipe known
-// ERROR
-PROC
-PROC_KAP_Start_Potion_Making()
+QRY
+QRY_KAP_RecipeCheckKnownAndRequirements((STRING)_RecipePattern)
 AND
-DB_KAP_Current_Lab(_Lab,_Player,_)
+GetHostCharacter(_Player)
 AND
-DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
+DB_KAP_Recipes_Known(_,_RecipePattern)
 AND
-DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
+DB_KAP_Recipe_Requirements(_RecipePattern,1,_)
 AND
-DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
-AND
-IsSubstring(_RecipeName,"ALCH_Transmutation",1)
-AND
-NOT DB_KAP_Recipes_Known(_,"ALCH_Transmutation")
+DB_KAP_CatalystForRemove(_Catalyst)
 THEN
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_TRANSMUTATION_KNOWN", 6.0, 1);
+DB_Singleton("DB_KAP_RecipeProcessing_NeedCatalyst",1);
 //
-// MERGE_HEALING
-PROC
-PROC_KAP_Start_Potion_Making()
+// Check tag
+QRY
+QRY_KAP_RecipeCheckKnownAndRequirements((STRING)_RecipePattern)
 AND
-DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
+GetHostCharacter(_Player)
 AND
-DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
+DB_KAP_Recipes_Known(_,_RecipePattern)
 AND
-DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
+DB_KAP_Recipe_Requirements(_RecipePattern,_,_Tag)
 AND
-IsSubstring(_RecipeName,"ALCH_Merge_Healing",1)
+_Tag != NULL_00000000-0000-0000-0000-000000000000
 AND
-DB_KAP_Recipes_Known(_,"ALCH_Merge_Healing")
-AND
-QRY_KAP_Clear_MainIngredientProcess() // Clear old main ingredient if present
-AND
-DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessed)
-AND
-IntegerSum(_AmountProcessed,1,_AmountProcessedNew) // Counting the processed ingredients
+NOT IsTagged(_Player,_Tag,1)
 THEN
-DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessedNew);
-DB_KAP_MainIngredientProcess(_Result,_ItemIndex,_ItemTemplate,_ComboCategory); // We send the main ingredient for processing
-PROC_KAP_Process_ModRecipe(_ComboCategory,_Amount); // ONLY FOR MOD RECIPES Prepares mod recipe
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_RECIPE_REQUIREMENTS", 6.0, 1);
+DB_Singleton("DB_KAP_RecipeProcessing_Error",1);
 //
-// Need recipe known
-// ERROR
-PROC
-PROC_KAP_Start_Potion_Making()
-AND
-DB_KAP_Current_Lab(_Lab,_Player,_)
-AND
-DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
-AND
-DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
-AND
-DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
-AND
-IsSubstring(_RecipeName,"ALCH_Merge_Healing",1)
-AND
-NOT DB_KAP_Recipes_Known(_,"ALCH_Merge_Healing")
-THEN
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_MERGE_HEALING_KNOWN", 6.0, 1);
 //
-// ALCH_Potion_ElixirSilvanus
-PROC
-PROC_KAP_Start_Potion_Making()
-AND
-DB_KAP_Current_Lab(_,_Player,_)
-AND
-DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
-AND
-DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
-AND
-DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
-AND
-IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
-AND
-DB_KAP_Recipes_Known(_,"ALCH_Potion_ElixirSilvanus")
-AND
-IsTagged(_Player,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0,1)
-AND
-QRY_KAP_Clear_MainIngredientProcess() // Clear old main ingredient if present
-AND
-DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessed)
-AND
-IntegerSum(_AmountProcessed,1,_AmountProcessedNew) // Counting the processed ingredients
-THEN
-DB_Singleton("DB_KAP_MainIngredientsProcessedCount",_AmountProcessedNew);
-DB_KAP_MainIngredientProcess(_Result,_ItemIndex,_ItemTemplate,_ComboCategory); // We send the main ingredient for processing
-PROC_KAP_Process_ModRecipe(_ComboCategory,_Amount); // ONLY FOR MOD RECIPES Prepares mod recipe
-//
-// Need recipe known
-// ERROR
-PROC
-PROC_KAP_Start_Potion_Making()
-AND
-DB_KAP_Current_Lab(_Lab,_Player,_)
-AND
-DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
-AND
-DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
-AND
-DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
-AND
-IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
-AND
-NOT DB_KAP_Recipes_Known(_,"ALCH_Potion_ElixirSilvanus")
-THEN
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_KNOWN", 6.0, 1);
-//
-// Not Druid
-// ERROR
-PROC
-PROC_KAP_Start_Potion_Making()
-AND
-DB_KAP_Current_Lab(_Lab,_Player,_)
-AND
-DB_KAP_Current_Lab_Slots(_Slot1,_,_Slot3)
-AND
-DB_KAP_AvailableIngredients(_ItemIndex,_Slot1,_Amount,_ItemTemplate,_ItemTemplateGUID,_ItemStat) // Let's go through the main ingredients
-AND
-DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a recipe for the main ingredient.
-AND
-IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
-AND
-DB_KAP_Recipes_Known(_,"ALCH_Potion_ElixirSilvanus")
-AND
-NOT IsTagged(_Player,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0,1)
-THEN
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_NOT_DRUID", 6.0, 1);
-//
-// 
 // Create result
 PROC
 PROC_KAP_Try_Create_Result()
@@ -860,7 +773,20 @@ PROC_KAP_Register_Result(_ResultTemplate,_Lab,1); // Register the result for lat
 // -----------------------------------------------------------------------------------------
 // MOD_RECIPES
 // -----------------------------------------------------------------------------------------
+//
+PROC
+PROC_KAP_Process_ModRecipe_CheckRequirements((ITEMROOT)_Result,(INTEGER)_ItemIndex,(ITEMROOT)_ItemTemplate,(STRING)_ComboCategory,(INTEGER)_Amount) // ONLY FOR MOD RECIPES Prepares mod recipe
+AND
+GetHostCharacter(_Player)
+AND
+NOT DB_Singleton("DB_KAP_RecipeProcessing_Error",1)
+THEN 
+//SetDualEntityEvent(_Player,_Player,"PROC_KAP_Process_ModRecipe_CheckRequirements RECIPE");
+DB_KAP_MainIngredientProcess(_Result,_ItemIndex,_ItemTemplate,_ComboCategory); // We send the main ingredient for processing
+PROC_KAP_Process_ModRecipe((STRING)_ComboCategory,(INTEGER)_Amount);
+
 //REGION MOD_RECIPES
+//
 // Looking in slot2 and collect ingredients for recipe
 IF
 DB_KAP_MainIngredientProcess(_Result,_MainIndex,_MainTemplate,_ComboCategory)
@@ -869,14 +795,17 @@ DB_KAP_Current_Lab_Slots(_,_Slot2,_)
 AND
 IsSubstring(_ComboCategory,"ALCH_Recipe",1) // ONLY FOR MOD RECIPES Prepares mod recipe
 AND
-DB_KAP_Recipe_Ingredients(_ComboCategory,_AdditionalTemplate,_AdditionalAmountForRecipe)
+DB_KAP_Recipe_Ingredients(_ComboCategory,_SecondaryTemplate,_SecondaryAmountForRecipe)
 THEN
-DB_KAP_RecipeByMainIngredient(_ComboCategory,_AdditionalTemplate,_AdditionalAmountForRecipe);
+//SetDualEntityEvent(_Slot2,_Slot2,"DB_KAP_MainIngredientProcess RECIPE");
+DB_KAP_RecipeByMainIngredient(_ComboCategory,_SecondaryTemplate,_SecondaryAmountForRecipe);
 //
 // CYCLE
 // Process main ingredients in stack by one
 PROC
 PROC_KAP_Process_ModRecipe((STRING)_ComboCategory,(INTEGER)_MainIngredientStack)
+AND
+GetHostCharacter(_Player)
 AND
 IsSubstring(_ComboCategory,"ALCH_Recipe",1)
 AND
@@ -884,14 +813,15 @@ IntegerSubtract(_MainIngredientStack, 1, _NewStack)
 AND
 _NewStack >= 0
 THEN
+//SetDualEntityEvent(_Player,_Player,"PROC_KAP_Process_ModRecipe RECIPE");
 SysClear("DB_KAP_TotalAvailableByTemplate",3);
-PROC_KAP_ModRecipe_Check_AvailableAdditionalIngredients(_ComboCategory);
+PROC_KAP_ModRecipe_Check_AvailableSecondaryIngredients(_ComboCategory);
 PROC_KAP_ModRecipe_Try_Create(_ComboCategory); 
 PROC_KAP_Process_ModRecipe(_ComboCategory,_NewStack);
 //
-// Collect additional ingredients
+// Collect secondary ingredients
 PROC
-PROC_KAP_ModRecipe_Check_AvailableAdditionalIngredients((STRING)_ComboCategory)
+PROC_KAP_ModRecipe_Check_AvailableSecondaryIngredients((STRING)_ComboCategory)
 AND
 DB_KAP_Current_Lab_Slots(_,_Slot2,_)
 AND
@@ -899,11 +829,11 @@ DB_KAP_RecipeByMainIngredient(_ComboCategory,_Template,_AmountRecipe)
 AND
 DB_KAP_AvailableIngredients(_,_Slot2,_AmountAvailable,_Template,_,_) 
 //AND
-//ConcatenateInteger("PROC_KAP_ModRecipe_Check_AvailableAdditionalIngredients _AmountAvailable: ",_AmountAvailable,_StringFinal)
+//ConcatenateInteger("PROC_KAP_ModRecipe_Check_AvailableSecondaryIngredients _AmountAvailable: ",_AmountAvailable,_StringFinal)
 AND
 _AmountAvailable >= _AmountRecipe
 THEN
-//SetDualEntityEvent(_Slot2,_Slot2, _StringFinal);
+//SetDualEntityEvent(_Slot2,_Slot2, "PROC_KAP_ModRecipe_Check_AvailableSecondaryIngredients");
 DB_KAP_TotalAvailableByTemplate(_ComboCategory,_Template,_AmountAvailable);
 
 //
@@ -917,9 +847,9 @@ DB_KAP_Current_Lab_Slots(_Slot1,_Slot2,_)
 AND
 DB_KAP_MainIngredientProcess(_ResultTemplate,_MainIndex,_,_ComboCategory)
 AND
-DB_KAP_RecipeByMainIngredient(_ComboCategory,_AdditionalTemplate,_AmountRecipe)
+DB_KAP_RecipeByMainIngredient(_ComboCategory,_SecondaryTemplate,_AmountRecipe)
 AND
-DB_KAP_TotalAvailableByTemplate(_ComboCategory,_AdditionalTemplate,_AmountAvailable)
+DB_KAP_TotalAvailableByTemplate(_ComboCategory,_SecondaryTemplate,_AmountAvailable)
 AND
 SysCount("DB_KAP_RecipeByMainIngredient", 3, _RecipeSize)
 AND
@@ -933,27 +863,27 @@ QRY_KAP_Available_Ingredients_Remove_Template(_Slot2,_ComboCategory)
 THEN
 //SetDualEntityEvent(_Player,_Player,"PROC_KAP_ModRecipe_Try_Create");
 PROC_KAP_Register_Result(_ResultTemplate,_Lab,1);
+PROC_KAP_Spent_Catalyst(1); // if need DB_Singleton("DB_KAP_RecipeProcessing_NeedCatalyst",1);
 NOT DB_OnlyOnce("DB_KAP_Available_Ingredients_Remove_Once");
-NOT DB_KAP_TotalAvailableByTemplate(_ComboCategory,_AdditionalTemplate,_AmountAvailable);
+NOT DB_KAP_TotalAvailableByTemplate(_ComboCategory,_SecondaryTemplate,_AmountAvailable);
 
 //END_REGION
-
-
+//
 // -----------------------------------------------------------------------------------------
-// TRANSMUTATION_RECIPES
+// GUIDSTRING_RECIPES
 // -----------------------------------------------------------------------------------------
-//REGION TRANSMUTATION_RECIPES
+//REGION GUIDSTRING_RECIPES
 // Looking in slot2 and collect ingredients for recipe
 IF
 DB_KAP_MainIngredientProcess(_Result,_MainIndex,_MainTemplate,_ComboCategory)
 AND
 DB_KAP_Current_Lab_Slots(_,_Slot2,_)
 AND
-IsSubstring(_ComboCategory,"ALCH_GUIDString",1) // ONLY FOR TRANSMUTATION RECIPES Prepares recipe
+IsSubstring(_ComboCategory,"ALCH_GUIDString",1) // 
 AND
-DB_KAP_Affinities_GUIDString(_ComboCategory,_GUIDPattern,_AdditionalAmountForRecipe)
+DB_KAP_Affinities_GUIDString(_ComboCategory,_GUIDPattern,_SecondaryAmountForRecipe)
 THEN
-DB_KAP_RecipeByMainIngredientGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountForRecipe);
+DB_KAP_RecipeByMainIngredientGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountForRecipe);
 //
 // CYCLE
 // Process main ingredients in stack by one
@@ -967,13 +897,13 @@ AND
 _NewStack >= 0
 THEN
 DB_Singleton("DB_KAP_GetTotalAmountByGUID",0);
-PROC_KAP_ModRecipe_Check_AvailableAdditionalIngredientsGUID(_ComboCategory);
+PROC_KAP_ModRecipe_Check_AvailableSecondaryIngredientsGUID(_ComboCategory);
 PROC_KAP_ModRecipe_Try_CreateGUID(_ComboCategory); 
 PROC_KAP_Process_ModRecipe(_ComboCategory,_NewStack);
 //
-// Collect additional ingredients
+// Collect secondary ingredients
 PROC
-PROC_KAP_ModRecipe_Check_AvailableAdditionalIngredientsGUID((STRING)_ComboCategory)
+PROC_KAP_ModRecipe_Check_AvailableSecondaryIngredientsGUID((STRING)_ComboCategory)
 AND
 DB_KAP_Current_Lab_Slots(_,_Slot2,_)
 AND
@@ -997,19 +927,19 @@ IntegerSum(_TotalAmount,_Amount,_NewTotalAmount)
 THEN
 DB_Singleton("DB_KAP_GetTotalAmountByGUID",_NewTotalAmount);
 //
-// IF _AdditionalAmountAvailable >= _AdditionalAmountForRecipe then collect additional ingredients for recipe
+// IF _SecondaryAmountAvailable >= _SecondaryAmountForRecipe then collect secondary ingredients for recipe
 PROC
-PROC_KAP_ModRecipe_Check_AvailableAdditionalIngredientsGUID((STRING)_ComboCategory)
+PROC_KAP_ModRecipe_Check_AvailableSecondaryIngredientsGUID((STRING)_ComboCategory)
 AND
 DB_KAP_Current_Lab_Slots(_,_Slot2,_)
 AND
-DB_KAP_RecipeByMainIngredientGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountForRecipe)
+DB_KAP_RecipeByMainIngredientGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountForRecipe)
 AND
-DB_Singleton("DB_KAP_GetTotalAmountByGUID",_AdditionalAmountAvailable)
+DB_Singleton("DB_KAP_GetTotalAmountByGUID",_SecondaryAmountAvailable)
 AND
-_AdditionalAmountAvailable >= _AdditionalAmountForRecipe
+_SecondaryAmountAvailable >= _SecondaryAmountForRecipe
 THEN
-DB_KAP_RecipeByMainIngredient_AvailableAdditionalIngredientsGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountAvailable);
+DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountAvailable);
 //
 // TRY REGISTER RESULT IF ALL INGREDIENTS READY
 // RecipeSize == 1
@@ -1022,9 +952,9 @@ DB_KAP_Current_Lab_Slots(_Slot1,_Slot2,_)
 AND
 DB_KAP_MainIngredientProcess(_ResultTemplate,_MainIndex,_MainTemplate,_ComboCategory)
 AND
-DB_KAP_RecipeByMainIngredientGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountForRecipe)
+DB_KAP_RecipeByMainIngredientGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountForRecipe)
 AND
-DB_KAP_RecipeByMainIngredient_AvailableAdditionalIngredientsGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountAvailable)
+DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountAvailable)
 AND
 SysCount("DB_KAP_RecipeByMainIngredientGUID", 3, _RecipeSize)
 AND
@@ -1037,7 +967,7 @@ THEN
 PROC_KAP_Spent_Catalyst(1);
 PROC_KAP_Register_Result(_ResultTemplate,_Lab,1);
 NOT DB_OnlyOnce("DB_KAP_Available_Ingredients_Remove_Once");
-NOT DB_KAP_RecipeByMainIngredient_AvailableAdditionalIngredientsGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountAvailable);
+NOT DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountAvailable);
 //
 // _RecipeSize > 1
 PROC
@@ -1049,15 +979,15 @@ DB_KAP_Current_Lab_Slots(_Slot1,_Slot2,_)
 AND
 DB_KAP_MainIngredientProcess(_ResultTemplate,_MainIndex,_MainTemplate,_ComboCategory)
 AND
-DB_KAP_RecipeByMainIngredientGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountForRecipe)
+DB_KAP_RecipeByMainIngredientGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountForRecipe)
 AND
-DB_KAP_RecipeByMainIngredient_AvailableAdditionalIngredientsGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountAvailable)
+DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountAvailable)
 AND
 SysCount("DB_KAP_RecipeByMainIngredientGUID", 3, _RecipeSize)
 AND
 _RecipeSize > 1
 AND
-SysCount("DB_KAP_RecipeByMainIngredient_AvailableAdditionalIngredientsGUID", 3, _RecipeAvailableSize)
+SysCount("DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID", 3, _RecipeAvailableSize)
 AND
 _RecipeSize == _RecipeAvailableSize
 AND
@@ -1068,7 +998,7 @@ THEN
 PROC_KAP_Spent_Catalyst(1);
 PROC_KAP_Register_Result(_ResultTemplate,_Lab,1);
 NOT DB_OnlyOnce("DB_KAP_Available_Ingredients_Remove_Once");
-NOT DB_KAP_RecipeByMainIngredient_AvailableAdditionalIngredientsGUID(_ComboCategory,_GUIDPattern,_AdditionalAmountAvailable);
+NOT DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountAvailable);
 
 //END_REGION
 
@@ -1108,7 +1038,8 @@ NOT DB_KAP_AdditionalStatus_Added(1)
 AND
 QRY_KAP_Available_Ingredients_Remove(_Slot3,1,_AdditionIndex)
 THEN
-//SetDualEntityEvent(_Lab,_Lab,"QRY_KAP_Try_Apply_Additional_Status ADDITIONAL_STATUS");
+SetDualEntityEvent(_Slot3,_Slot3,"QRY_KAP_Try_Apply_Additional_Status FIRST");
+DB_Singleton("DB_KAP_RecipeProcessing_NeedCatalyst",1);
 PROC_KAP_Spent_Catalyst(1);
 ApplyStatus(_Result, _KAPStatus, -1.0, 1);
 DB_KAP_AdditionalStatus_Added(1);
@@ -1136,7 +1067,7 @@ NOT QRY_KAP_PlayerAbilityLevelIsRequired(_Player,_Level)
 AND
 NOT DB_KAP_AdditionalStatus_Added(1)
 THEN
-//SetDualEntityEvent(_Lab,_Lab,"QRY_KAP_Try_Apply_Additional_Status KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ADDITIONAL_STATUS");
+SetDualEntityEvent(_Slot3,_Slot3,"QRY_KAP_Try_Apply_Additional_Status KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ADDITIONAL_STATUS");
 ApplyStatus(_Player, "KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ADDITIONAL_STATUS", 6.0, 1);
 //
 // KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_ADDITIONAL_STATUS
@@ -1163,7 +1094,7 @@ NOT DB_KAP_CatalystForRemove(_) // NOT has catalyst for apply additional status
 AND
 NOT DB_KAP_AdditionalStatus_Added(1)
 THEN
-//SetDualEntityEvent(_Lab,_Lab,"QRY_KAP_Try_Apply_Additional_Status KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_ADDITIONAL_STATUS");
+SetDualEntityEvent(_Slot3,_Slot3,"QRY_KAP_Try_Apply_Additional_Status KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_ADDITIONAL_STATUS");
 ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_ADDITIONAL_STATUS", 6.0, 1);
 //
 // NOT ADDITIONAL STATUSES
@@ -1172,7 +1103,7 @@ QRY_KAP_Try_Apply_Additional_Status((ITEM)_Owner,(ITEM)_Result,(STRING)_ResultTy
 AND
 NOT DB_KAP_AdditionalStatus_Added(1)
 THEN
-//SetDualEntityEvent(_Owner,_Owner,"QRY_KAP_Try_Apply_Additional_Status NOT ADDITIONAL STATUSES");
+SetDualEntityEvent(_Owner,_Owner,"QRY_KAP_Try_Apply_Additional_Status NOT ADDITIONAL STATUSES");
 ObjectTimerLaunch(_Result, "KAP_AddResultToPlayer_Timer", 500);
 
 
@@ -1344,27 +1275,34 @@ PROC_KAP_Create_Result(_Owner,_Template,_NewAmount);
 
 
 
+
+
+
+//END_REGION
+
+
+
+
 //
 // CYCLE
 // Remove only once Catalyst if need
 PROC
 PROC_KAP_Spent_Catalyst((INTEGER)_Amount)
 AND
-NOT DB_Singleton("DB_KAP_CatalystSpented",1)
+DB_Singleton("DB_KAP_RecipeProcessing_NeedCatalyst",1)
 AND
 DB_KAP_Current_Lab_Slots(_Slot1,_,_)
 AND
 DB_KAP_CatalystForRemove(_CatalystTemplate)
 AND
+NOT DB_Singleton("DB_KAP_CatalystSpented",1)
+AND
 QRY_KAP_Add_Ingredients_Spent(_Slot1,_CatalystTemplate,1)
 THEN
 DB_Singleton("DB_KAP_CatalystSpented",1);
+DB_Singleton("DB_KAP_RecipeProcessing_NeedCatalyst",0);
 
 
-
-
-
-//END_REGION
 
 
 // -----------------------------------------------------------------------------------------
@@ -1681,6 +1619,7 @@ DB_Singleton("DB_KAP_MainIngredientsAmount",0);
 DB_Singleton("DB_KAP_MainIngredientsProcessedCount",0);
 DB_Singleton("DB_KAP_SpentCount",0);
 DB_Singleton("DB_KAP_CatalystSpented",0);
+DB_Singleton("DB_KAP_RecipeProcessing_NeedCatalyst",0);
 DB_NOOP(1);
 //
 // FOR MOD RECIPE
@@ -1692,7 +1631,7 @@ SysClear("DB_KAP_AffinityAirEarthFireShadowWater",5);
 SysClear("DB_KAP_MainIngredientProcess", 4); // MOD RECIPE
 SysClear("DB_KAP_RecipeByMainIngredient", 3); // MOD RECIPE
 SysClear("DB_KAP_RecipeByMainIngredientGUID", 3); // MOD RECIPE
-SysClear("DB_KAP_RecipeByMainIngredient_AvailableAdditionalIngredientsGUID", 3); // MOD RECIPE
+SysClear("DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID", 3); // MOD RECIPE
 NOT DB_OnlyOnce("DB_KAP_Available_Ingredients_Remove_Once"); // MOD RECIPE
 //
 

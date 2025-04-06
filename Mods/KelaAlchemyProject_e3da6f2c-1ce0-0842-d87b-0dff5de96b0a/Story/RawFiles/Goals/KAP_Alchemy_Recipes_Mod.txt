@@ -13,13 +13,14 @@ DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion
 DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_3");
 DB_KAP_Recipes("ALCH_Merge_HealingSupreme_HealingSuperior",(ITEMROOT)CONS_Potion_Healing_A_Supreme_7d78f227-e8d4-486d-8121-25cf0bee751d,(ITEMROOT)CONS_Potion_Healing_A_Superior_df4f3495-abaf-4732-b82f-55bcccd561db,"ALCH_Recipe_Potion_HealingSupreme_HealingSuperior_4");
 
+DB_KAP_Recipe_Requirements("ALCH_Merge_Healing",1,(TAG)NULL_00000000-0000-0000-0000-000000000000);
+
 // Elixir of Silvanus
 DB_KAP_Recipes("ALCH_Potion_ElixirSilvanus_Mugwort",(ITEMROOT)UNI_Apprentice_Antidote_25fea821-5ec1-4052-bd6c-60c249e72a79,(ITEMROOT)ALCH_Extract_Mugwort_b707f039-af1d-456d-a606-1604f1d776c1,"ALCH_Recipe_ElixirSilvanus");
-
+DB_KAP_Recipe_Requirements("ALCH_Potion_ElixirSilvanus",1,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0);
 
 
 // ------------------------------------------------------------
-// INGREDIENTS FOR MOD RECIPES
 //
 // HEALING POTIONS
 DB_KAP_Recipe_Ingredients("ALCH_Recipe_Potion_HealingGreater_Healing",(ITEMROOT)CONS_Potion_Healing_A_d47006e9-8a51-453d-b200-9e0d42e9bbab,1);
@@ -44,6 +45,7 @@ DB_KAP_Recipes("ALCH_Transmutation_Adamantine_Bronze",(ITEMROOT)LOOT_GEN_Metalba
 DB_KAP_Recipes("ALCH_Transmutation_Adamantine_Silver",(ITEMROOT)LOOT_GEN_Metalbar_Adamantine_A_ed758113-c69b-4e7f-8b41-036a071df80a,(ITEMROOT)LOOT_GEN_Metalbar_Silver_A_e0803337-e2b1-4528-8d4f-b5814e9a52ec,"ALCH_GUIDString_AdamantineScrap");
 DB_KAP_Recipes("ALCH_Transmutation_Adamantine_Gold",(ITEMROOT)LOOT_GEN_Metalbar_Adamantine_A_ed758113-c69b-4e7f-8b41-036a071df80a,(ITEMROOT)LOOT_GEN_Metalbar_Gold_A_44f47718-9769-4c0e-af75-7789d2f2913d,"ALCH_GUIDString_AdamantineScrap");
 
+DB_KAP_Recipe_Requirements("ALCH_Transmutation",1,(TAG)NULL_00000000-0000-0000-0000-000000000000);
 
 // ------------------------------------------------------------
 // AFFINITIES FOR ORIGINAL RECIPES
@@ -52,6 +54,12 @@ DB_KAP_Recipes("ALCH_Transmutation_Adamantine_Gold",(ITEMROOT)LOOT_GEN_Metalbar_
 
 DB_KAP_Affinities_GUIDString("ALCH_GUIDString_Gold","Gold",1); 
 DB_KAP_Affinities_GUIDString("ALCH_GUIDString_AdamantineScrap","AdamantineScrap",1); 
+
+
+
+
+
+
 KBSECTION
 
 EXITSECTION

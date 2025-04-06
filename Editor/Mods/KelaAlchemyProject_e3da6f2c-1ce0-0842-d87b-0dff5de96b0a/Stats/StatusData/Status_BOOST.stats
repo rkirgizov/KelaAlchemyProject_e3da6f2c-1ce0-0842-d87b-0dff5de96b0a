@@ -796,11 +796,11 @@
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="37d85356-1c6e-4172-90db-18e5ee780c51" />
-        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_TRANSMUTATION" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfd8666fbga0e9g3e6cg3ce9gd22d32191b35" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf001028bg9122g0514gb2bbg754a1996eb32" version="2" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_RECIPE_REQUIREMENTS" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfd8666fbga0e9g3e6cg3ce9gd22d32191b35" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf001028bg9122g0514gb2bbg754a1996eb32" version="4" />
         <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
-        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_TRANSMUTATION" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_RECIPE_REQUIREMENTS" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
       </fields>
     </stat_object>
@@ -860,10 +860,10 @@
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="926c7424-daf2-42bd-b3c9-2d0313388ab9" />
-        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_TRANSMUTATION_KNOWN" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2d449a9egfffag26d5g9592gcb09c390a135" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h2abb0291ge602g0b96g6c18g3aa4a0c13e03" version="2" />
-        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_TRANSMUTATION_KNOWN" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_KNOWN" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2d449a9egfffag26d5g9592gcb09c390a135" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h2abb0291ge602g0b96g6c18g3aa4a0c13e03" version="3" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_RECIPE_KNOWN" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="dc7138dd-3ace-402c-b092-1e79363fb2eb" />
       </fields>
     </stat_object>

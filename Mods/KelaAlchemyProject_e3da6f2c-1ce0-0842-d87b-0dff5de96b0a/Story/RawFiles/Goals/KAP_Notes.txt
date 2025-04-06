@@ -40,7 +40,7 @@ QRY_KAP_NotesTravelEntries(_User,_NotesName)
 AND
 QRY_KAP_NotesBaseAlchemy(_User,_NotesName)
 THEN
-SetDualEntityEvent(_User,_User,_NotesName);
+//SetDualEntityEvent(_User,_User,_NotesName);
 DB_NOOP(1);
 
 QRY
