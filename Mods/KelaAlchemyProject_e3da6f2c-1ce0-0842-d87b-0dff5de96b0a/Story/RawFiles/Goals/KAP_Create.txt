@@ -507,7 +507,7 @@ DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a r
 AND
 IsSubstring(_RecipeName,"ALCH_Transmutation",1)
 AND
-DB_KELA_Recipes_Known("ALCH_Transmutation")
+DB_KAP_Recipes_Known(_,"ALCH_Transmutation")
 AND
 DB_KAP_CatalystForRemove(_CatalystTemplate)
 AND
@@ -555,7 +555,7 @@ DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a r
 AND
 IsSubstring(_RecipeName,"ALCH_Transmutation",1)
 AND
-NOT DB_KELA_Recipes_Known("ALCH_Transmutation")
+NOT DB_KAP_Recipes_Known(_,"ALCH_Transmutation")
 THEN
 ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_TRANSMUTATION_KNOWN", 6.0, 1);
 //
@@ -571,7 +571,7 @@ DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a r
 AND
 IsSubstring(_RecipeName,"ALCH_Merge_Healing",1)
 AND
-DB_KELA_Recipes_Known("ALCH_Merge_Healing")
+DB_KAP_Recipes_Known(_,"ALCH_Merge_Healing")
 AND
 QRY_KAP_Clear_MainIngredientProcess() // Clear old main ingredient if present
 AND
@@ -598,7 +598,7 @@ DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a r
 AND
 IsSubstring(_RecipeName,"ALCH_Merge_Healing",1)
 AND
-NOT DB_KELA_Recipes_Known("ALCH_Merge_Healing")
+NOT DB_KAP_Recipes_Known(_,"ALCH_Merge_Healing")
 THEN
 ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_MERGE_HEALING_KNOWN", 6.0, 1);
 //
@@ -616,7 +616,7 @@ DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a r
 AND
 IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
 AND
-DB_KELA_Recipes_Known("ALCH_Potion_ElixirSilvanus")
+DB_KAP_Recipes_Known(_,"ALCH_Potion_ElixirSilvanus")
 AND
 IsTagged(_Player,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0,1)
 AND
@@ -645,7 +645,7 @@ DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a r
 AND
 IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
 AND
-NOT DB_KELA_Recipes_Known("ALCH_Potion_ElixirSilvanus")
+NOT DB_KAP_Recipes_Known(_,"ALCH_Potion_ElixirSilvanus")
 THEN
 ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RECIPE_ELIXIR_OF_SILVANUS_KNOWN", 6.0, 1);
 //
@@ -664,7 +664,7 @@ DB_KAP_Recipes(_RecipeName,_Result,_ItemTemplate,_ComboCategory) // There is a r
 AND
 IsSubstring(_RecipeName,"ALCH_Potion_ElixirSilvanus",1)
 AND
-DB_KELA_Recipes_Known("ALCH_Potion_ElixirSilvanus")
+DB_KAP_Recipes_Known(_,"ALCH_Potion_ElixirSilvanus")
 AND
 NOT IsTagged(_Player,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0,1)
 THEN
