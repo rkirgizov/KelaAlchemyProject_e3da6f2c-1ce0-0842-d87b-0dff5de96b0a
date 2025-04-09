@@ -1,0 +1,5 @@
+valuelist "AlchemyCombinationType"
+value "None" : 0
+value "IngredientsToExtract" : 1
+value "ExtractToSolution" : 2
+value "KAPLaboratory" : 3
