@@ -776,8 +776,8 @@ PROC_KAP_Register_Result(_ResultTemplate,_Lab,1); // Register the result for lat
 //
 PROC
 PROC_KAP_Process_ModRecipe_CheckRequirements((ITEMROOT)_Result,(INTEGER)_ItemIndex,(ITEMROOT)_ItemTemplate,(STRING)_ComboCategory,(INTEGER)_Amount) // ONLY FOR MOD RECIPES Prepares mod recipe
-AND
-GetHostCharacter(_Player)
+//AND
+//GetHostCharacter(_Player)
 AND
 NOT DB_Singleton("DB_KAP_RecipeProcessing_Error",1)
 THEN 
