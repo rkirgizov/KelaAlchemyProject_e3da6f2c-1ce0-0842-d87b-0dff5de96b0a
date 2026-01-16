@@ -40,7 +40,7 @@ for subdir in "${SUBDIR_LIST[@]}"; do
 done;
 
 
-git remote set-url origin git@github.com:rkirgizov/KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a.git
-git add --all
-git commit -m "Backup at `date`"
-git push
+# git remote set-url origin git@github.com:rkirgizov/KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a.git
+# git add --all
+# git commit -m "Backup at `date`"
+# git push

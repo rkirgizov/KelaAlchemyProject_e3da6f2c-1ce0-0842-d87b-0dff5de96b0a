@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e4012e18-6a6b-4f40-aefa-c83b078c136c">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="057b28ba-6e03-4df5-87fb-168cbf53dba4" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DEBUG_ALL" />
+        <field name="DropCount" type="StringTableFieldDefinition" value="15,1" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" value="T_TEST_ALCH_Extracts" />
+        <field name="Frequency" type="IntegerTableFieldDefinition" value="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="057b28ba-6e03-4df5-87fb-168cbf53dba4" />
+        <field name="UUID" type="IdTableFieldDefinition" value="49047193-c98d-4536-82eb-2c3bb8d5c4d6" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DEBUG_ALL_substat_0" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" value="I_CONS_DRINK_Water" />
+        <field name="Frequency" type="IntegerTableFieldDefinition" value="1" />
+        <field name="DropCount" type="StringTableFieldDefinition" value="15,1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="057b28ba-6e03-4df5-87fb-168cbf53dba4" />
+        <field name="UUID" type="IdTableFieldDefinition" value="b3879d50-d58d-4d2b-ad39-d3b460fc7881" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DEBUG_ALL_substat_1" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" value="I_CONS_DRINK_Rum" />
+        <field name="Frequency" type="IntegerTableFieldDefinition" value="1" />
+        <field name="DropCount" type="StringTableFieldDefinition" value="15,1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="057b28ba-6e03-4df5-87fb-168cbf53dba4" />
+        <field name="UUID" type="IdTableFieldDefinition" value="33c8582e-25e7-45d2-9758-8a8a6ac943d3" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DEBUG_ALL_substat_2" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" value="I_CONS_DRINK_Wine_Bottle" />
+        <field name="Frequency" type="IntegerTableFieldDefinition" value="1" />
+        <field name="DropCount" type="StringTableFieldDefinition" value="15,1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="057b28ba-6e03-4df5-87fb-168cbf53dba4" />
+        <field name="UUID" type="IdTableFieldDefinition" value="bb9d3e17-686f-4ea8-89c3-7bf98749c65b" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DEBUG_ALL_substat_3" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" value="I_OBJ_Metalbar_Bronze" />
+        <field name="Frequency" type="IntegerTableFieldDefinition" value="1" />
+        <field name="DropCount" type="StringTableFieldDefinition" value="15,1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="057b28ba-6e03-4df5-87fb-168cbf53dba4" />
+        <field name="UUID" type="IdTableFieldDefinition" value="115fa150-5330-48fc-92d1-d357434e215d" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DEBUG_ALL_substat_4" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" value="T_ST_GEN_Valuables_Jewelry_Gold" />
+        <field name="Frequency" type="IntegerTableFieldDefinition" value="2" />
+        <field name="DropCount" type="StringTableFieldDefinition" value="15,1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="057b28ba-6e03-4df5-87fb-168cbf53dba4" />
+        <field name="UUID" type="IdTableFieldDefinition" value="5d61b032-8e06-4101-9e3c-7d25198e5527" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DEBUG_ALL_substat_6" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" value="T_Supply_Potions" />
+        <field name="Frequency" type="IntegerTableFieldDefinition" value="1" />
+        <field name="DropCount" type="StringTableFieldDefinition" value="15,1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="057b28ba-6e03-4df5-87fb-168cbf53dba4" />
+        <field name="UUID" type="IdTableFieldDefinition" value="7b4be619-817c-44df-bdee-5ca4f075555f" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_DEBUG_ALL_substat_5" />
+        <field name="DropCount" type="StringTableFieldDefinition" value="15,1" />
+        <field name="ObjectCategory" type="StringTableFieldDefinition" value="T_Supply_Alchemy_Potion_Healing" />
+        <field name="Frequency" type="IntegerTableFieldDefinition" value="1" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

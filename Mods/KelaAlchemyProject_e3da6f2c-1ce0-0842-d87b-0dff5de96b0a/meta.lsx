@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <save>
-    <version major="4" minor="7" revision="1" build="3"/>
+    <version major="4" minor="8" revision="0" build="500"/>
     <region id="Config">
         <node id="root">
             <children>
@@ -15,27 +15,38 @@
                             <attribute id="UUID" type="guid" value="28ac9ce2-2aba-8cda-b3b5-6e922f71b6b8"/>
                             <attribute id="Version64" type="int64" value="145100779997082619"/>
                         </node>
+                        <node id="ModuleShortDesc">
+                            <attribute id="Folder" type="LSString" value="GustavX"/>
+                            <attribute id="MD5" type="LSString" value="ef3fcba3f3684b3088ad1f9874d4957c"/>
+                            <attribute id="Name" type="LSString" value="GustavX"/>
+                            <attribute id="PublishHandle" type="uint64" value="0"/>
+                            <attribute id="UUID" type="guid" value="cb555efe-2d9e-131f-8195-a89329d218ea"/>
+                            <attribute id="Version64" type="int64" value="145241946983074840"/>
+                        </node>
                     </children>
                 </node>
                 <node id="ModuleInfo">
-                    <attribute id="Author" type="LSString" value=""/>
+                    <attribute id="Author" type="LSString" value="rkirgizov"/>
                     <attribute id="CharacterCreationLevelName" type="FixedString" value=""/>
-                    <attribute id="Description" type="LSString" value=""/>
-                    <attribute id="FileSize" type="uint64" value="0"/>
+                    <attribute id="Description" type="LSString" value="Alchemy Project - Separation, distillation and mixing! 
+The character must have an intelligence or wisdom (druid) of 14 or higher. 
+There is a debug chest and a lab on the shore near the crash site. 
+For testing. Ideas and feedback?"/>
+                    <attribute id="FileSize" type="uint64" value="22338602"/>
                     <attribute id="Folder" type="LSString" value="KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a"/>
                     <attribute id="LobbyLevelName" type="FixedString" value=""/>
-                    <attribute id="MD5" type="LSString" value="3c5c309c8143cc2ffeec59ddcbac7fbc"/>
+                    <attribute id="MD5" type="LSString" value="e8cc04f79101a39647fcc5c183d59c40"/>
                     <attribute id="MenuLevelName" type="FixedString" value=""/>
                     <attribute id="Name" type="LSString" value="KelaAlchemyProject"/>
                     <attribute id="NumPlayers" type="uint8" value="4"/>
                     <attribute id="PhotoBooth" type="FixedString" value=""/>
-                    <attribute id="PublishHandle" type="uint64" value="0"/>
+                    <attribute id="PublishHandle" type="uint64" value="4852778"/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
                     <attribute id="UUID" type="FixedString" value="e3da6f2c-1ce0-0842-d87b-0dff5de96b0a"/>
-                    <attribute id="Version64" type="int64" value="36028797018963969"/>
+                    <attribute id="Version64" type="int64" value="703687441776648"/>
                     <children>
                         <node id="PublishVersion">
-                            <attribute id="Version64" type="int64" value="144255927717549775"/>
+                            <attribute id="Version64" type="int64" value="703687441776640"/>
                         </node>
                         <node id="Scripts">
                             <children>

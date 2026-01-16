@@ -1,0 +1,41 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "D:/SteamLibrary/steamapps/common/Baldurs Gate 3/Data/Editor/Mods/KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a"
+		},
+		{
+			"path": "D:/SteamLibrary/steamapps/common/Baldurs Gate 3/Data/Mods/KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a"
+		},
+		{
+			"path": "D:/SteamLibrary/steamapps/common/Baldurs Gate 3/Data/Projects/KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a"
+		},
+		{
+			"path": "D:/SteamLibrary/steamapps/common/Baldurs Gate 3/Data/Public/KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a"
+		},
+		{
+			"path": "../../../BG3 Modding/bg3-modders-multitool (1)/UnpackedData/English"
+		},
+		{
+			"path": "../../../BG3 Modding/bg3-modders-multitool (1)/UnpackedData/Game"
+		},
+		{
+			"path": "../../../BG3 Modding/bg3-modders-multitool (1)/UnpackedData/Gustav"
+		},
+		{
+			"path": "../../../BG3 Modding/bg3-modders-multitool (1)/UnpackedData/GustavX"
+		},
+		{
+			"path": "../../../BG3 Modding/bg3-modders-multitool (1)/UnpackedData/Russian"
+		},
+		{
+			"path": "../../../BG3 Modding/bg3-modders-multitool (1)/UnpackedData/Shared"
+		}
+	],
+	"settings": {
+		"bg3ModHelper.rootModPath": "e:\\BG3 Kela Mods\\GIT-backup\\GIT KelaAlchemyProject_e3da6f2c-1ce0-0842-d87b-0dff5de96b0a",
+		"bg3ModHelper.packingPriority": 0
+	}
+}

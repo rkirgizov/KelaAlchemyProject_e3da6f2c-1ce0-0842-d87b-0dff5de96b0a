@@ -1,0 +1,309 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//DB_KAP_Alchemy_Result(KAP_Alchemy_Result_a2ae9d14-32c9-4354-8785-b361a8ecf598);
+KBSECTION
+// FIRST CHECK CATALYST AND POTIONS FOR SEPARATE
+PROC
+PROC_KAP_Start_Separate()
+AND
+DB_KAP_Current_Separate(_Player,_,_Slot1)
+AND
+NOT QRY_KAP_CatalystIsInItemInventory(_Slot1)
+THEN
+DB_Singleton("DB_KAP_StartCombined_Error",1);
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_CATALYST", 6.0, 1);
+// 
+PROC
+PROC_KAP_Start_Separate()
+AND
+DB_KAP_Current_Separate(_,_Lab,_)
+AND
+NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+THEN
+IterateInventory(_Lab,"KAP_Collect_Items_For_Separate","KAP_Collect_Items_For_Separate_Finish");
+//
+//
+// ITERATE LAB INVENTORY
+//REGION ITERATE_LAB_INVENTORY
+//
+IF
+EntityEvent((ITEM)_Item,"KAP_Collect_Items_For_Separate")
+AND
+GetTemplate(_Item,(ITEMROOT)_ItemTemplate)
+AND
+DB_KAP_Recipes(_,_ItemTemplate,_MainIngredient,_Affinity) 
+AND
+IsSubstring(_Affinity,"ALCH_Affinity",1)
+AND
+GetStackAmount(_Item, _Amount,_)
+AND
+QRY_KAP_Items_Add_For_Separate(_ItemTemplate,_MainIngredient,_Affinity,_Amount)
+THEN
+DB_NOOP(1);
+// 
+// ADD POTIONS TO DB_KAP_ItemsForSeparate
+// Added potions
+QRY
+QRY_KAP_Items_Add_For_Separate((ITEMROOT)_ItemTemplate,(ITEMROOT)_MainIngredient,(STRING)_Affinity,(INTEGER)_Amount)
+AND
+DB_KAP_ItemsForSeparate(_Index,_ItemTemplate,_MainIngredient,_Affinity,_CollectedAmount)
+AND
+IntegerSum(_CollectedAmount, _Amount, _NewAmount)
+THEN
+DB_KAP_ItemsForSeparate(_Index,_ItemTemplate,_MainIngredient,_Affinity,_NewAmount);
+// 
+// New potions
+QRY
+QRY_KAP_Items_Add_For_Separate((ITEMROOT)_ItemTemplate,(ITEMROOT)_MainIngredient,(STRING)_Affinity,(INTEGER)_Amount)
+AND
+NOT DB_KAP_ItemsForSeparate(_,_ItemTemplate,_,_,_)
+AND
+Random(100000,_RandomIndex)
+THEN
+DB_KAP_ItemsForSeparate(_RandomIndex,_ItemTemplate,_MainIngredient,_Affinity,_Amount);
+
+IF
+EntityEvent((ITEM)_Item,"KAP_Collect_Items_For_Separate_Finish")
+AND
+DB_KAP_Current_Separate(_Player,_,_)
+AND
+SysCount("DB_KAP_ItemsForSeparate",5,_Amount)
+AND
+_Amount <= 0
+THEN
+DB_Singleton("DB_KAP_StartCombined_Error",1);
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_SEPARATE", 6.0, 1);
+
+IF
+EntityEvent((ITEM)_Item,"KAP_Collect_Items_For_Separate_Finish")
+AND
+SysCount("DB_KAP_ItemsForSeparate",5,_Amount)
+AND
+_Amount > 0
+THEN
+DB_NOOP(1);
+
+//END_REGION
+//
+// START COMBINE
+//
+// ERRORS
+IF
+Combined(_Lab,_Slot1,_,_,_,_Player,_LabCombinedResult)
+AND
+DB_KAP_Current_Separate(_Player,_Lab,_Slot1)
+AND
+DB_Singleton("DB_KAP_StartCombined_Error",1)
+THEN
+RequestDelete((ITEM)_LabCombinedResult);
+//
+// GOOD START
+IF
+Combined(_Lab,_Slot1,_,_,_,_Player,_LabCombinedResult)
+AND
+DB_KAP_Current_Separate(_Player,_Lab,_Slot1)
+AND
+NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+THEN
+//DB_KAP_Current_Lab(_Lab,_Player,_Lab); // need for PROC_KAP_Create_Result
+//ObjectTimerLaunch(_LabCombinedResult, "KAP_DeleteLabCombinedResult_Timer", 30);
+DB_KAP_LabCombinedResult(_LabCombinedResult);
+PROC_KAP_StartSeparate();
+PROC_KAP_Try_Create_Result();
+//PROC_KAP_Try_Remove_Spented();
+//
+// Separate by stack
+PROC
+PROC_KAP_StartSeparate()
+AND
+DB_KAP_ItemsForSeparate(_Index,_,_,_,_Amount)
+THEN
+PROC_KAP_ProcessSeparateStack(_Index,_Amount);
+//
+// CYCLE
+// Separate by one potion in stack
+PROC
+PROC_KAP_ProcessSeparateStack((INTEGER)_Index,(INTEGER)_Stack)
+AND
+IntegerSubtract(_Stack, 1, _NewStack)
+AND
+_NewStack >= 0
+THEN
+PROC_KAP_CollectIngredientsByItem(_Index); // FIND_INGREDIENTS for potions
+PROC_KAP_SeparateTryRegisterResult(_Index);
+PROC_KAP_ProcessSeparateStack(_Index,_NewStack); // CYCLE by stack
+//
+//
+//REGION FIND_INGREDIENTS
+//
+// Collect by index
+PROC
+PROC_KAP_CollectIngredientsByItem((INTEGER)_Index)
+AND
+DB_KAP_ItemsForSeparate(_Index,_,_MainIngredient,_Affinity,_)
+THEN
+DB_Singleton("DB_KAP_CurrentSecondIngredientCount",0);
+SysClear("DB_KAP_SecondIngredientsByAffinity",2);
+DB_KAP_CurrentMainIngredient(_MainIngredient); 
+PROC_KAP_CollectSecondIngredientsByAffinity(_Affinity);
+PROC_KAP_SelectRandomSecondIngredient();
+// 
+PROC
+PROC_KAP_CollectSecondIngredientsByAffinity((STRING)_Affinity)
+AND
+DB_KAP_Affinities(_Affinity,_SecondIngredient,_,_,_,_)
+AND
+QRY_KAP_CollectSecondIngredients(_SecondIngredient)
+THEN
+DB_NOOP(1);
+// 
+// A count is needed to then randomly select from all ingredients by affinity
+QRY
+QRY_KAP_CollectSecondIngredients((ITEMROOT)_SecondIngredient)
+AND
+DB_Singleton("DB_KAP_CurrentSecondIngredientCount",_Count)
+AND
+IntegerSum(_Count,1,_NewCount)
+THEN
+DB_Singleton("DB_KAP_CurrentSecondIngredientCount",_NewCount);
+DB_KAP_SecondIngredientsByAffinity(_NewCount,_SecondIngredient);
+//
+// 
+PROC
+PROC_KAP_SelectRandomSecondIngredient()
+AND
+SysCount("DB_KAP_SecondIngredientsByAffinity",2,_Amount)
+AND
+Random(_Amount,_RandomNumber)
+AND
+IntegerSum(_RandomNumber, 1, _RandomNumberPlusOne) // because Random() is within [0, Modulo-1]
+AND
+DB_KAP_SecondIngredientsByAffinity(_RandomNumberPlusOne,_SecondTemplate)
+THEN
+DB_KAP_CurrentSecondIngredient(_SecondTemplate);
+
+//END_REGION
+//
+//
+//REGION REGISTER_RESULTS
+//
+//
+PROC
+PROC_KAP_SeparateTryRegisterResult((INTEGER)_Index)
+AND
+DB_KAP_Current_Separate(_,_Lab,_Slot1)
+AND
+SysCount("DB_KAP_CurrentMainIngredient",1,_MainAmount)
+AND
+_MainAmount > 0
+AND
+SysCount("DB_KAP_CurrentSecondIngredient",1,_SecondAmount)
+AND
+_SecondAmount > 0
+THEN
+PROC_KAP_Separate_Ingredients_Add();
+PROC_KAP_SpentSeparatedPotions(_Lab,_Index);
+PROC_KAP_Separate_Catalyst_Remove(_Slot1);
+//
+// Add separated ingredients to results
+PROC
+PROC_KAP_Separate_Ingredients_Add()
+AND
+DB_KAP_Current_Separate(_Player,_Lab,_)
+AND
+DB_KAP_LabCombinedResult(_LabCombinedResult)
+AND 
+DB_KAP_CurrentMainIngredient(_MainTemplate)
+AND
+DB_KAP_CurrentSecondIngredient(_SecondTemplate)
+THEN
+SetDualEntityEvent(_Player,_Player,"PROC_KAP_Separate_Ingredients_Add");
+PROC_KAP_Register_Result(_LabCombinedResult,_MainTemplate,1); // Register the result for later creation
+PROC_KAP_Register_Result(_LabCombinedResult,_SecondTemplate,1); // Register the result for later creation
+//
+// Spent processed potion
+PROC
+PROC_KAP_SpentSeparatedPotions((ITEM)_Lab,(INTEGER)_Index)
+AND
+DB_KAP_ItemsForSeparate(_Index,_Template,_MainIngredient,_Affinity,_AvailableAmount)
+AND
+IntegerSubtract(_AvailableAmount,1,_NewAvailableAmount)
+AND
+QRY_KAP_Add_Ingredients_Spent(_Lab,_Template,1)
+THEN
+//NOT DB_KAP_ItemsForSeparate(_Index,_Template,_MainIngredient,_Affinity,_AvailableAmount);
+DB_KAP_ItemsForSeparate(_Index,_Template,_MainIngredient,_Affinity,_NewAvailableAmount);
+//
+// Catalyst remove (checked on RequestCanCombine)
+PROC
+PROC_KAP_Separate_Catalyst_Remove((ITEM)_Slot1)
+AND
+DB_KAP_CatalystTemplate(_Template)
+AND
+NOT DB_OnlyOnce("PROC_KAP_Separate_Catalyst_Remove")
+AND
+QRY_KAP_Add_Ingredients_Spent(_Slot1,_Template,1)
+THEN
+//TemplateRemoveFrom((ITEMROOT)_Template, _Slot1, 1);
+DB_OnlyOnce("PROC_KAP_Separate_Catalyst_Remove");
+
+//END_REGION
+
+
+//REGION TECHNICAL
+// 
+// Singleton for DB_KAP_ItemsForSeparate
+IF
+DB_KAP_ItemsForSeparate((INTEGER)_Index,(ITEMROOT)_ItemTemplate,(ITEMROOT)_MainIngredient,(STRING)_Affinity,(INTEGER)_Amount)
+AND
+DB_KAP_ItemsForSeparate(_IndexOld,_ItemTemplateOld,_MainIngredientOld,_AffinityOld,_AmountOld)
+AND
+_Index == _IndexOld
+AND
+_Amount != _AmountOld
+THEN
+NOT DB_KAP_ItemsForSeparate(_IndexOld,_ItemTemplateOld,_MainIngredientOld,_AffinityOld,_AmountOld);
+
+// Singleton for DB_KAP_CurrentMainIngredient 
+//
+IF
+DB_KAP_CurrentMainIngredient((ITEMROOT)_NewMainTemplate)
+AND
+DB_KAP_CurrentMainIngredient(_OldMainTemplate)
+AND
+_NewMainTemplate != _OldMainTemplate
+THEN
+NOT DB_KAP_CurrentMainIngredient(_OldMainTemplate);
+//
+// Singleton for DB_KAP_CurrentSecondIngredient 
+//
+IF
+DB_KAP_CurrentSecondIngredient((ITEMROOT)_NewMainTemplate)
+AND
+DB_KAP_CurrentSecondIngredient(_OldMainTemplate)
+AND
+_NewMainTemplate != _OldMainTemplate
+THEN
+NOT DB_KAP_CurrentSecondIngredient(_OldMainTemplate);
+//
+//
+// Singleton for DB_KAP_CurrentSecondIngredient 
+//
+IF
+DB_KAP_LabCombinedResult((ITEM)_NewResult)
+AND
+DB_KAP_LabCombinedResult(_OldResult)
+AND
+_NewResult != _OldResult
+THEN
+NOT DB_KAP_LabCombinedResult(_OldResult);
+//
+//
+//
+
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "GLO_KelaAlchemyProject"

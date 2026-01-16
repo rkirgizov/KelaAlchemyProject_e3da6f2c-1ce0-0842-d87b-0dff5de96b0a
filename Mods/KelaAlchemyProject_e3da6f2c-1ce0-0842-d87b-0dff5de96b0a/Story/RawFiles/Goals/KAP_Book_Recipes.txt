@@ -1,25 +1,25 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-DB_KAP_Recipes_Books("ALCH_Transmutation",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Transmutation_8ced56a5-fe57-406d-84df-c9f3c409cb39);
-DB_KAP_Recipes_Books("ALCH_Merge_Healing",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Merge_Healing_354689f1-ea4f-4c2c-8794-776b3f29d9dd);
-DB_KAP_Recipes_Books("ALCH_Potion_ElixirSilvanus",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Apprentice_Antidote_befc74d2-ca7a-493e-a3d1-92b3383e32cb);
+DB_KAP_Recipes_Books("KAP_Recipe_Transmutation_Short","ALCH_Transmutation",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Transmutation_8ced56a5-fe57-406d-84df-c9f3c409cb39);
+DB_KAP_Recipes_Books("KAP_Recipe_Merge_Healing_Short","ALCH_Merge_Healing",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Merge_Healing_354689f1-ea4f-4c2c-8794-776b3f29d9dd);
+DB_KAP_Recipes_Books("KAP_Recipe_Apprentice_Antidote_Short","ALCH_Potion_ElixirSilvanus",(ITEMROOT)KAP_BOOK_Alchemy_Recipe_Apprentice_Antidote_befc74d2-ca7a-493e-a3d1-92b3383e32cb);
 KBSECTION
 //REGION RECIPE_READING
 // Reading recipes
 
 IF
-TemplateUseFinished(_Player, _RecipeTemplate, _Recipe, 1)
+TemplateUseFinished(_Player, _RecipeTemplate, _RecipeItem, 1)
 AND
 DB_Players(_Player) // used to be checking for DB_PartyMembers, problem with this is that if a familiar/summon was used, it'll be treated like whole party is following a companion into the hole - which isn't expected behavior.
 AND
 IsControlled(_Player, 1)
 AND
-DB_KAP_Recipes_Books(_RecipePattern,_RecipeTemplate)
+DB_KAP_Recipes_Books(_Recipe,_RecipePattern,_RecipeTemplate)
 AND
-NOT DB_KELA_Recipes_Known(_RecipePattern)
+NOT DB_KAP_Recipes_Known(_Recipe,_RecipePattern)
 THEN
-DB_KELA_Recipes_Known(_RecipePattern);
+DB_KAP_Recipes_Known(_Recipe,_RecipePattern);
 ApplyStatus(_Player, "KAP_MESSAGE_RECIPE_HAS_BEEN_REVIEWED", 6.0, 1);
 
 //

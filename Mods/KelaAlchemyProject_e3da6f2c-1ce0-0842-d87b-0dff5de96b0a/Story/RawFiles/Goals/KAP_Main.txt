@@ -7,8 +7,6 @@ DB_KAP_Debug_Break(1);
 
 DB_KAP_CatalystTemplate(LOOT_Laboratory_Flask_Glass_B_4528c43d-f986-42ea-8189-6efedae49ba8);
 DB_KAP_CatalystTemplate(LOOT_Laboratory_Flask_Glass_C_38eddd97-ecbc-4a76-8ebc-54cfb26ec424);
-
-//DB_KAP_AlchemistResultPouch(CONT_GEN_Pouch_Leather_A_2e40240b-77d3-400b-bd6a-caff66a85833);
 KBSECTION
 //REGION Init
 IF
@@ -104,60 +102,7 @@ DB_NOOP(1);
 // -----------------------------------------------------------------------------------
 //
 
-//REGION Utilities
 
-// CHECK CATALYST
-QRY
-QRY_KAP_CatalystIsInItemInventory((ITEM)_Owner)
-AND
-DB_KAP_CatalystTemplate(_Template)
-AND
-TemplateIsInInventory((ITEMROOT)_Template,_Owner,_Count)
-AND
-_Count > 0
-AND
-NOT DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked")
-THEN
-//SetDualEntityEvent(_Owner,_Owner,"QRY_KAP_CatalystIsInItemInventory");
-DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked");
-DB_NOOP(1);
-
-
-
-QRY
-QRY_KAP_PlayerLevelIsRequired((CHARACTER)_Player, (INTEGER)_RequiredLevel)
-AND
-GetLevel(_Player, _PlayerLevel)
-AND
-_PlayerLevel >= _RequiredLevel
-THEN
-DB_NOOP(1);
-
-// MAIN - INTELLIGENCE
-QRY
-QRY_KAP_PlayerAbilityLevelIsRequired((CHARACTER)_Player, (INTEGER)_RequiredLevel)
-AND
-GetAbility(_Player, "Intelligence", _Value)
-AND
-_Value >= _RequiredLevel
-THEN
-DB_NOOP(1);
-
-// DRUID - WISDOM
-QRY
-QRY_KAP_PlayerAbilityLevelIsRequired((CHARACTER)_Player, (INTEGER)_RequiredLevel)
-AND
-IsTagged(_Player,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0,1)
-AND
-GetAbility(_Player, "Wisdom", _Value)
-AND
-_Value >= _RequiredLevel
-THEN
-DB_NOOP(1);
-
-
-
-//END_REGION
 EXITSECTION
 
 ENDEXITSECTION

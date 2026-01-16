@@ -326,7 +326,7 @@ DB_Singleton("DB_KAP_CatalystReadyForRegisterResult",1) // ready to register the
 THEN
 PROC_KAP_Catalyst_Water_Remove(_Slot1);
 PROC_KAP_Catalyst_Drink_Remove(_Slot1);
-PROC_KAP_Register_Result(LOOT_Laboratory_Flask_Glass_B_4528c43d-f986-42ea-8189-6efedae49ba8,_Lab,1); // Register the result for later creation
+//PROC_KAP_Register_Result(LOOT_Laboratory_Flask_Glass_B_4528c43d-f986-42ea-8189-6efedae49ba8,_Lab,1); // Register the result for later creation
 //
 // Remove water
 PROC

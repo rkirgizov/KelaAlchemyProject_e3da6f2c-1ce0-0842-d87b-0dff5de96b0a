@@ -87,6 +87,8 @@ KBSECTION
 IF
 StatusRemoved(_AlchemySolution, _RemovedStatus, _Causee, _)
 AND
+IsItem(_AlchemySolution,1)
+AND
 QRY_IsExistingItem(_AlchemySolution,1)
 AND
 DB_KAP_Affinities(_,_,_,_AdditionalStatus,_,_)
@@ -115,6 +117,8 @@ DB_KAP_Solution_Destroyed_For_Handle(_AlchemySolution,_Destroyer); // remember t
 IF
 StatusRemoved(_AlchemySolution, _RemovedStatus, _Causee, _)
 AND
+IsItem(_AlchemySolution,1)
+AND
 IsDestroyed((ITEM)_AlchemySolution, 1)
 AND
 DB_KAP_Solution_Destroyed_For_Handle(_DestroyedAlchemySolution,_Destroyer)
@@ -138,6 +142,8 @@ NOT DB_KAP_Solution_Destroyed_For_Handle(_DestroyedAlchemySolution,_Destroyer);
 // Clear DB_KAP_Solution_Destroyed_For_Handle
 IF
 StatusRemoved(_AlchemySolution, _RemovedStatus, _Causee, _)
+AND
+IsItem(_AlchemySolution,1)
 AND
 DB_KAP_Solution_Destroyed_For_Handle(_DestroyedAlchemySolution,_Destroyer)
 THEN
