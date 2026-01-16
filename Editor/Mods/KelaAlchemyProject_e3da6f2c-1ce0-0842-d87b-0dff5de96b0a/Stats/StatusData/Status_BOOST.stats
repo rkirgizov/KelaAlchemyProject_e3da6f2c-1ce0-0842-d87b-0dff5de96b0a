@@ -819,6 +819,17 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ddd4f44d-85e4-4e76-bcc1-0aa23993f3b2" />
+        <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hb8ae76c3g8371g420dg1bf7geeb12813ce3d" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Tooltip_Error_Cross" />
+        <field name="StackId" type="StringTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_CATALYST_FOR_ADDITIONAL_STATUS" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="37d85356-1c6e-4172-90db-18e5ee780c51" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2b384c5agf97dge502g558egeaf736d954a4" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="cb0d6f54-fd38-4553-9f04-dbc82bd6b9ca" />
         <field name="Name" type="NameTableFieldDefinition" value="KAP_MESSAGE_ERROR_NOT_COMBINE" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h80419cf3gbe7bgd771g7e58g6448db2b5dee" version="2" />

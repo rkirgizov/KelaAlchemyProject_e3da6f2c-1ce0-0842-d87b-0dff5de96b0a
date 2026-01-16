@@ -1,9 +1,6 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-DB_KAP_Property_Ability_For_Making(14);
-DB_KAP_Property_Ability_For_Additional(17);
-
 DB_KAP_LaboratorySet(DEC_Laboratory_Flask_Glass_Installation_A_Empty_A_7c5d74dc-9bc2-4ea4-9691-dce888154941);
 
 
@@ -33,72 +30,40 @@ DB_KAP_LaboratorySet(DEC_Laboratory_Flask_Glass_Installation_A_Empty_A_7c5d74dc-
 // 3super + (1super + 1g + 6h) = V
 // 4super + (1super + 3g + 6h) = 
 KBSECTION
-// CLEANING
-IF
-RequestCanCombine(_Player,_Lab,_Slot1,_,_,_,_RequestID)
-AND
-GetStatString(_Lab, _LabStat)
-AND
-_LabStat == "OBJ_Laboratory_Installation"
-AND
-QRY_KAP_Clear_Old_Variables()
-THEN
-DB_NOOP(1);
-//
-// ERRORS
-//
-// ERROR LOW INTELLIGENCE OR WISDOM
-IF
-RequestCanCombine(_Player,_Lab,_Slot1,_,_,_,_RequestID)
-AND
-GetStatString(_Lab, _LabStat)
-AND
-_LabStat == "OBJ_Laboratory_Installation"
-AND
-GetStatString(_Slot1, _Slot1Stat)
-AND
-_Slot1Stat == "OBJ_Laboratory_Glass"
-AND
-DB_KAP_Property_Ability_For_Making(_Level)
-AND
-NOT QRY_KAP_PlayerAbilityLevelIsRequired(_Player,_Level)  // Intelligence or Wisdom+Druid
-THEN
-DB_Singleton("DB_KAP_StartCombined_Error",1);
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ALCHEMY", 6.0, 1);
-//
-// SLOT 1 IS EMPTY
-IF
-RequestCanCombine(_Player,_Lab,_Slot1,_,_,_,_RequestID)
-AND
-GetStatString(_Lab, _LabStat)
-AND
-_LabStat == "OBJ_Laboratory_Installation"
-AND
-GetStatString(_Slot1, _Slot1Stat)
-AND
-_Slot1Stat == "OBJ_Laboratory_Glass"
-AND
-IsInventoryEmpty(_Slot1,1)
-THEN
-DB_Singleton("DB_KAP_StartCombined_Error",1);
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_EMPTY_SLOT", 6.0, 1);
-//
-// SLOT 2 IS EMPTY
-IF
-RequestCanCombine(_Player,_Lab,_,_Slot2,_,_,_RequestID)
-AND
-GetTemplate(_Lab, _LabTemplate)
-AND
-DB_KAP_LaboratorySet(_LabTemplate)
-AND
-GetStatString(_Slot2, _Slot2Stat)
-AND
-_Slot2Stat == "OBJ_Laboratory_Glass"
-AND
-IsInventoryEmpty(_Slot2,1)
-THEN
-DB_Singleton("DB_KAP_StartCombined_Error",1);
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_EMPTY_SLOT", 6.0, 1);
+// //
+// // SLOT 1 IS EMPTY
+// IF
+// RequestCanCombine(_Player,_Lab,_Slot1,_,_,_,_RequestID)
+// AND
+// GetStatString(_Lab, _LabStat)
+// AND
+// _LabStat == "OBJ_Laboratory_Installation"
+// AND
+// GetStatString(_Slot1, _Slot1Stat)
+// AND
+// _Slot1Stat == "OBJ_Laboratory_Glass"
+// AND
+// IsInventoryEmpty(_Slot1,1)
+// THEN
+// DB_Singleton("DB_KAP_StartCombined_Error",1);
+// ApplyStatus(_Player, "KAP_MESSAGE_ERROR_EMPTY_SLOT", 6.0, 1);
+// //
+// // SLOT 2 IS EMPTY
+// IF
+// RequestCanCombine(_Player,_Lab,_,_Slot2,_,_,_RequestID)
+// AND
+// GetTemplate(_Lab, _LabTemplate)
+// AND
+// DB_KAP_LaboratorySet(_LabTemplate)
+// AND
+// GetStatString(_Slot2, _Slot2Stat)
+// AND
+// _Slot2Stat == "OBJ_Laboratory_Glass"
+// AND
+// IsInventoryEmpty(_Slot2,1)
+// THEN
+// DB_Singleton("DB_KAP_StartCombined_Error",1);
+// ApplyStatus(_Player, "KAP_MESSAGE_ERROR_EMPTY_SLOT", 6.0, 1);
 //
 //
 // ITERATE SLOTS
@@ -583,40 +548,7 @@ THEN
 ApplyStatus(_Player, "KAP_MESSAGE_ERROR_RECIPE_REQUIREMENTS", 6.0, 1);
 DB_Singleton("DB_KAP_RecipeProcessing_Error",1);
 //
-//
-// Create result
-PROC
-PROC_KAP_Try_Create_Result()
-AND
-NOT DB_KAP_Registered_Result(_,_,_)
-AND
-GetHostCharacter(_Player)
-THEN
-ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RESULT", 6.0, 1);
-// 
-// Create result
-PROC
-PROC_KAP_Try_Create_Result()
-AND
-DB_KAP_Registered_Result(_Owner, _Result, _Amount)
-THEN
-PROC_KAP_Create_Result(_Owner,_Result,_Amount);
-NOT DB_KAP_Registered_Result(_Owner,_Result,_Amount);
-//
-// Remove spent ingredients
-PROC
-PROC_KAP_Try_Remove_Spented()
-AND
-DB_KAP_Ingredients_Spent_Amount(_Slot,_Ingredient,_IngredientSpentAmount)
-AND 
-_IngredientSpentAmount > 0
-AND
-TemplateIsInInventory(_Ingredient,_Slot,_IngredientCount)
-AND
-_IngredientCount >= _IngredientSpentAmount
-THEN
-TemplateRemoveFrom(_Ingredient,_Slot,_IngredientSpentAmount);
-NOT DB_KAP_Ingredients_Spent_Amount(_Slot,_Ingredient,_IngredientSpentAmount);
+
 
 // -----------------------------------------------------------------------------------------
 // ORIGINAL_RECIPES
@@ -660,7 +592,7 @@ QRY_KAP_Available_Ingredients_Remove(_Slot1,_SpentCount,_MainIndex) // Add ingre
 AND
 QRY_KAP_Available_Ingredients_Remove(_Slot2,_SpentCount,_ExtractIndex)
 THEN
-PROC_KAP_Register_Result(_ResultTemplate,_Lab,_SpentCount); // Register the result for later creation
+PROC_KAP_Register_Result(_Lab,_ResultTemplate,_SpentCount); // Register the result for later creation
 //
 // QUERIES
 //
@@ -763,7 +695,7 @@ AND
 QRY_KAP_Available_Ingredients_Remove(_Slot2,1,_ExtractWaterIndex)
 THEN
 //SetDualEntityEvent(_Player,_Player,"PROC_KAP_ProcessAffinityAirEarthFireShadowWater_TryToRegisterResult");
-PROC_KAP_Register_Result(_ResultTemplate,_Lab,1); // Register the result for later creation
+PROC_KAP_Register_Result(_Lab,_ResultTemplate,1); // Register the result for later creation
 
 
 
@@ -862,7 +794,7 @@ AND
 QRY_KAP_Available_Ingredients_Remove_Template(_Slot2,_ComboCategory)
 THEN
 //SetDualEntityEvent(_Player,_Player,"PROC_KAP_ModRecipe_Try_Create");
-PROC_KAP_Register_Result(_ResultTemplate,_Lab,1);
+PROC_KAP_Register_Result(_Lab,_ResultTemplate,1);
 PROC_KAP_Spent_Catalyst(1); // if need DB_Singleton("DB_KAP_RecipeProcessing_NeedCatalyst",1);
 NOT DB_OnlyOnce("DB_KAP_Available_Ingredients_Remove_Once");
 NOT DB_KAP_TotalAvailableByTemplate(_ComboCategory,_SecondaryTemplate,_AmountAvailable);
@@ -965,7 +897,7 @@ AND
 QRY_KAP_Available_Ingredients_Remove_GUID(_Slot2,_ComboCategory)
 THEN
 PROC_KAP_Spent_Catalyst(1);
-PROC_KAP_Register_Result(_ResultTemplate,_Lab,1);
+PROC_KAP_Register_Result(_Lab,_ResultTemplate,1);
 NOT DB_OnlyOnce("DB_KAP_Available_Ingredients_Remove_Once");
 NOT DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountAvailable);
 //
@@ -996,7 +928,7 @@ AND
 QRY_KAP_Available_Ingredients_Remove_GUID(_Slot2,_ComboCategory)
 THEN
 PROC_KAP_Spent_Catalyst(1);
-PROC_KAP_Register_Result(_ResultTemplate,_Lab,1);
+PROC_KAP_Register_Result(_Lab,_ResultTemplate,1);
 NOT DB_OnlyOnce("DB_KAP_Available_Ingredients_Remove_Once");
 NOT DB_KAP_RecipeByMainIngredient_AvailableSecondaryIngredientsGUID(_ComboCategory,_GUIDPattern,_SecondaryAmountAvailable);
 
@@ -1014,7 +946,7 @@ QRY_KAP_Try_Apply_Additional_Status((ITEM)_Owner,(ITEM)_Result,(STRING)_ResultTy
 AND
 DB_KAP_Current_Lab(_,_Player,_)
 AND
-DB_KAP_Property_Ability_For_Additional(_Level)
+DB_KAP_Property_Ability_Level_Advanced(_Level)
 AND
 QRY_KAP_PlayerAbilityLevelIsRequired(_Player,_Level)
 AND
@@ -1051,7 +983,7 @@ QRY_KAP_Try_Apply_Additional_Status((ITEM)_Owner,(ITEM)_Result,(STRING)_ResultTy
 AND
 DB_KAP_Current_Lab(_,_Player,_)
 AND
-DB_KAP_Property_Ability_For_Additional(_Level)
+DB_KAP_Property_Ability_Level_Advanced(_Level)
 AND
 DB_KAP_Current_Lab_Slots(_,_,_Slot3)
 AND
@@ -1076,7 +1008,7 @@ QRY_KAP_Try_Apply_Additional_Status((ITEM)_Owner,(ITEM)_Result,(STRING)_ResultTy
 AND
 DB_KAP_Current_Lab(_,_Player,_)
 AND
-DB_KAP_Property_Ability_For_Additional(_Level)
+DB_KAP_Property_Ability_Level_Advanced(_Level)
 AND
 QRY_KAP_PlayerAbilityLevelIsRequired(_Player,_Level)
 AND
@@ -1211,71 +1143,45 @@ ToInventory((ITEM)_Result,_ResultSlot,1,0,1);
 // -----------------------------------------------------------------------------------------
 //REGION FINAL_ADD_RESULT
 //
-// Add result template 
-PROC
-PROC_KAP_Register_Result((ITEMROOT)_Template,(ITEM)_Owner,(INTEGER)_Amount)
-AND
-DB_KAP_Registered_Result(_Owner, _Template,_OldAmount)
-AND
-IntegerSum(_OldAmount, _Amount, _NewAmount)
-THEN
-//SetDualEntityEvent(_Owner,_Owner,"PROC_KAP_Register_Result EXIST");
-DB_KAP_Registered_Result(_Owner, _Template,_NewAmount);
-NOT DB_KAP_Registered_Result(_Owner, _Template,_OldAmount);
-//
-// Add new result template
-PROC
-PROC_KAP_Register_Result((ITEMROOT)_Template,(ITEM)_Owner,(INTEGER)_Amount)
-AND
-NOT DB_KAP_Registered_Result(_Owner, _Template,_)
-THEN
-//SetDualEntityEvent(_Owner,_Owner,"PROC_KAP_Register_Result NEW");
-DB_KAP_Registered_Result(_Owner, _Template,_Amount);
-//
 // CYCLE
 // Create results for alch template with status
-PROC
-PROC_KAP_Create_Result((ITEM)_Owner,(ITEMROOT)_Template,(INTEGER)_Amount)
+//PROC
+//PROC_KAP_Create_Result((ITEM)_Owner,(ITEMROOT)_Template,(INTEGER)_Amount)
 //AND
 //DB_KAP_Current_Lab(_Lab,_Player,_)
-AND
-DB_KAP_Affinities(_,_,_Template,_ResultStatus,_,_ResultType)
-AND
-IntegerSubtract(_Amount, 1, _NewAmount)
-AND
-_NewAmount >= 0
-AND
-CreateAtObject(_Template, _Owner, 0, 0, "", 1, _Result)
-AND
-QRY_KAP_Try_Apply_Additional_Status((ITEM)_Owner,(ITEM)_Result,(STRING)_ResultType,(STRING)_ResultStatus)
-THEN
-NOT DB_KAP_AdditionalStatus_Added(1);
-PROC_KAP_Create_Result(_Owner,_Template,_NewAmount);
+//AND
+//DB_KAP_Affinities(_,_,_Template,_ResultStatus,_,_ResultType)
+//AND
+//IntegerSubtract(_Amount, 1, _NewAmount)
+//AND
+//_NewAmount >= 0
+//AND
+//CreateAtObject(_Template, _Owner, 0, 0, "", 1, _Result)
+//AND
+//QRY_KAP_Try_Apply_Additional_Status((ITEM)_Owner,(ITEM)_Result,(STRING)_ResultType,(STRING)_ResultStatus)
+//THEN
+//NOT DB_KAP_AdditionalStatus_Added(1);
+//PROC_KAP_Create_Result(_Owner,_Template,_NewAmount);
 //
 // CYCLE
 // Create results for alch template WITHOUT status
 // TRANSMUTATION FOR EXAMPLE
-PROC
-PROC_KAP_Create_Result((ITEM)_Owner,(ITEMROOT)_Template,(INTEGER)_Amount)
+//PROC
+//PROC_KAP_Create_Result((ITEM)_Owner,(ITEMROOT)_Template,(INTEGER)_Amount)
 //AND
 //DB_KAP_Current_Lab(_Lab,_Player,_)
-AND
-NOT DB_KAP_Affinities(_,_,_Template,_,_,_)
-AND
-IntegerSubtract(_Amount, 1, _NewAmount)
-AND
-_NewAmount >= 0
-AND
-CreateAtObject(_Template, _Owner, 0, 0, "", 1, _Result)
-THEN
+//AND
+//NOT DB_KAP_Affinities(_,_,_Template,_,_,_)
+//AND
+//IntegerSubtract(_Amount, 1, _NewAmount)
+//AND
+//_NewAmount >= 0
+//AND
+//CreateAtObject(_Template, _Owner, 0, 0, "", 1, _Result)
+//THEN
 //SetDualEntityEvent(_Player,_Player,"Create results for alch template WITHOUT status");
-ObjectTimerLaunch(_Result, "KAP_AddResultToPlayer_Timer", 100);
-PROC_KAP_Create_Result(_Owner,_Template,_NewAmount);
-
-
-
-
-
+//ObjectTimerLaunch(_Result, "KAP_AddResultToPlayer_Timer", 100);
+//PROC_KAP_Create_Result(_Owner,_Template,_NewAmount);
 
 
 //END_REGION

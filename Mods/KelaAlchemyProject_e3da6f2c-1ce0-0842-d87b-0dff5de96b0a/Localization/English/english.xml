@@ -139,7 +139,7 @@
   <content contentuid="h5abb5aabgc41eg4f6dga03dgda863e21a0a5" version="6">Glass Separation Set</content>
   <content contentuid="he90ef7edgb7c7g4f9agb1c2gb1af77ff2ebb" version="6">Each cylinder, flask and retort in this set is covered in a sticky, dusty substance.</content>
   <content contentuid="h1c0a11a7g2d62g4410ga817geb244c366247" version="9">Glass Seperation Set</content>
-  <content contentuid="h7e775530g5ed9g44f9gadebg104b51bdd812" version="12">A set of flasks, the main purpose of which is separation</content>
+  <content contentuid="h7e775530g5ed9g44f9gadebg104b51bdd812" version="20">A set of flasks, the main purpose of which is separation</content>
   <content contentuid="h1974560eg8838g490fg9705g37b380b5d75c" version="3">Glass Distillation Set</content>
   <content contentuid="h4be54045g0e96g43e7gb383gafdf4c69e558" version="4">Each cylinder, flask and retort in this set is covered in a sticky, dusty substance.</content>
   <content contentuid="h137a02c3gc3b1g33d2g8488g9b7ccfa7cd0c" version="7">For alchemical experiments, you need to put a clean flask with the necessary ingredients in each slot according to the recipe: &lt;br&gt;Slot 1 - base and catalyst (if necessary) &lt;br&gt;Slot 2 - secondary ingredients &lt;br&gt;Slot 3 - additional ingredients &lt;br&gt;&lt;br&gt;&lt;i&gt;* you can conduct several experiments at the same time, but the more ingredients, the more difficult it is to control the experiment.</content>
@@ -197,7 +197,7 @@
   <content contentuid="h99fc3e54g91acgb0acg6d5fge4c86691a5d0" version="11">Recipe for transmutation of metals</content>
   <content contentuid="h6ef69cf3g07cbg7ba6g1c48gf872fdaddb87" version="11">This parchment is unread.</content>
   <content contentuid="he91abed2g11c9g2d37g6079g9a37692606b6" version="9">Once a recipe is learned, the knowledge becomes available to anyone on your team who has the necessary skills.</content>
-  <content contentuid="h543413ddgdea0gba7bgd5f4gb1ae2170fc76" version="6">To separate potions, elixirs, poisons or grenades into their ingredients, you need to place a clean flask in each slot, with the first slot containing the catalyst and what is being separated, and the second slot for the separated ingredients.</content>
+  <content contentuid="h543413ddgdea0gba7bgd5f4gb1ae2170fc76" version="14">To separate potions, elixirs, poisons or grenades into their ingredients, you need to place a clean flask in each slot, with the first slot containing the catalyst and what is being separated, and the second slot for the separated ingredients.</content>
   <content contentuid="h8fa3d0e5g274eg18fbgb656g90e197ef8823" version="5">To distill liquids, you need to put a clean flask in each slot, with the ingredients in the first slot and the second slot for distilled liquids.&lt;br&gt;The standard recipe is an alchemical catalyst, which requires water and alcohol (wine - two bottles, strong alcohol - one).</content>
   <content contentuid="h05def27eg192fg0d57ga9b4ga3b35fa45353" version="2">A new recipe has been learned</content>
   <content contentuid="hc4e017fdg856dg7ec5g9f40gec46f9a58361" version="2">You've learned the recipe! The knowledge becomes available to anyone on your team who has the necessary skills.</content>
@@ -1315,4 +1315,10 @@
   <content contentuid="hafe581eegba61g5e91gb149g191933c4cf1d" version="1">&lt;br&gt;&lt;br&gt;&lt;b&gt;Underdark Blend&lt;/b&gt; - gives the ability to see in the dark out to a range of 18 and gained a +1 bonus to Attack Rolls against targets standing in darkness or dim light. &lt;br&gt;Ingredients: Mugwort + Underdark mushroom.</content>
   <content contentuid="h4b1af1e8g58ffg86efg9a81g5e051f1166ef" version="1">&lt;br&gt;&lt;br&gt;&lt;b&gt;Cursed Blend&lt;/b&gt; - provides temporary resistance to the Shadow Curse and number you need to roll a Critical Hit while attacking is reduced by 1, but you are Vulnerable to Necrotic damage and your vitality reduces by 3.&lt;br&gt;Ingredients: Mugwort + Shadowroot Sac.</content>
   <content contentuid="hed6b6224gca45g3135gc275ge83e54bc50cd" version="1">&lt;br&gt;&lt;br&gt;&lt;b&gt;Noble Blend&lt;/b&gt; - gives self-confidence and opens many doors. The smoker gets Proficiency in Deception, Intimidation, Performance, and Persuasion, an extra bonus action and can't be Charmed. &lt;br&gt;Ingredients: Mugwort + Pale Mint.</content>
+  <content contentuid="h3b45afdcg1d89g2a77gab3fg93d73d904159" version="1">Alchemical result</content>
+  <content contentuid="h7cd6136cgf50dg0a9agc0a3g7f402c043862" version="1">Alchemical result</content>
+  <content contentuid="hc822010bgebb8g4e17g07d1g670c18706530" version="5">KAP Alchemy Result</content>
+  <content contentuid="h998b1400gcfcdge683g5e71gbfca5b047549" version="5">A small collection of various tinctures and tonics.</content>
+  <content contentuid="hb8ae76c3g8371g420dg1bf7geeb12813ce3d" version="1">Catalyst missing!</content>
+  <content contentuid="h2b384c5agf97dge502g558egeaf736d954a4" version="1">Catalyst missing</content>
 </contentList>

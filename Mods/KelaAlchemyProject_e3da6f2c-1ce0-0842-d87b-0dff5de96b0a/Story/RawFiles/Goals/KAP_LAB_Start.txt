@@ -1,0 +1,247 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+// Minimum level for alchemy
+DB_KAP_Property_Ability_Level_Min(14);
+// Advanced level for alchemy 
+DB_KAP_Property_Ability_Level_Advanced(17);
+
+DB_KAP_SeparationSet(DEC_Laboratory_Flask_Glass_Installation_B_Empty_A_25344450-3a06-4450-9df3-132336578019);
+DB_KAP_SeparationSet(DEC_Laboratory_Flask_Glass_Installation_C_Empty_A_f4117a4e-3ece-4816-8f6f-1cf3fc11a2ee);
+
+KBSECTION
+// CLEANING
+IF
+RequestCanCombine(_Player,_Lab,_,_,_,_,_RequestID)
+AND
+GetStatString(_Lab, _LabStat)
+AND
+_LabStat == "OBJ_Laboratory_Installation"
+AND
+QRY_KAP_LAB_Start_Cleaning()
+THEN
+SetDualEntityEvent(_Player,_Player,"START RequestCanCombine");
+DB_NOOP(1);
+//
+// CHECK INTELLIGENCE OR WISDOM LEVEL
+IF
+RequestCanCombine(_Player,_Lab,_,_,_,_,_RequestID)
+AND
+GetStatString(_Lab, _LabStat)
+AND
+_LabStat == "OBJ_Laboratory_Installation"
+AND
+DB_KAP_Property_Ability_Level_Min(_Level)
+AND
+NOT QRY_KAP_PlayerAbilityLevelIsRequired(_Player,_Level)  // Intelligence or Wisdom+Druid
+THEN
+SetDualEntityEvent(_Player,_Player,"LOW INTELLIGENCE OR WISDOM LEVEL");
+DB_Singleton("DB_KAP_StartCombined_Error",1);
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_INTELLIGENCE_LOW_FOR_ALCHEMY", 6.0, 1);
+//
+//
+// START SEPARATE
+IF
+RequestCanCombine(_Player,_Lab,_Slot1,_,_,_,_RequestID)
+AND
+GetTemplate(_Lab, _LabTemplate)
+AND
+DB_KAP_SeparationSet(_LabTemplate)
+AND
+GetStatString(_Slot1, _Slot1Stat)
+AND
+_Slot1Stat == "OBJ_Laboratory_Glass"
+AND 
+NOT DB_Singleton("DB_KAP_StartCombined_Error",1)
+THEN
+DB_KAP_Current_Separate(_Player,_Lab,_Slot1);
+PROC_KAP_Start_Separate();
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// REGISTER AND CREATE RESULTS
+// -----------------------------------------------------------------------------------------
+//REGION FINAL_ADD_RESULT
+//
+// Add result template 
+PROC
+PROC_KAP_Register_Result((ITEM)_Container,(ITEMROOT)_Template,(INTEGER)_Amount)
+AND
+DB_KAP_Registered_Result(_Container, _Template,_OldAmount)
+AND
+IntegerSum(_OldAmount, _Amount, _NewAmount)
+THEN
+SetDualEntityEvent(_Container,_Container,"PROC_KAP_Register_Result EXIST");
+DB_KAP_Registered_Result(_Container, _Template,_NewAmount);
+NOT DB_KAP_Registered_Result(_Container, _Template,_OldAmount);
+//
+// Add new result template
+PROC
+PROC_KAP_Register_Result((ITEM)_Container,(ITEMROOT)_Template,(INTEGER)_Amount)
+AND
+NOT DB_KAP_Registered_Result(_Container, _Template,_)
+THEN
+SetDualEntityEvent(_Container,_Container,"PROC_KAP_Register_Result NEW");
+DB_KAP_Registered_Result(_Container, _Template,_Amount);
+//
+
+//
+// Create result
+PROC
+PROC_KAP_Try_Create_Result()
+AND
+NOT DB_KAP_Registered_Result(_,_,_)
+AND
+GetHostCharacter(_Player)
+THEN
+SetDualEntityEvent(_Player,_Player,"PROC_KAP_Try_Create_Result ERROR");
+ApplyStatus(_Player, "KAP_MESSAGE_ERROR_NOT_RESULT", 6.0, 1);
+// 
+// Create result
+PROC
+PROC_KAP_Try_Create_Result()
+AND
+GetHostCharacter(_Player)
+AND
+DB_KAP_Registered_Result(_Container, _Template, _Amount)
+THEN
+SetDualEntityEvent(_Container,_Container,"PROC_KAP_Try_Create_Result GOOD");
+PROC_KAP_Create_Result(_Container,_Template,_Amount);
+//NOT DB_KAP_Registered_Result(_Container,_Template,_Amount);
+
+PROC
+PROC_KAP_Create_Result((ITEM)_Container,(ITEMROOT)_Template,(INTEGER)_Amount)
+//AND
+//DB_KAP_Current_Lab(_Lab,_Player,_)
+//AND
+//DB_KAP_Affinities(_,_,_Template,_ResultStatus,_,_ResultType)
+AND
+IntegerSubtract(_Amount, 1, _NewAmount)
+AND
+_NewAmount >= 0
+AND
+CreateAtObject(_Template, _Container, 0, 0, "", 1, _Result)
+//AND
+//QRY_KAP_Try_Apply_Additional_Status((ITEM)_Owner,(ITEM)_Result,(STRING)_ResultType,(STRING)_ResultStatus)
+THEN
+SetDualEntityEvent(_Container,_Container,"PROC_KAP_Create_Result GOOD");
+//ToInventory((ITEM)_Result,_Container,1,0,1);
+ObjectTimerLaunch(_Result, "KAP_FinallyAddResultToPlayer_Timer", 500);
+//NOT DB_KAP_AdditionalStatus_Added(1);
+PROC_KAP_Create_Result(_Container,_Template,_NewAmount);
+
+
+//
+// Remove spent ingredients
+PROC
+PROC_KAP_Try_Remove_Spented()
+AND
+DB_KAP_Ingredients_Spent_Amount(_Slot,_Ingredient,_IngredientSpentAmount)
+AND 
+_IngredientSpentAmount > 0
+AND
+TemplateIsInInventory(_Ingredient,_Slot,_IngredientCount)
+AND
+_IngredientCount >= _IngredientSpentAmount
+THEN
+TemplateRemoveFrom(_Ingredient,_Slot,_IngredientSpentAmount);
+NOT DB_KAP_Ingredients_Spent_Amount(_Slot,_Ingredient,_IngredientSpentAmount);
+
+
+// FINAL_ADD_RESULT
+//
+// To work around the problem where the created item is immediately added to the stack and the statuses get mixed up
+IF
+ObjectTimerFinished(_Result, "KAP_FinallyAddResultToPlayer_Timer")
+//AND
+//GetHostCharacter(_Player)
+AND
+DB_KAP_Registered_Result(_Container,_Template,_Amount)
+THEN
+SetDualEntityEvent(_Container,_Container,"FINAL_ADD_RESULT GOOD");
+ToInventory((ITEM)_Result,_Container,1,0,1);
+
+
+
+
+
+//END_REGION
+
+
+//REGION Utilities
+
+// CHECK CATALYST
+QRY
+QRY_KAP_CatalystIsInItemInventory((ITEM)_Owner)
+AND
+DB_KAP_CatalystTemplate(_Template)
+AND
+TemplateIsInInventory((ITEMROOT)_Template,_Owner,_Count)
+AND
+_Count > 0
+//AND
+//NOT DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked")
+THEN
+SetDualEntityEvent(_Owner,_Owner,"QRY_KAP_CatalystIsInItemInventory");
+//DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked");
+DB_NOOP(1);
+
+
+
+QRY
+QRY_KAP_PlayerLevelIsRequired((CHARACTER)_Player, (INTEGER)_RequiredLevel)
+AND
+GetLevel(_Player, _PlayerLevel)
+AND
+_PlayerLevel >= _RequiredLevel
+THEN
+DB_NOOP(1);
+
+// MAIN - INTELLIGENCE
+QRY
+QRY_KAP_PlayerAbilityLevelIsRequired((CHARACTER)_Player, (INTEGER)_RequiredLevel)
+AND
+GetAbility(_Player, "Intelligence", _Value)
+AND
+_Value >= _RequiredLevel
+THEN
+DB_NOOP(1);
+
+// DRUID - WISDOM
+QRY
+QRY_KAP_PlayerAbilityLevelIsRequired((CHARACTER)_Player, (INTEGER)_RequiredLevel)
+AND
+IsTagged(_Player,(TAG)DRUID_44ac4317-4d38-4d28-80e2-94024c6e42f0,1)
+AND
+GetAbility(_Player, "Wisdom", _Value)
+AND
+_Value >= _RequiredLevel
+THEN
+DB_NOOP(1);
+
+
+
+//END_REGION
+
+
+// CLEAR VARIABLES
+QRY
+QRY_KAP_LAB_Start_Cleaning()
+THEN
+// MAIN
+DB_Singleton("DB_KAP_StartCombined_Error",0);
+SysClear("DB_KAP_Registered_Result",3);
+// SEPARATE
+SysClear("DB_KAP_Current_Separate",3);
+SysClear("DB_KAP_ItemsForSeparate",5);
+//SysClear("DB_KAP_CurrentIngredientsByAffinity",2);
+//NOT DB_OnlyOnce("QRY_KAP_CatalystIsInItemInventory_Checked");
+NOT DB_OnlyOnce("PROC_KAP_Separate_Catalyst_Remove");
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "GLO_KelaAlchemyProject"
